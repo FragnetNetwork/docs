@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkfragdocs=self.webpackChunkfragdocs||[]).push([[2174],{69781:s=>{s.exports=JSON.parse('{"title":"7 Days To Die","slug":"/games/7dtd","permalink":"/docs/games/7dtd","navigation":{"previous":{"title":"Games","permalink":"/docs/games/"},"next":{"title":"Adding admins","permalink":"/docs/games/7dtd/adding-admins"}}}')}}]);
