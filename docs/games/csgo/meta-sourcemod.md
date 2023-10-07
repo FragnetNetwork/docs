@@ -6,7 +6,7 @@ You can easily install the latest version of MetaMod and SourceMod on the Fragif
 
 Follow these steps:
 
-1. Log in to [Fragify panel](https://beta.fragify.net/).
+1. Log in to [Fragify panel](VAR::FRAGIFY_URL).
 2. Select your CS:GO server and go to **Configure** option on the left-side menu.
 
 ![Configure](../images/configure.png)
