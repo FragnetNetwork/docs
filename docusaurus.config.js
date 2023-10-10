@@ -90,6 +90,12 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: '/discord-bots',
+            position: 'left',
+            label: 'Discord Bots',
+          },
+          {
+            type: 'doc',
             docId: 'fragify/intro',
             position: 'left',
             label: 'Fragify',

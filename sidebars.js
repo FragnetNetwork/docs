@@ -57,6 +57,30 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Discord Bots',
+      link: {
+        type: 'generated-index',
+        title: 'Discord Bots',
+        description: 'Learn more about our Discord Bots!',
+        slug: '/discord-bots',
+        keywords: ['discord bots', 'discord', 'discord bot'],
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Corebot',
+          link: {
+            type: 'generated-index',
+            slug: '/discord-bots/corebot',
+          },
+          items: [
+            'discord-bots/corebot/setting-up-corebot'
+          ]
+        }
+      ]
+    },
+    {
+      type: 'category',
       label: 'Games',
       link: {
         type: 'doc',
