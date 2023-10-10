@@ -79,11 +79,11 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        title: 'Homepage',
+        title: 'Home',
         logo: {
           alt: 'Fragnet Logo',
           src: 'https://b-cdn.fragnet.net/images/logo.png',
-          href: 'https://fragnet.net',
+          href: 'https://docs.fragnet.net',
           target: '_self',
           style: {backgroundColor: '#242526'}
         },
