@@ -268,7 +268,7 @@ const sidebars = {
             'games/pathoftitans/add-player-role',
             'games/pathoftitans/admin-chat-commands',
             'games/pathoftitans/ban-player',
-            'games/pathoftitans/creating-whitelist',
+            'games/pathoftitans/create-whitelist',
             'games/pathoftitans/generate-auth-token',
             'games/pathoftitans/server-config-options',
             'games/pathoftitans/setup-mods'
