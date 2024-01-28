@@ -258,6 +258,24 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Path of Titans',
+          link: {
+            type: 'generated-index',
+            slug: '/games/pathoftitans',
+          },
+          items: [
+            'games/pathoftitans/add-admins-find-agid', 
+            'games/pathoftitans/add-player-role',
+            'games/pathoftitans/admin-chat-commands',
+            'games/pathoftitans/ban-player',
+            'games/pathoftitans/creating-whitelist',
+            'games/pathoftitans/generate-auth-token',
+            'games/pathoftitans/server-config-options',
+            'games/pathoftitans/setup-mods'
+          ]
+        },
+        {
+          type: 'category',
           label: 'Procon Layer',
           link: {
             type: 'generated-index',
