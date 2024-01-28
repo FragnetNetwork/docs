@@ -1,3 +1,8 @@
+---
+title: Configuration options for your Path of Titans server
+keywords: ['config options pot', 'config options path of titans']
+---
+
 # Configuration options for your Path of Titans server
 
 **Important Note:** The server must be stopped while editing server files. You must save your edits and restart your server for any edits to take effect.

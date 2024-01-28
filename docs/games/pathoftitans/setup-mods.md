@@ -1,3 +1,8 @@
+---
+title: Setting up Mods on your Path Of Titans server
+keywords: ['setup mods pot server', 'setup mods pot', 'pot server mods', 'path of titans mods setup', 'path of titans server mods setup', 'path of titans server mods']
+---
+
 # Setting up Mods on your Path Of Titans server
 
 In order to use a mod you must specify it in your **GameUserSettings.ini** file located in `PathOfTitans/Saved/Config/LinuxServer` directory which can be accessed via **File Manager**. If you are hosting a modded map, you must also change your server config settings to use the modded map name. 
