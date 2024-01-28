@@ -1,4 +1,9 @@
-# Changing MOTD on Left 4 Dead 2 server
+---
+title: Changing MOTD on your Left 4 Dead 2 server
+keywords: ['left 4 dead 2 motd', 'left 4 dead 2 create motd', 'left 4 dead 2 server motd']
+---
+
+# Changing MOTD on your Left 4 Dead 2 server
 MOTD or Message of the day is a small text that appears to players once they join the server.
 
 Banners can also be added, but we’ll cover this in a different guide.

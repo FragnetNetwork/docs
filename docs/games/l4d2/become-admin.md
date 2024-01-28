@@ -5,7 +5,7 @@ keywords: ['left 4 dead 2 admin', 'left 4 dead 2 admin setup', 'left 4 dead 2 ad
 
 1. Firstly, navigate to your **File Manager**. 
 
-![File Manager](images/file-manager.png)
+![File Manager](../images/file-manager.png)
 
 2. Then go to `left4dead2 => addons => sourcemod => configs => admins.cfg`.
 

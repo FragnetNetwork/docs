@@ -3,6 +3,8 @@ title: Adding SourceMod plugins to Left 4 Dead 2 server
 keywords: ['left 4 dead 2 sourcemod', 'left 4 dead 2 sourcemod plugins', 'left 4 dead 2 sourcemod plugins install', 'left 4 dead 2 sourcemod plugins installation', 'left 4 dead 2 sourcemod plugins setup', 'left 4 dead 2 sourcemod plugins setup']
 --- 
 
+# Adding SourceMod plugins to Left 4 Dead 2 server
+
 1. Firstly, you’ll need sourcemod installed, do check out our guide on how to install it if you need help.
 
 2. If you have sourcemod already installed, go to these sites to download the plugin you want.
@@ -13,11 +15,11 @@ keywords: ['left 4 dead 2 sourcemod', 'left 4 dead 2 sourcemod plugins', 'left 4
 
 3. Once you have chosen and downloaded the wanted plugin navigate to your **File Manager**, go to `left4dead2 => addons => sourcemod => plugins`.
 
-![File Manager](images/file-manager.png)
+![File Manager](../images/file-manager.png)
 
 4. Then upload the plugin in that directory by clicking on upload or just drag and dropping the file.
 
-![Upload Plugin](images/upload-plugin.png)
+![Upload Plugin](../images/upload.png)
 
 5. Once it has been uploaded, Start/Restart your server, and it has been installed.
 

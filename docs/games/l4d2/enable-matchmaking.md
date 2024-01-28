@@ -1,3 +1,8 @@
+---
+title: Enabling matchmaking on Left 4 Dead 2 server
+keywords: ['left 4 dead 2 matchmaking', 'left 4 dead 2 server matchmaking setup', 'left 4 dead 2 server matchmaking']
+---
+
 # Enabling matchmaking on Left 4 Dead 2 server
 By default, our servers aren't open to matchmaking, meaning no other players can join via the **Quick Match** option in the game.
 
@@ -7,7 +12,7 @@ If you wish to have a server that's available to that option, follow these steps
 
 2. Navigate to File Manager.
 
-![File Manager](images/file-manager.png)
+![File Manager](../images/file-manager.png)
 
 3. Go to ```left4dead2  /cfg / server.cfg```.
 
@@ -15,6 +20,8 @@ If you wish to have a server that's available to that option, follow these steps
 
 ![Steam Group](images/steamgroup.png)
 
-5. Once edited, press **Save Content** located in the lower right section of the window.
+5. Once edited, press **Save Content** located in the top right section of the window.
+
+![Save Content](../images/save-content.png)
 
 6. Start the server again, and now players can join your server via **Quick Match**.

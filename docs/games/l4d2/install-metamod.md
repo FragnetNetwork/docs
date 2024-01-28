@@ -1,4 +1,9 @@
-# Installing Metamod and Sourcemod on Left 4 Dead 2 server
+---
+title: Installing Metamod and Sourcemod on your Left 4 Dead 2 server
+keywords: ['Left 4 Dead 2 metamod', 'Left 4 Dead 2 sourcemod', 'Left 4 Dead 2 metamod install', 'Left 4 Dead 2 metamod setup', 'Left 4 Dead 2 sourcemod install', 'Left 4 Dead 2 sourcemod setup']
+---
+
+# Installing Metamod and Sourcemod on your Left 4 Dead 2 server
 Due to our Fragify game panel, installing both mods is straightforward.
 
 1. Navigate to the **Mods** tab.

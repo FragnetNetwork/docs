@@ -1,3 +1,8 @@
+---
+title: Finding your Steam64ID
+keywords: ['Steam64ID', 'find Steam64ID', 'get Steam64ID']
+---
+
 # Finding your Steam64ID
 1. Copy your steam profile link. 
 
