@@ -76,8 +76,20 @@ const sidebars = {
           items: [
             'discord-bots/corebot/setting-up-corebot'
           ]
+        },
+        {
+          type: 'category',
+          label: 'DiscordGSM',
+          link: {
+            type: 'generated-index',
+            slug: '/discord-bots/discodgsm',
+          },
+          items: [
+            'discord-bots/discordgsm/setting-up-discordgsm'
+          ]
         }
       ]
+
     },
     {
       type: 'category',
@@ -102,6 +114,19 @@ const sidebars = {
             'games/7dtd/edit-configuration', 
             'games/7dtd/upload-world',
             'games/7dtd/find-and-connect-to-server'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'ARK: Survival Evolved',
+          link: {
+            type: 'generated-index',
+            slug: '/games/ark',
+          },
+          items: [
+            'games/ark/become-admin', 
+            'games/ark/change-map', 
+            'games/ark/change-server-name'
           ]
         },
         {
@@ -146,21 +171,6 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Counter-Strike: Global Offensive',
-          link: {
-            type: 'generated-index',
-            slug: '/games/csgo',
-          },
-          items: [
-          'games/csgo/gotv', 
-          'games/csgo/meta-sourcemod', 
-          'games/csgo/find-steamid', 
-          'games/csgo/rcon-commands', 
-          'games/csgo/workshop-maps'
-          ]
-        },
-        {
-          type: 'category',
           label: 'DayZ',
           link: {
             type: 'generated-index',
@@ -168,7 +178,7 @@ const sidebars = {
           },
           items: [
             'games/dayz/add-mods', 
-            'games/dayz/adjust_configuration_files',
+            'games/dayz/adjust-basic-settings',
             'games/dayz/custom-commandline-dayz-server',
             'games/dayz/increase-item-spawns',
             'games/dayz/make-backup',
@@ -228,6 +238,22 @@ const sidebars = {
             'games/l4d2/kick-players',
             'games/l4d2/enable-matchmaking',
             'games/l4d2/set-rcon-password'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Minecraft',
+          link: {
+            type: 'generated-index',
+            slug: '/games/minecraft',
+          },
+          items: [
+            'games/minecraft/become-admin', 
+            'games/minecraft/create-whitelist',
+            'games/minecraft/install-modpack',
+            'games/minecraft/join-server',
+            'games/minecraft/switch-server-version',
+            'games/minecraft/upload-world'
           ]
         },
         {
