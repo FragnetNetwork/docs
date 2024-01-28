@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfragdocs=self.webpackChunkfragdocs||[]).push([[2201],{38195:s=>{s.exports=JSON.parse('{"title":"DayZ","slug":"/games/dayz","permalink":"/docs/games/dayz","navigation":{"previous":{"title":"Setting up Workshop Maps","permalink":"/docs/games/csgo/workshop-maps"},"next":{"title":"Adding mods","permalink":"/docs/games/dayz/add-mods"}}}')}}]);
