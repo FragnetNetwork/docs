@@ -1,3 +1,8 @@
+---
+title: Common problems on FS22 server
+keywords: ['fs22', 'fs22 docs', 'fs22 faq', 'fs22 frequently asked questions', 'fs22 server issues', 'fs22 server issue', 'fs22 server problems', 'fs22 server problem']
+---
+
 # Overview of common problems
 
 ## Unable to find my FS22 server
