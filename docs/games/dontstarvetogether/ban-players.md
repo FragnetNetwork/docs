@@ -1,4 +1,9 @@
-# Banning players on Don't Starve Together server
+---
+title: Banning players on your Don't Starve Together server 
+keywords: ['dont starve together', 'dont starve together ban', 'dont starve together ban player']
+---
+
+# Banning players on your Don't Starve Together server
 There are two ways to ban players.
 
 1. If the players are still present on the server, they can be banned via console commands.
@@ -24,12 +29,14 @@ It should look something like this:
 1. If the player isn’t online anymore, you can go to the server logs, search for the player's name and find their Klei ID.
 The server logs are located at `DoNotStarveTogether => config => server => Master => server_log.txt`.
 
-2. Now, we need to go to the directory where blocklist.txt is, and if it isn’t there, we need to create it. If **blocklist.txt** isn’t there, go ahead and click on **New File** in the upper right corner.
-![New File](images/new-file.png)
+2. Now, we need to go to the directory where blocklist.txt is, and if it isn’t there, we need to create it. If **blocklist.txt** isn’t there, go ahead and click on **New File** in the upper right corner. 
+
+![New File](../images/new-file.png)
 
 3. Paste the Klei ID you have acquired through the **server_log.txt**.
 
 4. Once done, click on **Create File** and type in the name **blocklist.txt**.  Exactly like that, it’s crucial.
+
 ![blocklist](images/blocklist.png)
 
 5. And press Create File again, Start/Restart your server and when the player connects, they will see this: ![Ban](images/banned.png)

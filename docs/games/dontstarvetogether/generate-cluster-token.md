@@ -1,3 +1,8 @@
+---
+title: Generating Cluster Token for your Don't Starve Together server
+keywords: ['dont starve together', 'dont starve together server token', 'dont starve together server cluster' , 'dont starve together server cluster token', ' generate token dont starve together', 'create token dont starve together', 'get token for dont starve together server']
+---
+
 # Generating Cluster Token for your Don't Starve Together server
 
 It is neccessary to generate a token for your server to run and to be accessible in-game. This guide will show you on how to proceed with setup of token for your Don't Starve Together server.

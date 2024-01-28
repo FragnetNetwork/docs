@@ -1,3 +1,8 @@
+---
+title: Assinging reserved slots on Don't Starve Together server
+keywords: ['dont starve together', 'dont starve together server', 'dont starve together server reversed slots' , 'dont starve together server whitelist slots']
+---
+
 # Assinging reserved slots on Don't Starve Together server
 In Don't Starve Together, a whitelist is called an **Allowlist** since it prioritizes players on the list and afterwards, allows other players who aren’t on the list to join.
 
@@ -21,11 +26,13 @@ Now that we have activated the whitelist option we need to create a whitelist.tx
 3. Lets get to creating a whitelist, go to `DoNotStarveTogether  => config => server`.
 
 4. Once there, click on the **New File** button located in the upper right corner.
-![New File](images/new-file.png)
+![New File](../images/new-file.png)
 
 5. Afterwards, insert the Klei IDs of the players that need the whitelist and then click on **Create File**. 
+
 ![Example Whitelist](images/whitelist-txt.png)
 It will prompt you for a name. It needs to be named **whitelist.txt** and click again on **Create File**.
+
 ![whitelist.txt](images/create-whitelist.png)
 
 Done! Don't forget to Start/Restart your server. The players located in the whitelist will have priority to other players connecting.

@@ -3,6 +3,7 @@ title: Adding Mods
 keywords: ['dont starve together', 'dont starve together mods', 'dont starve together adding mods']
 ---
 
+# Adding mods to your Don't Starve Together server
 
 1. Navigate to your **File Manager** on the Fragify game panel and open the **mods** folder, don't forget to stop your server.
 
@@ -39,7 +40,7 @@ Now we need to go and activate the mod and create a `modoverrides.lua`.
 
 3. Head over to `DoNotStarveTogether  => config  => server => Master` and click on **New File** located at the upper right part of the window.
 
-![New File](images/new-file.png)
+![New File](../images/new-file.png)
 
 4. Now Copy this text:
 ```

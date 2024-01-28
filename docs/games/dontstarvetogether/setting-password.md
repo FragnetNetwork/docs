@@ -1,4 +1,9 @@
-# Setting a password for Don't Starve Together server
+---
+title: Setting a password on your Don't Starve Together server
+keywords: ['dont starve together', 'dont starve together server', 'dont starve together server password' , 'dont starve together password']
+---
+
+# Setting a password on your Don't Starve Together server
 To make your server password protected, all that needs to be done is edit the **cluster.ini** file.
 
 ## Via Configuration options
@@ -20,7 +25,8 @@ cluster_password =
 ```
 
 3. Once added, click on **Save Content** located in the lower right corner. 
-![Save Contnet](images/save-content.png)
+
+![Save Contnet](../images/save-content.png)
 
 5. Start/Restart your server.
 

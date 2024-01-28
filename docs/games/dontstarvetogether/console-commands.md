@@ -1,3 +1,8 @@
+---
+title: Console commands for Don't Starve Together 
+keywords: ['dont starve together', 'dont starve together console', 'dont starve together console commands']
+---
+
 # Console commands for Don't Starve Together
 First off, let's learn how to open the console.
 

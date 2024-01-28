@@ -1,3 +1,8 @@
+---
+title: Configuring PVP on your Don't Starve Together server 
+keywords: ['dont starve together', 'dont starve together pvp', 'dont starve together enable pvp']
+---
+
 # Configuring PvP on Don't Starve Together server
 
 1. To edit the PvP setting for your server head over to `DoNotStarveTogether => config => server => cluster.ini`.
@@ -13,6 +18,6 @@ In this instance I have enabled the PvP, if you want to disable it type in `fals
 
 3. Once done click on **Save Content**. 
 
-![Save Content](images/save-content.png)
+![Save Content](../images/save-content.png)
 
 4. Start/Restart your server and you’re done. The change has been applied to the server.
