@@ -3,27 +3,29 @@ title: Increase Item Spawns
 keywords: ['dayz', 'dayz loot', 'dayz loot table', 'dayz item spawns', 'dayz item spawn', 'dayz item spawn amount', 'dayz item spawn amount change']
 ---
 
+# Increasing spawn rates for items on your DayZ server
+
 Making changes to the drop loot table can be tricky, but once you are able to understand its functions and purpose, you will be able to ninja add new items in notime. This guide will help you going trough the process of applying changes to the dayz loot table.
 
 
 ## Where to Start?
 
 
-Firstly, you have to know what you would like to change. In this guide, we are going to increase the amount of spawns for the item "shovel". To edit the amount of a select item that spawns on the map, you will have to open up the "types.xml" file.
+Firstly, you have to know what you would like to change. In this guide, we are going to increase the amount of spawns for the item "shovel". To edit the amount of a select item that spawns on the map, you will have to open up the **types.xml** file.
 
   
 
 - Navigate to your [Gamepanel](VAR::OLD_PANEL_URL).
 
-- Now from the dashboard, on the left-hand side, go to `File Manager > mpmissions >dayzOffline.chernarusplus > db`
+- Now from the dashboard, on the left-hand side, go to `File Manager > mpmissions > dayzOffline.chernarusplus (or any other mission that you would like to use) > db`
 
-- Now click on and open your **"types.xml"**
+- Now click on and open your **"types.xml"**. 
+
+> We advise to make a backup of this file before editing, so the changes can be reversed. 
 
 ----------
 
 ### Item Values
-
-  
 
 - Once inside the file, you will notice a lot of coding and itemnames. These are all the items that you can find ingame. They are preset and defined depending on their locations.
 
@@ -60,4 +62,6 @@ text means, it would mean that we have to edit the "min" option.
 Go back to our game panel and restart your server. 
 Success! You just changed the amount of spawns on your server for the shovel! You should be good to go.
 
-If there would be any questions, we are happy to help you out on our official discord channel!
+> If you want a bit easier way to edit **types.xml** file, you can upload to here: https://dzsa.tools/ and adjust the rates to your preferences. Afterwards, you can reupload it back to the same directory. 
+
+If there would be any questions, we are happy to help you out on our official Discord channel!
