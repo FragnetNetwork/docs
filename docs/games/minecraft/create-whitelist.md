@@ -7,7 +7,7 @@ keywords: ['minecraft server', 'minecraft whitelist', 'minecraft server whitelis
 
 You can use whitelist function of your Minecraft server to allow only whitelisted players to join your server.
 
-1. Login to [your Fragify panel account]((VAR::FRAGIFY_URL)) and select your server. 
+1. Login to [your Fragify panel account](VAR::FRAGIFY_URL) and select your server. 
 
 2. Navigate to **Configure** option on the left-side menu and look for **Whitelist** under `Base Settings`. You will need to enable it. 
 

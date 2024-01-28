@@ -7,7 +7,7 @@ keywords: ['minecraft server', 'minecraft add admin', 'minecraft add op', 'minec
 
 You can grant OP permission to players using the Fragify panel console or via an in-game command by the user who is already an operator. 
 
-1. Login to [your Fragify panel account]((VAR::FRAGIFY_URL)) and select your server. 
+1. Login to [your Fragify panel account](VAR::FRAGIFY_URL) and select your server. 
 
 2. Start your server, and once it is running, you can run in **Console** the following command:
 ```

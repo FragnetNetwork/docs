@@ -7,7 +7,7 @@ keywords: ['minecraft server', 'minecraft server world', 'minecraft world upload
 
 First of all, please ensure that your server runs the same modpack and version of Minecraft as your local world. 
 
-1. Login to [your Fragify panel account]((VAR::FRAGIFY_URL)) and select your server. 
+1. Login to [your Fragify panel account](VAR::FRAGIFY_URL) and select your server. 
 
 2. You will need to go to the folder where your world is located. The world folder usually will consist of `data, DIM1, DIM-1, region, leve.dat` files. Select all files by using shortcut on your keyboard **CTRL+A** and right-click to see menu with options. If you use Windows 11, you will see an option **Compress to ZIP file** which you can use.
 
