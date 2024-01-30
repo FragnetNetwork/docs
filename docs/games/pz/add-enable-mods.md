@@ -1,6 +1,6 @@
 ---
 title: Adding and enabling mods on your Project Zomboid server
-keywords: ['project zomboid mods', 'project zomboid server mods', 'project zomboid server setup mods, 'project zomboid server enable mods']
+keywords: ['project zomboid mods', 'project zomboid server mods', 'project zomboid server setup mods', 'project zomboid server enable mods']
 ---
 
 # Adding and enabling mods on your Project Zomboid server
