@@ -288,6 +288,21 @@ const sidebars = {
             'games/proconlayer/troubleshoot-procon'
           ]
         },
+        {
+          type: 'category',
+          label: 'Project Zomboid',
+          link: {
+            type: 'generated-index',
+            slug: '/games/pz',
+          },
+          items: [
+            'games/pz/add-admin', 
+            'games/pz/add-enable-mods',
+            'games/pz/create-whitelist',
+            'games/pz/upload-world',
+            'games/pz/connect-to-server'
+          ]
+        }
       ]
     },
     {
