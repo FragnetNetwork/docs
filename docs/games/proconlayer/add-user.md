@@ -1,4 +1,9 @@
-# Adding users in Procon layer
+---
+title: Adding users to your Procon layer
+keywords: ['procon layer add users', 'procon layer setup users', 'procon layer']
+---
+
+# Adding users to your Procon layer
 
 You can easily add another user and give him access to the Procon Layer and the server.
 

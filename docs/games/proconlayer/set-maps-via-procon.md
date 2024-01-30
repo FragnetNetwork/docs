@@ -1,3 +1,8 @@
+---
+title: Setting up Maplist via Procon
+keywords: ['procon layer setup maplist', 'procon layer maplist', 'procon layer']
+---
+
 # Setting up Maplist via Procon
 
 You can configure the maplist for your Battlefield server via Procon, in a rather easy way.
