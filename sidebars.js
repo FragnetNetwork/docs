@@ -321,6 +321,23 @@ const sidebars = {
             'games/rust/pair-server-with-rust-plus-app',
             'games/rust/rust-wipe'
           ]
+        },
+        {
+          type: 'category',
+          label: 'Satisfactory',
+          link: {
+            type: 'generated-index',
+            slug: '/games/satisfactory',
+          },
+          items: [
+            'games/satisfactory/access-in-game-console', 
+            'games/satisfactory/change-name-of-server',
+            'games/satisfactory/change-starting-area',
+            'games/satisfactory/claim-and-join-satisfactory-server',
+            'games/satisfactory/set-admin-password',
+            'games/satisfactory/switch-to-experimental',	
+            'games/satisfactory/this-server-offline-solution'
+          ]
         }
       ]
     },
