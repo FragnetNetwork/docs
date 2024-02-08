@@ -302,6 +302,25 @@ const sidebars = {
             'games/pz/upload-world',
             'games/pz/connect-to-server'
           ]
+        },
+        {
+          type: 'category',
+          label: 'Rust',
+          link: {
+            type: 'generated-index',
+            slug: '/games/rust',
+          },
+          items: [
+            'games/rust/adding-admins', 
+            'games/rust/change-server-name',
+            'games/rust/connecting-to-server',
+            'games/rust/header-and-server-description',
+            'games/rust/install-oxide-and-umod-plugins',
+            'games/rust/installing-rustio',	
+            'games/rust/load-custom-map',
+            'games/rust/pair-server-with-rust-plus-app',
+            'games/rust/rust-wipe'
+          ]
         }
       ]
     },
