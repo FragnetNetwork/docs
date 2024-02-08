@@ -1,5 +1,5 @@
 ---
-title: Installing Rust:IO on your RUST server
+title: Installing RustIO on your RUST server
 keywords: ['rust server rustio', 'rust server setup rustio', 'rust server install rustio']
 ---
 
@@ -17,7 +17,7 @@ Adding Rust:IO to your server:
 
 ![File Manager](../images/file-manager.png)
 
-*   Make sure that **uMod/OxideMod** is installed, if not follow instructions from [here](install-oxide.md). It is important as it is a requirement for Rust:IO.
+*   Make sure that **uMod/OxideMod** is installed, if not follow instructions from [here](install-oxide-and-umod-plugins.md). It is important as it is a requirement for Rust:IO.
 
 *   Download `Oxide.Ext.RustIO.dll` from http://playrust.io/latest .
 

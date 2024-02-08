@@ -13,7 +13,7 @@ Google Play link: https://play.google.com/store/apps/details?id=com.facepunch.ru
 
 AppStore link: https://apps.apple.com/us/app/rust/id1487691681
 
-2\. Open the game and join your Rust server. If you cannot join your server, you can check our guide [here](How_to_connect_to_your_server.md).
+2\. Open the game and join your Rust server. If you cannot join your server, you can check our guide [here](connecting-to-server.md).
 
 3\. Press the **ESC** key, and you will need to select the **Rust+** option from the menu. 
 
