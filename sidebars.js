@@ -378,7 +378,8 @@ const sidebars = {
         'FAQ/change-server-location',
         'FAQ/manage-server-files-via-ftp',
         'FAQ/setup-time',
-        'FAQ/upgrade-downgrade-server'		
+        'FAQ/upgrade-downgrade-server',
+        'FAQ/perform-winmtr'		
       ]
     },
   ]
