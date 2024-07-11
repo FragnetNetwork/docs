@@ -15,6 +15,31 @@ const sidebars = {
       },
       items: [
         'fragify/intro',
+        {
+          type: 'category',
+          label: 'API',
+          link: {
+            type: 'doc',
+            id: 'fragify/api/index',
+          },
+          items: [
+            'fragify/api/generating-an-api-key',
+            {
+              type: 'category',
+              label: 'Server',
+              link: {
+                type: 'generated-index',
+                slug: '/api/server',
+              },
+              items: [
+                'fragify/api/server/retrieving-server-resources',
+                'fragify/api/server/websocket',
+                'fragify/api/server/sending-a-command',
+                'fragify/api/server/power-actions',
+              ]
+            },
+          ],
+        },
         'fragify/basics',
         'fragify/changelog',
         'fragify/file-manager',
