@@ -21,18 +21,20 @@ This will be a guide on how you can add admin to your [7 Days To Die](https://fr
 
 **Step 6:** Go back to the config file and search for the section:
 ```
-<admins>
-</admins>
+<adminTools>
+  <users>
+  </users>
 ```
 Insert the following line:
 ```
-<!-- <admin steamID="yourSteam64ID" permission_level="0" /> -->
+<user platform="Steam" userid="76561198021925107" name="yourNickname" permission_level="0" />
 ``` 
-between `<admins>` and `</admins>` and paste your Steam64 ID in `steamID=`.
+between `<users>` and `</users>` and paste your Steam64 ID in `userID=`.
 Example:
 ```
-<admins>
-    <user steamID="76561198021925107" permission_level="0" />
-</admins>
+<adminTools>
+  <users>
+    <user platform="Steam" userid="76561198021925107" name="yourNickname" permission_level="0" />
+  </users>
 ```
 **Step 7:** Start the server.
