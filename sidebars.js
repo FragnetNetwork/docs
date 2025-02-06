@@ -343,6 +343,7 @@ const sidebars = {
             'games/rust/install-oxide-and-umod-plugins',
             'games/rust/installing-rustio',	
             'games/rust/load-custom-map',
+            'games/rust/primitive-gamemode',
             'games/rust/pair-server-with-rust-plus-app',
             'games/rust/rust-wipe'
           ]
