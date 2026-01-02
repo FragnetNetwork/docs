@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes } = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 // Custom variable injector for remark
 const variableInjector = require('./src/remark/variable-injector');
@@ -18,7 +19,12 @@ const config = {
   projectName: 'docs',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -26,7 +32,7 @@ const config = {
   },
   
   plugins: [
-    'plugin-image-zoom'
+    'docusaurus-plugin-zooming'
   ],
 
   presets: [
@@ -175,7 +181,7 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Fragnet Networks International AB. 🛠️ with Docusaurus.`,
       },
-      imageZoom: {
+      zooming: {
         selector: '.markdown img',
         options: {
           margin: 24,
