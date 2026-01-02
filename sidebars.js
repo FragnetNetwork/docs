@@ -233,13 +233,13 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Farming Simulator 22',
+          label: 'Farming Simulator 2022',
           link: {
             type: 'generated-index',
             slug: '/games/fs22',
           },
           items: [
-            'games/fs22/become-admin', 
+            'games/fs22/become-admin',
             'games/fs22/find-server',
             'games/fs22/overview-of-common-issues',
             'games/fs22/fs22-faq',
@@ -247,6 +247,18 @@ const sidebars = {
             'games/fs22/installing-mods',
             'games/fs22/upload-savegame',
             'games/fs22/upgrade-server'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Farming Simulator 2025',
+          link: {
+            type: 'generated-index',
+            slug: '/games/fs25',
+          },
+          items: [
+            'games/fs25/become-admin',
+            'games/fs25/upload-local-savegame'
           ]
         },
         {
