@@ -58,14 +58,14 @@ It will look approximately like this:
       "scenarios": [
          {
             "name": "name of scenario",
-            "gameId": "{FGWZH7WSY6F7P45J}Missions/MissionHeader_1.conf"
+            "gameId": "\{FGWZH7WSY6F7P45J\}Missions/MissionHeader_1.conf"
          }
       ],
       "downloaded": true
    }
 }
 ```
-In this case, you will need to copy value of gameId which is in the example **{FGWZH7WSY6F7P45J}Missions/MissionHeader_1.conf** and paste in **Scenario ID** which can be found on Fragify panel in **"Settings"** option.
+In this case, you will need to copy value of gameId which is in the example `{FGWZH7WSY6F7P45J}Missions/MissionHeader_1.conf` and paste in **Scenario ID** which can be found on Fragify panel in **"Settings"** option.
 Note that you need to restart server for the changes to be applied.
 
 **MODS UPDATE**

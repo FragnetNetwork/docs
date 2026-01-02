@@ -19,18 +19,20 @@ Admins
 
 4. Now you need to input your info in this format:
 
-  "PlayerNickname" 
-  { 
+```
+  "PlayerNickname"
+  {
 
-   "auth"  "steam" 
+   "auth"  "steam"
 
-   "identity"  "insert_players_steamID" 
+   "identity"  "insert_players_steamID"
 
-    "flags"  "z" 
+    "flags"  "z"
 
-    "immunity"  "99" 
+    "immunity"  "99"
 
   }
+```
 
 In the end, it should look something like this:
 ```
