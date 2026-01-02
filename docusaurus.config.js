@@ -78,12 +78,12 @@ const config = {
         respectPrefersColorScheme: false,
       },
       announcementBar: {
-        id: 'notification',
+        id: 'contribute',
         content:
-          'We are working to revamp our docs and some games and guides may be missing!',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
-        isCloseable: false,
+          'Help improve our docs and earn platform credits! <a href="/contributing">Learn how to contribute</a>',
+        backgroundColor: '#E53600',
+        textColor: '#ffffff',
+        isCloseable: true,
       },
       navbar: {
         title: 'Home',
