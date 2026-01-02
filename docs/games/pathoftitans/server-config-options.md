@@ -9,7 +9,7 @@ keywords: ['config options pot', 'config options path of titans']
 
 To change the configuration options, you must edit your `Game.ini` file.
 
-The file is located in following directory: `PathOfTitans/Saved/Config/LinuxServer/` which can be accessed via **File Manager** on the [Fragify panel](VAR::FRAGIFY_URL).
+The file is located in following directory: `PathOfTitans/Saved/Config/LinuxServer/` which can be accessed via **File Manager** on the [Fragify panel](VAR::PANEL_URL).
 
 **Note:** Each option must be on its own line or else they will not work.
 

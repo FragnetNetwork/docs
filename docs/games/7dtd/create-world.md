@@ -3,7 +3,7 @@ title: Creating a new world
 keywords: ['create 7dtd world', 'create 7 days to die world', 'create 7 days to die server world', 'create 7dtd server world', '7dtd world', '7 days to die world', '7 days to die server world', '7dtd server world']
 ---
 
-**Step 1:** Log in to your account on our [Fragify panel](VAR::FRAGIFY_URL) and find your 7 Days To Die server.  
+**Step 1:** Log in to your account on our [Fragify panel](VAR::PANEL_URL) and find your 7 Days To Die server.  
 **Step 2:** Navigate to **Configure** and find the **Game World** variable. Set it to any world you would like the server to load. You can also switch **World Gen Size**, **World Seed**, and **Game Name**.
 
 ![Configure](../images/configure.png)

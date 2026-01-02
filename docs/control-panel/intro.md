@@ -2,15 +2,15 @@
 sidebar_position: 1
 ---
 
-# What is Fragify?
+# What is the Game Control Panel?
 
-Let's discover **Fragify in less than 5 minutes**.
+Let's discover **the Game Control Panel in less than 5 minutes**.
 
 ## Behind the panel
 
-Fragify is a custom fork of [Pterodactyl](https://pterodactyl.io/), an open-source game server management panel.
+The Game Control Panel (Fragify) is a custom fork of [Pterodactyl](https://pterodactyl.io/), an open-source game server management panel.
 
-### What features does Fragify offer?
+### What features does the Game Control Panel offer?
 
 <u>By default, all servers get access to:</u>
 

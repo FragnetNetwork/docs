@@ -8,7 +8,7 @@ To make your server password protected, all that needs to be done is edit the **
 
 ## Via Configuration options
 
-1. Login to your [Fragify panel](VAR::FRAGIFY_URL) and select Don't Starve Together server. Select Configure tab and you can set password in **Cluster Settings**.
+1. Login to your [Fragify panel](VAR::PANEL_URL) and select Don't Starve Together server. Select Configure tab and you can set password in **Cluster Settings**.
 ![](images/cluster-password.png)
 
 2. Restart the server for the changes to be applied.

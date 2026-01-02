@@ -15,7 +15,7 @@ Please note that after you click "Generate New Token", the page will not display
 
 ![](https://cdn.discordapp.com/attachments/193204194117681154/922895541623488522/unknown.png)
 
-2. Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your Path of Titans server.
+2. Login to the [Fragify panel](VAR::PANEL_URL) and select your Path of Titans server.
 
 3. Go to **Configure** option on the left-side menu and paste your token under `Base Settings` in **Alderon Auth Token** variable.
 

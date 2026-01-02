@@ -5,7 +5,7 @@ keywords: ['map ark survival server', 'change map ark','map switch ark', 'ark se
 # Changing map on ARK server
 You can easily change the map on your server by following the next steps:
 
-**Step 1:**  Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your ARK server.
+**Step 1:**  Login to the [Fragify panel](VAR::PANEL_URL) and select your ARK server.
 
 **Step 2:** Navigate to the **Configure** option on the left-side menu.
 

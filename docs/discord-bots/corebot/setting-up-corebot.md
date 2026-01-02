@@ -72,7 +72,7 @@ You will now need to verify your purchase with the Corebot team in order to rece
 ## Configuring your bot
 You should now have a license key and a zip file containing the Corebot files. Let's start installing them!
 
-Navigate to your Fragify's server [File Manager](../../fragify/file-manager.md) and upload the zip file by dragging it into the file manager or using the "Upload" button.
+Navigate to your server's [File Manager](../../control-panel/file-manager.md) and upload the zip file by dragging it into the file manager or using the "Upload" button.
 
 Then extract the zip file by clicking on the **Unarchive** button.
 ![Unarchive Button](images/file-manager.png)

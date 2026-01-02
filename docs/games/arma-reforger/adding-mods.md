@@ -20,7 +20,7 @@ If you would like to download mods to your server, you can follow next steps:
    }
 }
 ```
-**Step 4:** Login to your account on [Fragify panel](VAR::FRAGIFY_URL) and select your Arma Reforger server
+**Step 4:** Login to your account on [Fragify panel](VAR::PANEL_URL) and select your Arma Reforger server
 
 **Step 5:** Navigate to **File Manager** on the left-side menu
 

@@ -7,7 +7,7 @@ This will be a guide on how you can add admin to your [7 Days To Die](https://fr
 
 ## Adding admin through the config file
 
-**Step 1:** Log in to your account on our [Fragify panel](VAR::FRAGIFY_URL) and find your 7 Days To Die server.
+**Step 1:** Log in to your account on our [Fragify panel](VAR::PANEL_URL) and find your 7 Days To Die server.
 
 **Step 2:** Before making any changes, you will first need to stop your server.  
 

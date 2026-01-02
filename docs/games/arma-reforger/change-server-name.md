@@ -5,7 +5,7 @@ keywords: ['change arma reforger server name', 'change arma reforger server name
 
 To change Arma Reforger's server name, you will need to proceed with the following steps:
 
-**Step 1:** Login to your account on [Fragify panel](VAR::FRAGIFY_URL) and select your Arma Reforger server.
+**Step 1:** Login to your account on [Fragify panel](VAR::PANEL_URL) and select your Arma Reforger server.
 
 **Step 2:** Go to **Configure** option on the left-side menu.
 

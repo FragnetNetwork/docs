@@ -7,7 +7,7 @@ In case you want to add an admin password that you can use to identify as the ow
 
 
 ## Setting Admin Password
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your ARK server.
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your ARK server.
 
 **Step 2:** Navigate to the **Configure** option on the left side menu.
 

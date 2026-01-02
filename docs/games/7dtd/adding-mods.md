@@ -5,7 +5,7 @@ keywords: ['7dtd mods', '7 days to die mods', '7 days to die server mods', '7dtd
 
 To begin with, you will need to follow the next steps to implement mods on your server.
 
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your 7 Days to Die server. 
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your 7 Days to Die server. 
 
 **Step 2:** You will find a section named **File Manager** on the left-side menu and click on it.
 

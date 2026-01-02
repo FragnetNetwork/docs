@@ -21,7 +21,7 @@ First, you will need to know Alderon Games ID to add yourself or any other playe
 ## Adding AGID of admins to Game.ini
 You can add or remove admins by using the following steps:
 
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your Path of Titans server.
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your Path of Titans server.
 
 **Step 2:** Ensure that the server is stopped and navigate to **File Manager** on the left side menu. 
 

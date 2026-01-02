@@ -5,7 +5,7 @@ keywords: ['server name ark', 'changing ark server name', 'name of the server ar
 # Change ARK server's name
 To change the name of your server, follow the next steps.
 
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your ARK server.
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your ARK server.
 
 **Step 2:** You will see on the left side several sections you are looking for **Configure** option.
 

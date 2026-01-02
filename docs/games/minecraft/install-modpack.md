@@ -5,7 +5,7 @@ keywords: ['minecraft server', 'minecraft add mod', 'minecraft add modpack', 'mi
 
 # Adding modpack to your Minecraft server
 
-You can easily install modpacks on your Minecraft server in [Fragify panel](VAR::FRAGIFY_URL).
+You can easily install modpacks on your Minecraft server in [Fragify panel](VAR::PANEL_URL).
 
 1. Login to your account and navigate to your server. You should see options on the left-side menu, and one of them will be **Modpacks** under the `Tools` section. 
 

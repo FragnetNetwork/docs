@@ -11,7 +11,7 @@ keywords: ['7dtd upload world', '7 days to die upload world', '7 days to die ser
 ![Saves](images/saves.png)
 ![GeneratedWorlds](images/generated-worlds.png)
 
-3. Login to your [Fragify Panel](VAR::FRAGIFY_URL) and select your 7 Days To Die server.
+3. Login to your [Fragify Panel](VAR::PANEL_URL) and select your 7 Days To Die server.
 
 4. Navigate to **File Manager** on the left-side menu and go to `.local/share/7DaysToDie/`.  
 ![File Manager](../images/file-manager.png)

@@ -8,7 +8,7 @@ To create a backup, follow the next steps:
 
 ## Create a backup of myserverconfig.xml
 
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your 7 Days to Die server. 
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your 7 Days to Die server. 
 
 **Step 2:** Go to **File Manager**  
 

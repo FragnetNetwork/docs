@@ -28,7 +28,7 @@ Name the bot and agree to the Terms of Service. Afterwards, click on the **Creat
 
 ![Reset Token](images/reset-token.png)
 
-3. Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your DiscordGSM server.
+3. Login to the [Fragify panel](VAR::PANEL_URL) and select your DiscordGSM server.
 
 4. Go to **Configure** option on the left-side menu and paste your token in **Discord Bot Token**.
 

@@ -7,7 +7,7 @@ keywords: ['minecraft server', 'minecraft server version switch', 'minecraft ser
 
 With the help of our panel, you can switch between different Minecraft versions easily. 
 
-1. Login to [your Fragify panel account](VAR::FRAGIFY_URL) and select your server. 
+1. Login to [your Fragify panel account](VAR::PANEL_URL) and select your server. 
 
 > We recommend making a backup of your Minecraft server before switching to another version.
 

@@ -11,7 +11,7 @@ There are 2 ways of banning/unbanning players on the server which are done by ed
 
 # Ban with bans.txt file
 
-**Step 1:** Login to the [Fragify panel](VAR::FRAGIFY_URL) and select your Path of Titans server.
+**Step 1:** Login to the [Fragify panel](VAR::PANEL_URL) and select your Path of Titans server.
 
 **Step 2:** Go to **File Manager** on the left-side menu. Navigate to the following directory: `PathOfTitans/Saved/` and you will need to click on **bans.txt** file to edit it.
 

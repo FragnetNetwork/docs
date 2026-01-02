@@ -7,7 +7,7 @@ This guide will show you 2 ways to connect to your 7 Days To Die server.
 
 ## Via Direct Connect
 
-1. Before attempting to connect  to your server,  you will need to find the server's IP address". The IP address can be found by going to your [Fragify panel](VAR::FRAGIFY_URL) and selecting 7 Days to Die server. On the console page, you will see IP address on which you can click on to copy it on the clipboard. 
+1. Before attempting to connect  to your server,  you will need to find the server's IP address". The IP address can be found by going to your [Fragify panel](VAR::PANEL_URL) and selecting 7 Days to Die server. On the console page, you will see IP address on which you can click on to copy it on the clipboard. 
 
 ![IP address](images/ip.png)
 

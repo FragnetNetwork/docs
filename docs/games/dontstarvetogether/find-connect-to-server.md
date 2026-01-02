@@ -9,7 +9,7 @@ This guide will show you 2 ways to connect to your Don't Starve Together server.
 
 ## Via Direct Connect
 
-1. Before attempting to connect  to your server,  you will need to find the server's IP address". The IP address can be found by going to your [Fragify panel](VAR::FRAGIFY_URL) and selecting Don't Starve Together server. On the console page, you will see IP address on which you can click on to copy it on the clipboard. The password can be found in `Configure` => `Cluster Settings` => **Cluser Password**.
+1. Before attempting to connect  to your server,  you will need to find the server's IP address". The IP address can be found by going to your [Fragify panel](VAR::PANEL_URL) and selecting Don't Starve Together server. On the console page, you will see IP address on which you can click on to copy it on the clipboard. The password can be found in `Configure` => `Cluster Settings` => **Cluser Password**.
 ![Cluster Password](images/cluster-password.png)
 
 2. Launch the game and press tilde meg (***~***) on your keyboard for the console to appear.  

@@ -8,7 +8,7 @@ keywords: ['minecraft server', 'minecraft server', 'minecraft server connect', '
 You can join your server via Direct Connection or by Adding it in-game. 
 > Please note that you need to have the same version of your client-side Minecraft as your server's version. 
 
-1. Login to [your Fragify panel account](VAR::FRAGIFY_URL) and select your server. 
+1. Login to [your Fragify panel account](VAR::PANEL_URL) and select your server. 
 
 2. You should see your server's IP address and port under your server's name.
 

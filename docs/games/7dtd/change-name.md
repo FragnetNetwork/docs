@@ -5,7 +5,7 @@ keywords: ['change 7dtd server name', 'change 7 days to die server name', 'chang
 
 This will be a guide on how you can change the name of your server.
   
-**Step 1:** Log in to your account on our [Fragify panel](VAR::FRAGIFY_URL) and find your 7 Days To Die server.
+**Step 1:** Log in to your account on our [Fragify panel](VAR::PANEL_URL) and find your 7 Days To Die server.
 
 **Step 2:** Go to **Configure** on the left-side menu.  
 

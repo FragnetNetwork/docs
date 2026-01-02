@@ -3,27 +3,29 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   docs: [
+    'intro',
+    'contributing',
     {
       type: 'category',
-      label: 'Fragify',
+      label: 'Game Control Panel',
       link: {
         type: 'generated-index',
-        title: 'Getting Started With Fragify',
-        description: 'Learn more about Fragify!',
-        slug: '/fragify',
-        keywords: ['getting started', 'fragify', 'fragify docs'],
+        title: 'Getting Started With the Game Control Panel',
+        description: 'Learn more about the Game Control Panel (Fragify)!',
+        slug: '/control-panel',
+        keywords: ['getting started', 'fragify', 'control panel', 'game panel'],
       },
       items: [
-        'fragify/intro',
+        'control-panel/intro',
         {
           type: 'category',
           label: 'API',
           link: {
             type: 'doc',
-            id: 'fragify/api/index',
+            id: 'control-panel/api/index',
           },
           items: [
-            'fragify/api/generating-an-api-key',
+            'control-panel/api/generating-an-api-key',
             {
               type: 'category',
               label: 'Server',
@@ -32,30 +34,30 @@ const sidebars = {
                 slug: '/api/server',
               },
               items: [
-                'fragify/api/server/retrieving-server-resources',
-                'fragify/api/server/websocket',
-                'fragify/api/server/sending-a-command',
-                'fragify/api/server/power-actions',
+                'control-panel/api/server/retrieving-server-resources',
+                'control-panel/api/server/websocket',
+                'control-panel/api/server/sending-a-command',
+                'control-panel/api/server/power-actions',
               ]
             },
           ],
         },
-        'fragify/basics',
-        'fragify/changelog',
-        'fragify/file-manager',
+        'control-panel/basics',
+        'control-panel/changelog',
+        'control-panel/file-manager',
         {
           type: 'category',
           label: 'Scheduled Tasks',
           link: {
             type: 'doc',
-            id: 'fragify/schedules/index',
+            id: 'control-panel/schedules/index',
           },
           items: [
-            'fragify/schedules/creating-a-schedule',
-            'fragify/schedules/creating-a-task',
-            'fragify/schedules/editing-a-task',
-            'fragify/schedules/editing-a-schedule',
-            'fragify/schedules/running-a-schedule',
+            'control-panel/schedules/creating-a-schedule',
+            'control-panel/schedules/creating-a-task',
+            'control-panel/schedules/editing-a-task',
+            'control-panel/schedules/editing-a-schedule',
+            'control-panel/schedules/running-a-schedule',
           ]
         },
         {
@@ -63,59 +65,59 @@ const sidebars = {
           label: 'Backups',
           link: {
             type: 'doc',
-            id: 'fragify/backups/index',
+            id: 'control-panel/backups/index',
           },
           items: [
-            'fragify/backups/creating-a-backup',
-            'fragify/backups/downloading-a-backup',
-            'fragify/backups/locking-a-backup',
-            'fragify/backups/restoring-a-backup',
-            'fragify/backups/deleting-a-backup',
+            'control-panel/backups/creating-a-backup',
+            'control-panel/backups/downloading-a-backup',
+            'control-panel/backups/locking-a-backup',
+            'control-panel/backups/restoring-a-backup',
+            'control-panel/backups/deleting-a-backup',
           ]
         },
-        'fragify/subusers',
-        'fragify/subdomains',
-        'fragify/databases',
-        'fragify/crash-alerts',
-        'fragify/2fa'
+        'control-panel/subusers',
+        'control-panel/subdomains',
+        'control-panel/databases',
+        'control-panel/crash-alerts',
+        'control-panel/2fa'
       ],
     },
-    {
-      type: 'category',
-      label: 'Discord Bots',
-      link: {
-        type: 'generated-index',
-        title: 'Discord Bots',
-        description: 'Learn more about our Discord Bots!',
-        slug: '/discord-bots',
-        keywords: ['discord bots', 'discord', 'discord bot'],
-      },
-      items: [
-        {
-          type: 'category',
-          label: 'Corebot',
-          link: {
-            type: 'generated-index',
-            slug: '/discord-bots/corebot',
-          },
-          items: [
-            'discord-bots/corebot/setting-up-corebot'
-          ]
-        },
-        {
-          type: 'category',
-          label: 'DiscordGSM',
-          link: {
-            type: 'generated-index',
-            slug: '/discord-bots/discodgsm',
-          },
-          items: [
-            'discord-bots/discordgsm/setting-up-discordgsm'
-          ]
-        }
-      ]
-
-    },
+    // Discord Bots section hidden - service not currently offered
+    // {
+    //   type: 'category',
+    //   label: 'Discord Bots',
+    //   link: {
+    //     type: 'generated-index',
+    //     title: 'Discord Bots',
+    //     description: 'Learn more about our Discord Bots!',
+    //     slug: '/discord-bots',
+    //     keywords: ['discord bots', 'discord', 'discord bot'],
+    //   },
+    //   items: [
+    //     {
+    //       type: 'category',
+    //       label: 'Corebot',
+    //       link: {
+    //         type: 'generated-index',
+    //         slug: '/discord-bots/corebot',
+    //       },
+    //       items: [
+    //         'discord-bots/corebot/setting-up-corebot'
+    //       ]
+    //     },
+    //     {
+    //       type: 'category',
+    //       label: 'DiscordGSM',
+    //       link: {
+    //         type: 'generated-index',
+    //         slug: '/discord-bots/discodgsm',
+    //       },
+    //       items: [
+    //         'discord-bots/discordgsm/setting-up-discordgsm'
+    //       ]
+    //     }
+    //   ]
+    // },
     {
       type: 'category',
       label: 'Games',

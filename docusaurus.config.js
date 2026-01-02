@@ -41,13 +41,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/FragnetNetwork/docs/tree/main/',
           remarkPlugins: [
             [variableInjector, {
               replacements: {
-                'FRAGIFY_URL': 'https://beta.fragify.net',
+                'PANEL_URL': 'https://beta.fragify.net',
                 'OLD_PANEL_URL': 'https://gamepanel.fragnet.net',
                 'BILLING_URL': 'https://clients.fragnet.net',
                 'CDN_URL': 'https://cdn.fragify.net',
@@ -89,35 +90,37 @@ const config = {
         logo: {
           alt: 'Fragnet Logo',
           src: 'https://b-cdn.fragnet.net/images/logo.png',
-          href: 'https://docs.fragnet.net',
           target: '_self',
           style: {backgroundColor: '#242526'}
         },
         items: [
+          // Discord Bots hidden - service not currently offered
+          // {
+          //   type: 'doc',
+          //   docId: '/discord-bots',
+          //   position: 'left',
+          //   label: 'Discord Bots',
+          // },
           {
             type: 'doc',
-            docId: '/discord-bots',
+            docId: 'control-panel/intro',
             position: 'left',
-            label: 'Discord Bots',
-          },
-          {
-            type: 'doc',
-            docId: 'fragify/intro',
-            position: 'left',
-            label: 'Fragify',
+            label: 'Control Panel',
+            activeBaseRegex: '^/control-panel(/|$)',
           },
           {
             type: 'doc',
             docId: 'games/index',
-            to: 'docs/games',
+            position: 'left',
             label: 'Games',
+            activeBaseRegex: '^/games(/|$)',
           },
           {
-            to: 'docs/billing',
+            to: '/billing',
             label: 'Billing',
           },
           {
-            to: 'docs/faq',
+            to: '/faq',
             label: 'FAQ',
           },
           {
@@ -130,6 +133,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            to: '/contributing',
+            label: 'Contribute',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -140,15 +148,15 @@ const config = {
             items: [
               {
                 label: 'Farming Simulator 2022',
-                to: '/docs/games/fs22',
+                to: '/games/fs22',
               },
               {
                 label: 'Rust',
-                to: '/docs/games/rust',
+                to: '/games/rust',
               },
               {
                 label: 'Minecraft',
-                to: '/docs/games/minecraft',
+                to: '/games/minecraft',
               }
             ],
           },
@@ -156,7 +164,7 @@ const config = {
             title: 'Useful Links',
             items: [
               {
-                label: 'Fragify Panel',
+                label: 'Game Control Panel',
                 href: 'https://beta.fragify.net',
               },
               {
