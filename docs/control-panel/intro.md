@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# What is the Game Control Panel?
+# Getting Started
 
-Let's discover **the Game Control Panel in less than 5 minutes**.
+Learn about the Game Control Panel and its features.
 
 ## Behind the panel
 
