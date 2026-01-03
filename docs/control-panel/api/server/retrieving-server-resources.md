@@ -39,7 +39,7 @@ This endpoint provides access to server resources for a specific server.
 ## Example Request
     
 ```bash
-curl -X GET "https://beta.fragify.net/api/client/servers/{server}/resources" \
+curl -X GET "https://panel.fragnet.net/api/client/servers/{server}/resources" \
     -H "Authorization: Bearer your_api_key" \
     -H "Content-Type: application/json"
 ```

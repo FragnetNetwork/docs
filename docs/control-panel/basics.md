@@ -7,7 +7,7 @@ sidebar_position: 2
 ## Accessing the panel
 Once you have purchased a server, you will receive an email within a few minutes with the subject **Account Created**. 
 
-This email includes a link to set a new password for your account. Note that this link only lasts for 1 hour. If you do not set a password within this time, you will need to use the [**Forgot Password**](https://beta.fragify.net/auth/password) link on the login page to reset your password.
+This email includes a link to set a new password for your account. Note that this link only lasts for 1 hour. If you do not set a password within this time, you will need to use the [**Forgot Password**](https://panel.fragnet.net/auth/password) link on the login page to reset your password.
 
 ## Dashboard
 The dashboard is the first page you will see when you log in. It will show you a list of all your servers, as well as some basic information about them.

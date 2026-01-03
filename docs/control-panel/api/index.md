@@ -12,7 +12,7 @@ Welcome to the API documentation for Fragify. This documentation provides some e
 All API requests are made to the following base URL:
 
 ```
-https://beta.fragify.net/api/client/
+https://panel.fragnet.net/api/client/
 ```
 
 ## Authentication
@@ -22,7 +22,7 @@ Authentication is required for all API endpoints. You need to include your API k
 ### Example
 
 ```bash
-curl -H "Authorization: Bearer your_api_key" https://beta.fragify.net/api/client
+curl -H "Authorization: Bearer your_api_key" https://panel.fragnet.net/api/client
 ```
 
 ## Response Format

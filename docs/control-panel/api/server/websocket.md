@@ -24,7 +24,7 @@ This endpoint generates credentials to establish a WebSocket connection with you
 ### Example Request
 
 ```bash
-curl -X GET "https://beta.fragify.net/api/client/servers/{server}/websocket"
+curl -X GET "https://panel.fragnet.net/api/client/servers/{server}/websocket"
     -H "Authorization: Bearer your_api_key"
     -H "Accept: application/json"
     -H "Content-Type: application/json"
@@ -36,7 +36,7 @@ curl -X GET "https://beta.fragify.net/api/client/servers/{server}/websocket"
 {
   "data": {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImp0aSI6Ij...",
-    "socket": "wss://beta.fragify.net:8080/api/servers/xxxxxxxxx/ws"
+    "socket": "wss://panel.fragnet.net:8080/api/servers/xxxxxxxxx/ws"
   }
 }
 ```
@@ -49,7 +49,7 @@ curl -X GET "https://beta.fragify.net/api/client/servers/{server}/websocket"
 ### Example
 
 ```javascript
-const ws = new WebSocket('wss://beta.fragify.net:8080/api/servers/xxxxxxxxx/ws');
+const ws = new WebSocket('wss://panel.fragnet.net:8080/api/servers/xxxxxxxxx/ws');
 
 ws.onopen = () => {
   ws.send(JSON.stringify({

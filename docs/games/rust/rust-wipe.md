@@ -14,7 +14,7 @@ There are two ways you can wipe data from your Rust server:
 # #1 Using the Fragify Wipe function
 ----------------------------------
 
-*   Login to the [Fragify panel](https://beta.fragify.net/auth/login) and select your Rust server.
+*   Login to the [Fragify panel](https://panel.fragnet.net/auth/login) and select your Rust server.
 
 *   Navigate to **Wipe Manager** function on the left-side menu.
 

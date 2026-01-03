@@ -9,7 +9,7 @@ You can find and connect to your Project Zomboid server in 2 ways which are desc
 
 ## Via Steam
 
-1. Copy your IP address and port of your Project Zomboid server from your [Fragify panel's account](https://beta.fragify.net/)
+1. Copy your IP address and port of your Project Zomboid server from your [Fragify panel's account](https://panel.fragnet.net/)
 
 2. Launch your Steam client and go to `View` tab on top-left side of the client => click on `Game Servers` option.
 ![Steam Game Servers](images/steam-servers.png)

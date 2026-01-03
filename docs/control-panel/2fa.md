@@ -10,7 +10,7 @@ Take caution and only enable 2FA on a trusted device. If you lose access to this
 
 ## Enabling 2FA
 
-To enable 2FA, head over to the [**Account**](https://beta.fragify.net/account) tab and click the **Enable Two-Step** button.
+To enable 2FA, head over to the [**Account**](https://panel.fragnet.net/account) tab and click the **Enable Two-Step** button.
 
 ![2FA Prompt](images/2fa-prompt.png)
 

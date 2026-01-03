@@ -20,7 +20,7 @@ This endpoint sends a command to the server. The server must be online to send a
 ## Example Request
 
 ```bash
-curl -X POST "https://beta.fragify.net/api/client/servers/{server}/command"
+curl -X POST "https://panel.fragnet.net/api/client/servers/{server}/command"
     -H "Authorization: Bearer your_api_key"
     -H "Accept: application/json"
     -H "Content-Type: application/json"

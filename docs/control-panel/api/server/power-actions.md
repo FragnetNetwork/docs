@@ -20,7 +20,7 @@ This endpoint sends a power signal to the server.
 ## Example Request
 
 ```bash
-curl -X POST "https://beta.fragify.net/api/client/servers/{server}/power"
+curl -X POST "https://panel.fragnet.net/api/client/servers/{server}/power"
     -H "Authorization: Bearer your_api_key"
     -H "Accept: application/json"
     -H "Content-Type: application/json"

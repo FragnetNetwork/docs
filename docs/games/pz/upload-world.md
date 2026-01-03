@@ -24,7 +24,7 @@ Example for singleplayer Apocalypse world:
 
 # Uploading your world and switching your server to it.
 
-1. Navigate to your [Fragify panel](https://beta.fragify.net/) and select your Project Zomboid server. 
+1. Navigate to your [Fragify panel](https://panel.fragnet.net/) and select your Project Zomboid server. 
 
 2. Go to **File Manager** => `pzserver/Saves/Multiplayer` directory. Drag and drop zip archive or use **Upload** button. Afterwards, you can click on **...** and select **Unarchive** option. 
 ![Unarchive](images/unarchive-zip.png)

@@ -7,7 +7,7 @@ keywords: ['pot server whitelist', 'pot whitelist', 'path of titans server white
 
 If you would like only specific players to join, you can create a Whitelist by following steps described below.
 
-**Step 1:** Login to your account on [Fragify panel](https://beta.fragify.net/) and select your Path of Titans server.
+**Step 1:** Login to your account on [Fragify panel](https://panel.fragnet.net/) and select your Path of Titans server.
 
 **Step 2:** Make sure that the server is stopped. Afterwards, go to **File Manager** on the left-side menu and navigate to `PathOfTitans/Saved` directory. There you will find **whitelist.txt** and you will need to click on it for editing.
 

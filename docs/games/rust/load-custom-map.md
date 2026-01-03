@@ -14,7 +14,7 @@ Just follow these simple steps:
 
 2\.  Once uploaded, copy the download link.
 
-3\.  Login to the [Fragify panel](https://beta.fragify.net/auth/login) and select your Rust server.
+3\.  Login to the [Fragify panel](https://panel.fragnet.net/auth/login) and select your Rust server.
 
 4\.  Navigate to the **Configure** option on the left-side menu and look for **Server Level URL** variable under `World` settings.
 
