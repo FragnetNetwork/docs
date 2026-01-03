@@ -145,8 +145,8 @@ const config = {
             title: 'Popular Game Docs',
             items: [
               {
-                label: 'Farming Simulator 2022',
-                to: '/games/fs22',
+                label: 'Farming Simulator 2025',
+                to: '/games/fs25',
               },
               {
                 label: 'Rust',
