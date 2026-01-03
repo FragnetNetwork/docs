@@ -29,7 +29,7 @@ Go to **Multiplayer** and select **Join Game**.
 
 Set the search filters to match the settings configured in your FS25 control panel.
 
-![Search Filters](images/fs25-menu-multiplayer-button.png)
+![Search Filters](images/fs25-browser-filters.png)
 
 ---
 
