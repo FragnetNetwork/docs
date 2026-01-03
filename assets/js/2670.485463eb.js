@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkfragdocs=globalThis.webpackChunkfragdocs||[]).push([[2670],{62670(s,a,c){c.r(a)}}]);
