@@ -5,7 +5,7 @@ keywords: ['dayz wipe', 'dayz server wipe', 'dayz wipe server']
 
 # Wipe persistence on your DayZ server
 
-If you decide to wipe your DayZ server, you should start by creating a backup for your server in case you want to retrieve the old server. To create a backup, follow this guide on our knowledgebase on [How to create a backup for DayZ server](/docs/games/dayz/make-backup).
+If you decide to wipe your DayZ server, you should start by creating a backup for your server in case you want to retrieve the old server. To create a backup, follow this guide on our knowledgebase on [How to create a backup for DayZ server](/games/dayz/make-backup).
 
 Please proceed with this at caution as the files will be deleted beyond recovery!
 

@@ -45,7 +45,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/FragnetNetwork/docs/tree/main/',
-          remarkPlugins: [
+          beforeDefaultRemarkPlugins: [
             [variableInjector, {
               replacements: {
                 'PANEL_URL': 'https://beta.fragify.net',
@@ -54,7 +54,7 @@ const config = {
                 'CDN_URL': 'https://cdn.fragify.net',
               }
             }],
-          ]
+          ],
         },
         blog: {
           showReadingTime: false
