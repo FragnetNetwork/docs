@@ -48,7 +48,7 @@ const config = {
           beforeDefaultRemarkPlugins: [
             [variableInjector, {
               replacements: {
-                'PANEL_URL': 'https://beta.fragify.net',
+                'PANEL_URL': 'https://panel.fragnet.net',
                 'OLD_PANEL_URL': 'https://gamepanel.fragnet.net',
                 'BILLING_URL': 'https://clients.fragnet.net',
                 'CDN_URL': 'https://cdn.fragify.net',
@@ -102,18 +102,16 @@ const config = {
           //   label: 'Discord Bots',
           // },
           {
-            type: 'doc',
-            docId: 'control-panel/intro',
+            to: '/control-panel/intro',
             position: 'left',
             label: 'Control Panel',
-            activeBaseRegex: '^/control-panel(/|$)',
+            activeBasePath: '/control-panel',
           },
           {
-            type: 'doc',
-            docId: 'games/index',
+            to: '/games',
             position: 'left',
             label: 'Games',
-            activeBaseRegex: '^/games(/|$)',
+            activeBasePath: '/games',
           },
           {
             to: '/billing',
@@ -165,7 +163,7 @@ const config = {
             items: [
               {
                 label: 'Game Control Panel',
-                href: 'https://beta.fragify.net',
+                href: 'https://panel.fragnet.net',
               },
               {
                 label: 'Old Game Panel',
