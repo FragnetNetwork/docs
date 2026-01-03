@@ -1,11 +1,11 @@
 ---
-title: Upload a Local Savegame
+title: Uploading your Savegame
 keywords: ['fs25', 'fs25 savegame', 'fs25 local savegame', 'upload savegame']
 ---
 
-# How to Upload a Local Savegame to a Farming Simulator 2025 Server
+# How to Upload a Savegame to your Farming Simulator 2025 Server
 
-This guide explains how to upload a **single-player or local multiplayer savegame** to a **dedicated Farming Simulator 2025 server**.
+This guide explains how to upload a **single-player or local multiplayer savegame** to your **dedicated Farming Simulator 2025 server**.
 
 ---
 
@@ -39,6 +39,8 @@ On Windows, savegames are stored in your Documents folder:
 C:\Users\<YourUsername>\Documents\My Games\FarmingSimulator2025
 ```
 
+![Savegame Path](images/fs25-savegame-path.png)
+
 To open this folder quickly:
 1. Press **Win + R** to open the Run dialog
 2. Type `%USERPROFILE%\Documents\My Games\FarmingSimulator2025` and press **Enter**
@@ -51,7 +53,9 @@ Inside this folder, you'll find subfolders named `savegame1`, `savegame2`, etc. 
 
 ### Upload a ZIP File
 
-Make a zip archive of the **contents** of the savegame folder, not a nested folder with 7z or any other archive program supporting .zip format. 7-Zip can be downloaded here: https://7-zip.org/
+Make a zip archive of the **contents** of the savegame folder, not a nested folder. 
+
+![Compress Files](images/fs25-compress-files.png)
 
 **Correct:**
 ```
@@ -74,6 +78,8 @@ savegame1.zip
 ## Step 3: Upload to the Server
 
 Upload the savegame zip archive in FS25 control panel => **Savegames** tab => under **Upload Savegame** click on **Choose file** button => select the zip archive of savegame that was made in the previous step.
+
+![Upload Savegame](images/fs25-upload-savegame.png)
 
 :::note
 We recommend selecting an empty savegame slot.

@@ -257,8 +257,11 @@ const sidebars = {
             slug: '/games/fs25',
           },
           items: [
-            'games/fs25/become-admin',
-            'games/fs25/upload-local-savegame'
+            'games/fs25/accessing-your-control-panel',
+            'games/fs25/finding-your-server',
+            'games/fs25/becoming-an-admin',
+            'games/fs25/uploading-mods',
+            'games/fs25/uploading-your-savegame'
           ]
         },
         {
