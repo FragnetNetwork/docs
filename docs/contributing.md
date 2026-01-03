@@ -45,7 +45,7 @@ We welcome contributions from the community! Whether you're fixing a typo, impro
 
 - `docs/` - All documentation files (Markdown)
 - `docs/games/` - Game-specific documentation
-- `docs/fragify/` - Fragify panel documentation
+- `docs/control-panel/` - Control panel documentation
 - `docs/billing/` - Billing and payment guides
 - `docs/FAQ/` - Frequently asked questions
 
@@ -60,6 +60,24 @@ We welcome contributions from the community! Whether you're fixing a typo, impro
    ---
    ```
 3. Write your content using Markdown
+4. Add your page to `sidebars.js` (see below)
+
+### Adding to the Sidebar
+
+New pages must be added to `sidebars.js` to appear in the navigation. Open the file and find the appropriate category, then add your page:
+
+```js
+{
+  type: 'category',
+  label: 'Game Name',
+  items: [
+    'games/game-name/existing-article',
+    'games/game-name/your-new-article'  // Add your page here
+  ]
+}
+```
+
+The path should match your file location without the `.md` extension.
 
 ### Writing Guidelines
 
