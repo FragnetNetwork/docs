@@ -32,7 +32,26 @@ const config = {
   },
   
   plugins: [
-    'docusaurus-plugin-zooming'
+    'docusaurus-plugin-zooming',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        createRedirects(existingPath) {
+          // Skip root path and paths ending with / to avoid duplicates
+          // (both /games/ark and /games/ark/ create the same redirect file)
+          if (existingPath === '/' || existingPath.endsWith('/')) {
+            return undefined;
+          }
+          const redirects = [`/docs${existingPath}`];
+          // Also redirect old /docs/fragify/* to /control-panel/*
+          if (existingPath.startsWith('/control-panel')) {
+            const fragifyPath = existingPath.replace('/control-panel', '/fragify');
+            redirects.push(`/docs${fragifyPath}`);
+          }
+          return redirects;
+        },
+      },
+    ],
   ],
 
   presets: [
