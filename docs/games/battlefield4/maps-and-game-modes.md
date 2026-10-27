@@ -138,7 +138,7 @@ These are the different maps that are available in the Battlefield 4 PC Final St
 | XP4_Arctic        | Operation Whiteout      |
 | XP4_SubBase       | Hammerhead              |
 | XP4_Titan         | Hangar 21               |
-| XP4_WalkerFactory | Giants of Karelia       |
+| XP4_WlkrFtry      | Giants of Karelia       |
 
 
 ### Final stand game modes
@@ -207,6 +207,10 @@ The supported game modes on this map are:
 *   Chainlink
     
 *   CTF
+    
+*   Team Deathmatch v2 (TeamDeathMatch1)
+    
+*   Squad Deathmatch v2 (SquadDeathMatch1)
     
 
 ### Legacy Operations Game Maps and Modes
