@@ -1,77 +1,87 @@
 ---
 title: Adding admins to your Rust server
-keywords: ['rust admin', 'rust server admin', 'rust admin setup', 'rust server setup admin']
+keywords: ['rust admin', 'rust server admin', 'rust admin setup', 'rust server setup admin', 'rust ownerid', 'rust moderatorid', 'rust users.cfg', 'rust players tab', 'rust ban player', 'fragnet dashboard']
 ---
 
-# How to add admins to your RUST server
+# How to add admins to your Rust server
 
-Admin access on a Rust server allows a player to execute all Rust commands in-game. This is important since it gives you access to the commands for keeping your server clean from the players violating your rules, but to many other things such as teleporting, spawning items and more!
+Admins on a Rust server can use admin commands in game: keep the server clean of players who break your rules, but also teleport, spawn items and more. A full list of Rust server commands is on the [Rust wiki](https://rust.fandom.com/wiki/Server_Commands).
 
-A full list of Rust server commands can be found [here](http://rust.wikia.com/wiki/Server_Commands).
+## Admin roles
 
-## Adding admins via a configuration file
+Rust has two admin roles:
 
-There are two admin user roles on a Rust server:
+- **Owner** (`ownerid`): full admin rights in game, including every console command and adding other admins.
+- **Moderator** (`moderatorid`): can kick, ban and use admin tools in game, but not every console command. Moderators can't add other admins.
 
-*   **ownerid** - This Admin role gives access to all admin commands, including access to add other Rust admins.
-*   **moderatorid** - This Admin role gives access to all admin commands but does not allow the user to add other admins.
+You add an admin by their SteamID64: a 17-digit number that starts with `7656119`. It's in the address of their Steam profile when it looks like `https://steamcommunity.com/profiles/76561198000000000`. If their profile address uses a custom name (`/id/...`), look up the SteamID64 with a site such as [steamid.io](https://steamid.io/).
 
-To add an admin via configuration file on your server, follow these few steps:
+## Method 1: The Players tab
 
-*   Go to your Rust server on the Fragify Game Panel
-*   Navigate to **File Manager** on the left-side menu.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Rust server.
+2. Select the **Players** tab. If you don't see it in the tab row, look under **More**.
+3. In the **Owners and moderators** card, paste the SteamID64 or the `steamcommunity.com/profiles/` link into **SteamID64 or profile link**.
+4. Next to it, pick **Moderator** or **Owner**.
+5. Select **Add**.
+6. Optionally fill in **Player name (optional)** and **Reason (optional)**, then select **Make owner** or **Make moderator**.
+7. Ask the player to reconnect to the server to get the new role.
 
-![File Manager](../images/file-manager.png)
+<!-- screenshot: rust-players-admins.png | Rust server, Players tab: the "Owners and moderators" card with one owner and one moderator listed (role tags visible), and the add row at the bottom with a SteamID64 typed into "SteamID64 or profile link", the role dropdown and the "Add" button -->
 
-*   Go to the following directory `server/rust/cfg/` and you will find there **users.cfg** file.
->If you use custom server identity, the location of **users.cfg** file will be in `server\nameOfYourServerIdentity\cfg\`
+If the server is running, the change is made right away through the console. If it's offline, it's saved to the server's files and applies when the server starts.
 
-*  Open **users.cfg** and input the following line, on each separate line, for each user you would like to assign as a Rust admin:  
-```
-ownerid Steam64ID "optional username" "optional reason"
-```
-You can add users as Rust moderator in the same **users.cfg** file by replacing "**ownerid**" in the above command with "**moderatorid**" like this:
+Players who are online are listed under **Online now**. Open the ⋯ menu on their row and select **Make owner** or **Make moderator** to give them a role directly. To take a role away, open the ⋯ menu on the player in **Owners and moderators** and select **Remove admin rights**.
 
-```  
-moderatorid steamid64 "optional username" "optional reason"
-```
+The **Bans** card on the same tab works the same way: paste a SteamID64 and select **Ban player**, or use **Ban**, **Kick** and **Unban** in the ⋯ menus.
 
-Here is an example of how a **users.cfg** would look like with multiple users added:  
+:::info
+The **Players** tab talks to your server over Web RCON. If it says that Web RCON is off, turn on **Web RCON** on the **Configuration** tab, under **General** > **RCON and Rust+**, and restart the server.
+:::
 
-```
-ownerid 76812312312312311 "Fragnet" "Some reason"  
-ownerid 76812312312312312 "Fragnet2"   
-moderatorid 76812312312312313 "Fragnet3" "Great helper"  
-moderatorid 76812312312312314 "Fragnet4"  
-```      
-    
-*   After adding users to the "**users.cfg**" file, click "**Save Content**" and then restart your Rust server for the changes to be applied.
+## Method 2: The console
 
-## Adding admins via RCON
+1. Start the server and open the **Console** on the **Overview** tab. See [Send a command](../../control-panel/basics.md#send-a-command).
+2. To add an owner, send these two commands:
 
-Admins/moderators can also be added via the RCON console.
+   ```
+   ownerid 76561198000000000 "optional username" "optional reason"
+   server.writecfg
+   ```
 
-*   Connect to your server
+   To add a moderator:
 
-*   While remaining in-game, go to your Rust server on the Fragify Game Panel
+   ```
+   moderatorid 76561198000000000 "optional username" "optional reason"
+   server.writecfg
+   ```
 
-*   You will see server's console and **Type a command...** input window. 
+   `server.writecfg` saves the change to `users.cfg`, so it's kept after a restart.
+3. Ask the player to reconnect to get the new role.
 
-*   Simply write the following commands if you want to add admin: 
-``` 
-ownerid steamid64 "optional username" "optional reason"  
-server.writecfg
-```
+You can send the same commands from RCON tools such as [RustAdmin](https://www.rustadmin.com/). They need your server's address, the **RCON port** and the **RCON password**, all on the **Configuration** tab under **General** > **RCON and Rust+**.
 
-In case you want to add a moderator:
-```
-moderatorid steamid64 "optional username" "optional reason"  
-server.writecfg 
-``` 
-*   After this is done, simply reconnect to the server and allow that role to apply.
+## Method 3: Edit users.cfg
 
-Other 3rd party apps can be used to input the above commands for adding admins. We suggest using [RustAdmin](https://www.rustadmin.com/).  
+Owners and moderators are stored in `users.cfg`, in the folder `server/rust/cfg/`. If you changed your server identity, the file is in `server/<identity>/cfg/` instead.
 
-The **users.cfg** file on your server may not update until your server has been stopped/restarted.
+1. Stop the server with **Shut down** at the top of the server page. Rust writes this file itself, so changes made while it runs can be overwritten.
+2. On the **Files** tab, open `server/rust/cfg/` and select `users.cfg` to edit it. If the file isn't there, create it with **New file**. See [Edit a file](../../control-panel/file-manager.md#edit-a-file).
+3. Add one line per admin:
 
-You have successfully added a new admin/moderator to your Rust server, and those users will now have access to admin commands in-game!
+   ```
+   ownerid SteamID64 "optional username" "optional reason"
+   moderatorid SteamID64 "optional username" "optional reason"
+   ```
+
+   For example:
+
+   ```
+   ownerid 76561198000000001 "Fragnet" "Server owner"
+   ownerid 76561198000000002 "Fragnet2"
+   moderatorid 76561198000000003 "Fragnet3" "Great helper"
+   moderatorid 76561198000000004 "Fragnet4"
+   ```
+
+4. Select **Save file**, then start the server.
+
+`users.cfg` also appears on the **Configuration** tab as "Owners and moderators", with a link to the **Players** tab, where the list is easier to manage.

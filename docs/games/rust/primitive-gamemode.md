@@ -1,6 +1,6 @@
 ---
 title: Primitive Game Mode
-keywords: ['rust server primitive', 'rust server primitive setup', 'rust server primitive gamemode']
+keywords: ['rust server primitive', 'rust server primitive setup', 'rust server primitive gamemode', 'rust server era', 'rust game mode', 'rust medieval era', 'rust frontier era', 'fragnet dashboard']
 ---
 
 
@@ -16,11 +16,14 @@ The **Primitive Game Mode** was officially introduced in the **February 2025 Pri
 
 ## Enabling Primitive Game Mode on your server
 
-To activate the **Primitive Game Mode**, simply navigate to the **Configure** page in the **Fragify** control panel. Under the **Base Settings** tab, you will find an option to choose the new game mode:
+The game mode and era are startup settings on the **Configuration** tab of your server.
 
-![Configure Gamemode](images/configure-primitive.png)
-
-Additionally, you can customize the game mode further by setting an **Era** and various other gameplay parameters from the **Configure** tab.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Rust server.
+2. Select the **Configuration** tab and select **General** in the list on the left.
+3. In the **Gameplay** group, set **Game mode** to **Primitive**.
+4. In the **World** group, pick a **Server era** (see the table below) and switch **Enforce era limits** on or off.
+5. Select **Save** in the bar at the bottom of the page. See [Under General](../../control-panel/configuration.md#under-general).
+6. Restart the server. These settings apply on the next restart.
 
 ---
 
@@ -30,23 +33,25 @@ The **Eras** system in Primitive Game Mode allows you to control technological p
 
 ### Available Eras
 
-| Era       | Effect                                                                         |
-| --------- | ------------------------------------------------------------------------------ |
-| None      | No restrictions (vanilla gameplay).                                            |
-| Primitive | Most restrictive, removing modern weapons, tools, and structures.              |
-| Medieval  | Adds basic firearms like the Revolver, Blunderbuss, and Double Barrel Shotgun. |
-| Frontier  | Similar to Medieval but may introduce additional items.                        |
-| Rust      | Restores full vanilla gameplay.                                                |
+Pick the era under **Configuration** > **General** > **World** > **Server era**.
+
+| Server era | Effect |
+| --- | --- |
+| **Any era** | No era restrictions (vanilla gameplay). |
+| **Primitive** | Most restrictive, removing modern weapons, tools, and structures. |
+| **Medieval** | Adds basic firearms like the Revolver, Blunderbuss, and Double Barrel Shotgun. |
+| **Frontier** | Similar to Medieval but may introduce additional items. |
+| **Full Rust** | Restores full vanilla gameplay. |
 
 ### Additional Options
 
-Under the **Configure** tab, we provide additional settings to fine-tune your Primitive server:
+These settings on the **Configuration** tab, under **General**, fine-tune your Primitive server:
 
-| Option                         | Description |
-|--------------------------------|-------------|
-| **NPC Spawn on Junkpiles**     | Allows scientist NPCs to spawn on roadside junkpiles. Overwritten by `Scientist Spawners Enabled`. |
-| **Scientist Spawners Enabled** | Enables or disables scientist NPC spawn locations across the map. |
-| **Enforce Era Restrictions**   | Ensures all restricted items that bypass restrictions are removed. |
+| Option | Group | Description |
+| --- | --- | --- |
+| **Scientists at junk piles** | **Gameplay** | Allows scientist NPCs to spawn near roadside junk piles. Overridden by **Scientist spawners**. |
+| **Scientist spawners** | **Gameplay** | Turns scientist NPC spawns at their usual places on the map on or off. |
+| **Enforce era limits** | **World** | Also removes items from outside the era, including restricted items that got past the era's restrictions. |
 
 ### Era-Specific Restrictions
 
@@ -103,8 +108,8 @@ Each Era applies a unique set of restrictions, primarily on weapons, constructio
 
 As a server owner, you have full control over how **Primitive Mode** plays out. You can:
 
-- **Manually switch Eras** under the **Configure** tab to progress gameplay.
-- **Restrict specific items further** by disabling crafting or modifying loot tables.
-- **Enable limited NPC spawns** through configuration options.
+- **Switch eras** to progress gameplay: change **Server era** under **Configuration** > **General** > **World** and restart the server.
+- **Restrict specific items further** by disabling crafting or changing loot tables, for example with [plugins](./install-oxide-and-umod-plugins.md).
+- **Allow limited NPC spawns** with **Scientists at junk piles** and **Scientist spawners** under **Configuration** > **General** > **Gameplay**.
 
 This allows you to fine-tune the experience for your community, whether you want a fully primitive survival mode or a more structured, era-based progression system.

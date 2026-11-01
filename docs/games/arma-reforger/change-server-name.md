@@ -1,14 +1,24 @@
 ---
 title: Change server's name
-keywords: ['change arma reforger server name', 'change arma reforger server name', 'change arma reforger']
+keywords: ['change arma reforger server name', 'arma reforger server name', 'arma reforger server password', 'arma reforger startup settings', 'arma reforger config.json', 'fragnet dashboard']
 ---
 
-To change Arma Reforger's server name, you will need to proceed with the following steps:
+Your Arma Reforger server's name, as players see it in the server browser, is a startup setting. You change it on the **Configuration** tab in the [Fragnet dashboard](VAR::PANEL_URL).
 
-**Step 1:** Login to your account on [Fragify panel](VAR::PANEL_URL) and select your Arma Reforger server.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Arma Reforger server.
+2. Select the **Configuration** tab. If it shows a list on the left, select **General**.
+3. Select the **Startup** group.
+4. Enter the new name in the startup setting for the server name.
+5. To make players enter a password to join, fill in the startup setting for the server password. Leave it empty for a public server.
+6. Select **Save**.
+7. Restart the server. Startup settings apply the next time the server starts. See [Power controls](../../control-panel/basics.md#power-controls).
 
-**Step 2:** Go to **Configure** option on the left-side menu.
+See [Startup](../../control-panel/configuration.md#startup) for how startup settings work.
 
-**Step 3** Change value of **SERVER NAME** under **Variables** to the desired name that will appear in server browser. If you wish to add password for joining your server, you can set in the **SERVER PASSWORD** field.
+:::info Server name in config.json
+The name and password are also in the `game` section of the server's `config.json` (`name` and `password`). When they come from your startup settings, they're written into `config.json` every time the server starts, so change them under **Startup** rather than in the file.
+:::
 
-**Step 4** Restart the server and changes will be applied.
+:::tip Dashboard name
+The **Dashboard name** under **General** is only the name of the server in your dashboard. It doesn't change what players see. See [General settings](../../control-panel/configuration.md#general).
+:::

@@ -1,33 +1,64 @@
 ---
-title: Creating a custom commandline for the DayZ server
-keywords: ['dayz commandline', 'dayz command line', 'dayz custom commandline', 'dayz custom command line']
+title: Mod load order and launch parameters
+keywords: ['dayz commandline', 'dayz command line', 'dayz custom commandline', 'dayz launch parameters', 'dayz startup parameters', 'dayz mod load order', 'dayz -mod', 'dayz -servermod', 'dayz server-side mods', 'fragnet dashboard']
 ---
 
-# Creating a custom commandline for your DayZ server
+# Mod load order and launch parameters on your DayZ server
 
-Generally speaking, custom commandline is required when you need to specify the mod order manually, as certain mod dependencies need to be loaded first for mods to work correctly and for the server to be able to start.  
-To create a custom commandline in DayZ, you will need to follow the next steps:
+The [Fragnet dashboard](VAR::PANEL_URL) builds your DayZ server's launch line for you. There's no custom command line to write:
 
-**Step 1:** Log in to your account on our [game panel](VAR::OLD_PANEL_URL) and find your service.   
+- The `-mod` and `-servermod` parameters come from the mods on the **Workshop** tab, in their **Load order**.
+- Other startup options are startup settings on the **Configuration** tab.
 
-**Step 2:** Go to **Commandline Manager**.  
+## Set the mod load order
 
-**Step 3:** Press on **Custom Commandline** and hit **+New**.  
+Some mods need other mods, such as Community Framework (CF), to load first. If a mod loads before a mod it needs, the server may not start.
 
-**Step 4:** You will be displayed a list with many checkboxes. First, you will need to name your custom commandline, and you can do this next to **Description** by writing the name of your commandline (ex. DayZ custom commandline)  
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
+2. Select the **Workshop** tab, then **Installed**.
+3. Open the **Load order** card if it's folded. It has two lists:
+   - **Client mods** (`-mod`): players download these when they join.
+   - **Server-side mods** (`-servermod`): only the server loads these.
+4. Drag a mod up or down to change where it loads. Mods load top to bottom, so put a mod below the mods it needs. On a phone, use the arrows next to each mod.
+5. To move a mod to the other list, drag it there, or select it and turn **Server-side only** on or off.
+6. Restart the server. Changes save straight away but only apply on the next start.
 
-**Step 5:** On to the checkboxes you will need the following checkboxes as shown on a screenshot
+![DayZ server, Workshop tab, Installed view](images/dayz-workshop-load-order@2x.webp)
 
-![DayZ Custom Commandline](images/dayz-commandline.png)
+Disabled mods keep their place and show **Off**. Mods you uploaded yourself show **Custom**.
 
-**Step 7:** Fill in the required details, and once you are done, press **Save** button on top.  
+Until you change the order yourself, the dashboard places mods after the mods they need. After you've reordered by hand, check the order whenever you install a new mod.
 
-**Step 8:** On the right side of the custom commandline, you will see two buttons **Edit** and **Select**. Press **Select** option and the newly created custom commandline will be selected.
+### Which mods does a mod need?
 
->In the mods input box, you must write mod ID. To find the mod ID, press on the tab of the already opened mod Steam page, select the URL, and copy the number as shown on the screenshot: ![URL ID](images/steam-url.png) . Mods are listed in the commandline always start with `@` and end with `;` except the last one.
-Here is an example:
+The mod's Steam Workshop page lists them under **Required items**:
+
+![Required items on a Steam Workshop page](images/steam-requireditems.png)
+
+Those mods must be above it in the load order. When you install a mod from the **Workshop** tab, its required items are installed with it.
+
+## See the launch line
+
+Below the lists, **Launch** shows the mod parameters the server starts with, for example:
+
 ```
-@1559212036;@1590841260;@1646187754
+-mod=@CF;@VPPAdminTools -servermod=@MyServerMod
 ```
-When creating a custom commandline and placing the mod IDs, ensure they are correctly placed in this format. Otherwise, the server will have an issue starting. This goes for both the -servermod and -mod option.
 
+Each mod is its folder name on the server, separated by `;`. Select **Copy** to copy the line, for example to add it to a support ticket.
+
+## Other launch parameters
+
+Other startup options are startup settings:
+
+1. Open the **Configuration** tab and select **General**.
+2. Select the **Startup** group. It lists the startup settings your server offers, each with a short description.
+3. Change a value and select **Save**. It applies the next time the server starts.
+
+Settings tagged **Fixed** or **Set by your plan** can't be changed there. See [Startup](../../control-panel/configuration.md#startup).
+
+Many server options are not launch parameters but settings in `serverDZ.cfg`, for example **Verify mod signatures** and **Same game version only**. See [Changing basic settings](./adjust-basic-settings.md).
+
+:::info
+You can't add your own launch parameters, such as `-filePatching` or `-ignoremod`. If you need one, [open a support ticket](VAR::SUPPORT_URL).
+:::

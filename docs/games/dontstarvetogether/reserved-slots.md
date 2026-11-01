@@ -1,38 +1,36 @@
 ---
-title: Assinging reserved slots on Don't Starve Together server
-keywords: ['dont starve together', 'dont starve together server', 'dont starve together server reversed slots' , 'dont starve together server whitelist slots']
+title: Assigning reserved slots on Don't Starve Together server
+keywords: ['dont starve together', 'dont starve together server', 'dont starve together server reserved slots' , 'dont starve together server whitelist slots', 'dont starve together whitelist.txt', 'fragnet dashboard']
 ---
 
-# Assinging reserved slots on Don't Starve Together server
-In Don't Starve Together, a whitelist is called an **Allowlist** since it prioritizes players on the list and afterwards, allows other players who aren’t on the list to join.
+# Assigning reserved slots on Don't Starve Together server
 
-First, we need to turn on the **Allowlist** and then add the players' Klei IDs to the list.
+In Don't Starve Together, the whitelist reserves slots: players on the list always have a free slot, and other players who aren't on the list can still join with the remaining slots.
 
-To enable the Allowlist you need to open the cluster.ini file.
+First you set the number of reserved slots in `cluster.ini`, then you add the players' Klei IDs to `whitelist.txt`. To find a Klei ID, see [Get your Klei ID](adding-admins.md#get-your-klei-id).
 
-1. Click on File Manager on your Fragify game panel and then go to `DoNotStarveTogether => config => server => cluster.ini`.
+## Set the number of reserved slots
 
-![File Manager](../images/file-manager.png)
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Don't Starve Together server.
+2. Select the **Files** tab, open the folder `DoNotStarveTogether/config/server` and select `cluster.ini` to open it in the editor (see [Edit a file](../../control-panel/file-manager.md#edit-a-file)).
+3. In the `[NETWORK]` section, add this line and replace `number` with the number of reserved slots you want:
 
-2. Once you have opened the cluster.ini file navigate to the [NETWORK] section. And add this new line to it, and replace the word Number with the number you want the reserved slots to be
-```
-whitelist_slots = number
-``` 
-In this example, I have used the number 5, and it should look something like this:
-![Example Whitelist](images/example-whitelist.png)
+   ```ini
+   whitelist_slots = number
+   ```
 
-Now that we have activated the whitelist option we need to create a whitelist.txt file containing the Klei IDs of all the players that will have a reserved slot.
+   In this example, there are 5 reserved slots:
 
-3. Lets get to creating a whitelist, go to `DoNotStarveTogether  => config => server`.
+   ![Example Whitelist](images/example-whitelist.png)
 
-4. Once there, click on the **New File** button located in the upper right corner.
-![New File](../images/new-file.png)
+4. Select **Save file**.
 
-5. Afterwards, insert the Klei IDs of the players that need the whitelist and then click on **Create File**. 
+## Create the whitelist
 
-![Example Whitelist](images/whitelist-txt.png)
-It will prompt you for a name. It needs to be named **whitelist.txt** and click again on **Create File**.
+1. On the **Files** tab, open the folder `DoNotStarveTogether/config/server`.
+2. If `whitelist.txt` is already there, select it to open it. Otherwise select **New file**, enter `whitelist.txt` as the name and select **Create** (see [Create a file or folder](../../control-panel/file-manager.md#create-a-file-or-folder)). The name must be exactly `whitelist.txt`.
+3. Enter the Klei IDs of the players who get a reserved slot, one per line.
+4. Select **Save file**.
+5. Restart the server (see [Power controls](../../control-panel/basics.md#power-controls)).
 
-![whitelist.txt](images/create-whitelist.png)
-
-Done! Don't forget to Start/Restart your server. The players located in the whitelist will have priority to other players connecting.
+The players on the whitelist now have priority over other players connecting.

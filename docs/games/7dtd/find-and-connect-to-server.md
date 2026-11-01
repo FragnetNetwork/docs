@@ -1,44 +1,44 @@
 ---
 title: Connecting to your server
-keywords: ['7dtd connect', '7 days to die connect', '7 days to die server connect', '7dtd server connect', '7dtd connect to server', '7 days to die connect to server', '7 days to die server connect to server', '7dtd server connect to server']
+keywords: ['7dtd connect', '7 days to die connect', '7 days to die server connect', '7dtd server connect', '7dtd connect to server', '7 days to die connect to server', '7dtd server ip', '7dtd direct connect', 'fragnet dashboard']
 ---
 
-This guide will show you 2 ways to connect to your 7 Days To Die server.
+This guide shows two ways to connect to your 7 Days To Die server: by its address, or through the in-game server browser.
 
-## Via Direct Connect
+## Find your server's address
 
-1. Before attempting to connect  to your server,  you will need to find the server's IP address". The IP address can be found by going to your [Fragify panel](VAR::PANEL_URL) and selecting 7 Days to Die server. On the console page, you will see IP address on which you can click on to copy it on the clipboard. 
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your 7 Days To Die server.
+2. On the **Overview** tab, the **Server Details** card shows the **Address**. Select the copy button next to it.
 
-![IP address](images/ip.png)
+The address has two parts, the host and the port, separated by a colon (`host:port`). You need both. See [Server Details](../../control-panel/basics.md#server-details).
 
-2. Launch the game and go to ```Join a Game``` option in the main menu. 
+## Connect with the address
 
-![Join a Game](images/join-game.png)
+1. Launch the game and select **Join a Game** in the main menu.
 
-3. You can click on ```Start Search``` button ob the bottom-right corner.
+   ![Join a Game](images/join-game.png)
 
-![Start search](images/start-search.png)
+2. Select **Start Search** in the bottom-right corner.
 
-4. Navigate to ```Connect to IP...``` button and input IP address/port.
+   ![Start search](images/start-search.png)
 
-![Connect to IP](images/connect-to-ip.png)
+3. Select **Connect to IP...** and enter the host in **IP** and the port in **Port**.
 
-5. Click on ```Connect``` and if IP address/port were correctly input, you should be connected to your server. 
+   ![Connect to IP](images/connect-to-ip.png)
 
-![Connect](images/connect.png)
+4. Select **Connect**. If the address and port are right, you join your server.
 
-## Via Server Browser in-game
+## Find the server in the in-game browser
 
-1. Launch the game and go to ```Join a Game``` option in the main menu. 
+1. Launch the game and select **Join a Game** in the main menu.
+2. In the **Server Name** filter, enter your server's name, then select **Start Search**. The name is the **Server Name** startup setting. See [Change your server's name](change-name.md).
 
-![Join a Game](images/join-game.png)
+   ![Server search](images/server-search.png)
 
-2. Input the name of your server that you have set in **Configure** option in Fragify panel. If you don't know where to find your server's name, you can check [this article](change-name.md).
+3. Your server appears in the list. Double-click it to connect.
 
-![Server search](images/server-search.png)
+   ![Server in browser](images/server-in-browser.png)
 
-3. You should see your server in the browser and connect to it by double-clicking on it.
-
-![Server in browser](images/server-in-browser.png)
-
-> If you cannot find server, please double-check if server name and region are set to match your settings in Fragify panel. 
+:::tip Can't find your server?
+Check that the name you search for matches the **Server Name** startup setting, and reset other filters such as **Region**. You can always [connect with the address](#connect-with-the-address) instead.
+:::

@@ -1,28 +1,29 @@
 ---
 title: Pairing your Rust server with Rust+ app
-keywords: ['rust server rust+', 'rust server rust+ setup', 'rust server pair rust+']
+keywords: ['rust server rust+', 'rust server rust+ setup', 'rust server pair rust+', 'rust+ companion app', 'rust+ port', 'fragnet dashboard']
 ---
 
-# Pair your Rust server with Rust+ App
+# Pair your Rust server with the Rust+ app
 
-This article will explain pairing your Rust+ companion app with your Rust server on our Fragify panel.
+Rust+ is Facepunch's companion app. Once paired, your phone shows the map, team chat and alarms of your Rust server. Your server needs no setup for it: players pair it in game.
 
-1\. You will need to download the Rust+ app on your phone. 
+1. Download the Rust+ app on your phone:
+   - Google Play: https://play.google.com/store/apps/details?id=com.facepunch.rust.companion
+   - App Store: https://apps.apple.com/us/app/rust/id1487691681
+2. Open Rust and join your server. If you can't find it, see [Connecting to your Rust server](connecting-to-server.md).
+3. Press **ESC** and select **Rust+** in the menu.
+4. Select **Pair with server**.
 
-Google Play link: https://play.google.com/store/apps/details?id=com.facepunch.rust.companion
+   ![Rust+ Pair Window](images/rust%2B-server.png)
 
-AppStore link: https://apps.apple.com/us/app/rust/id1487691681
+5. Open the Rust+ app on your phone and select **Pair a server**.
 
-2\. Open the game and join your Rust server. If you cannot join your server, you can check our guide [here](connecting-to-server.md).
+   ![Rust+ Companion App](images/rust%2B-companion.png)
 
-3\. Press the **ESC** key, and you will need to select the **Rust+** option from the menu. 
+Your server is now paired with the Rust+ app on your phone.
 
-4\. You will need to click **Pair with server** button.
+## If pairing doesn't work
 
-![Rust+ Pair Window](images/rust%2B-server.png)
+The app connects to your server on its Rust+ port. You can see it in the [Fragnet dashboard](VAR::PANEL_URL): on the **Configuration** tab, select **General** and look under **RCON and Rust+** > **Rust+ port**. If no port is shown there, or the Rust+ window in game says Rust+ isn't enabled for the server, [open a support ticket](VAR::SUPPORT_URL).
 
-5\. Open the Rust+ companion app on your phone, and you will need to click on the **Pair a server** button.
-
-![Rust+ Companion App](images/rust%2B-companion.png)
-
-Your server was successfully paired with your phone companion Rust+ app!
+A **Full wipe** on the **Wipes** tab keeps Rust+ pairings, so players don't need to pair again after a wipe. See [Wiping your Rust server](./rust-wipe.md).

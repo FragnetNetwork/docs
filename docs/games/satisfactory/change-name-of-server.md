@@ -29,3 +29,7 @@ To change your server name, follow these simple steps:
 ![Server Name](images/server-name.png)
 
 5\. Done! You have renamed your server.
+
+:::info
+Renaming the server in the [Fragnet dashboard](VAR::PANEL_URL) only changes its name in your dashboard lists. Players see the name you set in the game's **Server Manager**. See [Rename the server](../../control-panel/basics.md#rename-the-server).
+:::

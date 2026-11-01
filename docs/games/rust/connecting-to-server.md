@@ -1,53 +1,52 @@
 ---
 title: Connecting to your Rust server
-keywords: ['rust server connect', 'rust server join', 'rust server browser connect', 'rust server steam connect']
+keywords: ['rust server connect', 'rust server join', 'rust server browser connect', 'rust server steam connect', 'rust client.connect', 'rust server address', 'rust server ip', 'fragnet dashboard']
 ---
 
 # Connecting to your Rust server
-There are multiple methods to connect to your Rust server, which we will describe here.
 
-#  Via in-game server browser
+There are several ways to join your Rust server. All of them start in the [Fragnet dashboard](VAR::PANEL_URL).
 
-1\. Make sure to change server's name in **Configure** option on the left-side menu => **Server Name** variable under `Base Settings`.
+## Before you connect
 
-![Server Name](images/server-name.png)
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Rust server.
+2. Check your server's address. It's the **Address** row of the **Server Details** card on the **Overview** tab. Select the copy button next to it to copy it. See [Server Details](../../control-panel/basics.md#server-details).
+3. Give your server a name players can find. See [Change your server name](./change-server-name.md).
+4. Start the server with **Start** at the top of the page. A Rust server takes a few minutes to start, longer the first time and on large maps. Wait until the **Console** shows `Server startup complete`.
 
-2\. Start your Rust server. After starting your Rust server on the Fragify panel, please, allow 5-10 minutes for the startup process to be completed. 
+## Via the in-game server browser
 
-3\. Open Rust game and go to **Play Game**. The server browser will appear, and you will need to choose **Community** tab if you did not install **uMod/Oxide** extension. If you have installed **uMod/Oxide** and plugins, you will need to choose the **Modded** tab. You might need to tick the box next to **Show Empty** to find your server faster. Also, you can select tags to find your server. Tags can be added in **Configure** option => **Server Tags** variable. You can read more about them on the [official Facepunch wiki](https://wiki.facepunch.com/rust/server-browser-tags).
+1. Open Rust and select **Play Game**. The server browser opens.
+2. Select the **Community** tab. If your server runs Oxide or Carbon with plugins, select the **Modded** tab instead. You may need to tick **Show Empty** to see a server without players.
 
-![Server Browser](images/server-browser.png)
+   ![Server Browser](images/server-browser.png)
 
-4\. Type your server's name in **Search Servers..** field and wait till the server appears. Sometimes you will need to click on **Refresh** since the server can take some time to appear due to how the listing of servers works. 
+3. Type your server's name in **Search Servers..** and wait for it to appear. Select **Refresh** if it doesn't show up straight away; new servers can take a while to be listed.
 
-![Server in Browser](images/server-in-browser.png)
+   ![Server in Browser](images/server-in-browser.png)
 
-We recommend clicking on the star sign next to your server so that it can be always found in the **Favorites** tab. 
+4. Select the star next to your server to add it to the **Favourited** tab, so you can always find it there.
 
-# Via in-game console command
+You can also filter the browser by tags. To set your server's tags, open the **Configuration** tab, select **General** and pick them under **Server browser** > **Tags**, for example **Monthly wipe**, **Vanilla** or **Europe**. They apply at the next restart. Read more about tags on the [Facepunch wiki](https://wiki.facepunch.com/rust/server-browser-tags).
 
-1\. Open your Rust game, and once loaded on the main menu, click the **F1** key. 
+## Via the in-game console
 
-2\. You will see a Rust console window, and you can type the following command:
-```
-client.connect yourServerIP:Port
-```
-Example:
-```
-client.connect 123.456.789.012:27015
-```
-![Rust Console Window](images/rust-console.png)
+1. Open Rust. On the main menu, press **F1** to open the console.
+2. Type `client.connect` followed by your server's address, for example:
 
-3\. Click the **Enter** key, and you will be joining your server. If you want to close the Rust console window, you can press the **F1** key again. 
+   ```
+   client.connect 123.456.789.012:27015
+   ```
 
-# Via Steam Favorites
+   ![Rust Console Window](images/rust-console.png)
 
-1\. Open your Steam client and navigate to **View** tab => **Servers** option.
+3. Press **Enter** to join. Press **F1** again to close the console.
 
-![Steam Servers](images/steam-servers.png)
+## Via Steam favourites
 
-2\. Go to the **Favorites** tab and click on the **Add a server** button.
+1. Open Steam and select **View** > **Game Servers** (**Servers** in older Steam versions).
 
-3\. You can input your server's IP and port and click on **Add this address to favorites**, and you will be able to access your server at any time from the **Favorites** tab. You can also click on **Find games at this address...** and you will see your server.
+   ![Steam Servers](images/steam-servers.png)
 
-![Example Steam Servers](images/example-steam-server.png)
+2. Go to the **Favorites** tab and select **Add a server**.
+3. Enter your server's address and select **Add this address to favorites**. You can then join from the **Favorites** tab at any time. **Find games at this address...** shows the server straight away.

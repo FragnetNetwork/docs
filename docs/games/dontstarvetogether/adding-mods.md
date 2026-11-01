@@ -1,120 +1,117 @@
 ---
 title: Adding Mods
-keywords: ['dont starve together', 'dont starve together mods', 'dont starve together adding mods']
+keywords: ['dont starve together', 'dont starve together mods', 'dont starve together adding mods', 'dedicated_server_mods_setup.lua', 'modoverrides.lua', 'fragnet dashboard']
 ---
 
 # Adding mods to your Don't Starve Together server
 
-1. Navigate to your **File Manager** on the Fragify game panel and open the **mods** folder, don't forget to stop your server.
+Installing mods on a Don't Starve Together server takes two files, which you edit on the **Files** tab of the dashboard:
 
-![File Manager](../images/file-manager.png)
+- `dedicated_server_mods_setup.lua` in the `mods` folder tells the server which Steam Workshop mods to download.
+- `modoverrides.lua` in `DoNotStarveTogether/config/server/Master` (and `Caves`) turns the mods on and holds their settings.
 
-2. Find the file **dedicated_server_mods_setup.lua** this is the file that needs to be edited. Open it up and you can see there are 2 possibilities regarding installing mods: Individually or Steam Workshop collections.
+Stop the server before you start (see [Power controls](../../control-panel/basics.md#power-controls)).
 
-We'll make a step-by-step guide on both of these options.
+## Find a mod's ID
 
-## Adding individual mods to your server
+Open the mod's Steam Workshop page. The last part of the page's link is the mod ID:
 
-Let's establish what command we need for this to work.
+![Example Mod](images/example-mod.png)
 
-1. Copy/Paste this command in the dedicated_server_mods_setup.lua file:
-```
-ServerModSetup("ModID")
-```
-It should look something like this now, the ModID will be changed with the wanted mods ID:
-![Server Mod Setup](images/server-mod-setup.png)
+## Add individual mods
 
-And the easiest way to find it is to go to the mods Steam Workshop page.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Don't Starve Together server.
+2. Select the **Files** tab, open the `mods` folder and select `dedicated_server_mods_setup.lua` to open it in the editor.
+3. Add this line to the file:
 
-Go to the mod you want to download and open its workshop page. Checking out the link of the mod, you can see the last part of it has a mod ID, as shown in the example here:
-![Example Mod](images/example-mod.png) 
-Copy that mod id and paste the id instead of the ModID inside the apostrophes, and click on **Save Content**. 
+   ```lua
+   ServerModSetup("ModID")
+   ```
 
-![Mod](images/random-mod.png)
+   It should look like this:
 
-If you want to add more mods, add another ServerModSetup("ModID") command and do the same with pasting the mod id inside.
+   ![Server Mod Setup](images/server-mod-setup.png)
 
-2. After the mods have been added. Start/Restart your server, and the mod should be downloading automatically.
+4. Replace `ModID` with the mod's ID. Keep the quotes and the parentheses.
 
-Now we need to go and activate the mod and create a `modoverrides.lua`.
+   ![Mod](images/random-mod.png)
 
-3. Head over to `DoNotStarveTogether  => config  => server => Master` and click on **New File** located at the upper right part of the window.
+5. To add more mods, add another `ServerModSetup("ModID")` line for each mod.
+6. Select **Save file**.
 
-![New File](../images/new-file.png)
+Next, turn the mods on with `modoverrides.lua`, as described in [Enable the mods](#enable-the-mods).
 
-4. Now Copy this text:
-```
- return {
-  ["workshop-modid"]={
-    configuration_options={  },
-    enabled=true 
-  },
-  ["workshop-modid"]={
-    configuration_options={  },
-    enabled=true 
-   }
-  }
-```
-This is an example to enable 2 mods on your server. To add more mods, simply add this text between the last two “}” signs:
-```
- ["workshop-modid"]={
-    configuration_options={  },
-    enabled=true 
-  },
-```
-Note that the last mod should not finish with *coma (,)*.
+## Add a Workshop collection
 
-5. Afterwards, click on Create File, name the file `modoverrides.lua`
-and click on Create File again. Now we have created the file that enables the mods.
+Adding a Steam Workshop collection works the same way. The only difference is the line you add to `dedicated_server_mods_setup.lua`. Instead of `ServerModSetup("ModID")`, use:
 
-6. Start your server, and the mods will start downloading and get enabled right on the server.
-
-## Adding a workshop collection to your server
-To add a Steam Workshop collection to your server is the same as above. The only difference is the command that is used, so instead of ServerModSetup("ModID") you’re going to use
-```
+```lua
 ServerModCollectionSetup("Workshop_Collection_ID")
 ```
-Here is an example for the **dedicated_server_mods_setup.lua** :
+
+Replace `Workshop_Collection_ID` with the ID from the collection's Workshop page. For example:
 
 ![Mod Collection](images/mod-collection.png)
 
-## Configuring your mods
+## Enable the mods
 
-Some mods need to be configured, and the best way to do that is to create a config file of the mod via your own game.
+1. On the **Files** tab, open the folder `DoNotStarveTogether/config/server/Master`.
+2. If `modoverrides.lua` is already there, select it to open it. Otherwise select **New file**, enter `modoverrides.lua` as the name and select **Create** (see [Create a file or folder](../../control-panel/file-manager.md#create-a-file-or-folder)). The new file opens in the editor.
+3. Paste this text. It enables two mods. Replace `modid` with each mod's ID, for example `workshop-347079953`:
 
-1. **Subscribe** to the mod on Steam Workshop and get in your game.
+   ```lua
+   return {
+     ["workshop-modid"]={
+       configuration_options={  },
+       enabled=true
+     },
+     ["workshop-modid"]={
+       configuration_options={  },
+       enabled=true
+     }
+   }
+   ```
 
-2. Click on **Host Game**. 
+4. To add more mods, add another block like this one inside the outer brackets, separated from the previous block by a comma:
 
-![Host Game](images/host-game.png)
+   ```lua
+   ["workshop-modid"]={
+     configuration_options={  },
+     enabled=true
+   },
+   ```
 
-3. Go to the mods tab and tick on the mods you want to have. 
+5. Select **Save file**.
+6. If your server has caves, create the same `modoverrides.lua` in `DoNotStarveTogether/config/server/Caves` too, so the mods are enabled there as well. Copy the text from the `Master` file and paste it into a new file in `Caves`.
+7. Start the server. The mods download and are enabled on the server.
 
-![Mods Tab](images/mods-tab.png)
+## Configure your mods
 
-4. Select the mod you want to configure and then click on **Configure Mod**.
+Some mods need to be configured. The easiest way is to let the game create the config for you on your own computer, then copy it to the server.
 
-![Configure Mod](images/configure-mod.png)
+1. **Subscribe** to the mod on the Steam Workshop and start the game.
+2. Select **Host Game**.
 
-5. Once done, click on **Generate World**. Now that the game has created the wanted config file, we need to upload it. The file is located at ```Users\%useraccount%\Documents\Klei\DoNotStarveTogether\%randomnumber%\Cluster_1\Master```.
-Or you can click on **Manage World**.
+   ![Host Game](images/host-game.png)
 
-![Manage World](images/manage-world.png)
+3. Go to the **Mods** tab and tick the mods you want.
 
-And then on **Open World Folder**.
+   ![Mods Tab](images/mods-tab.png)
 
-![Open World Folder](images/world-folder.png)
+4. Select the mod you want to configure, then select **Configure Mod**.
 
-6. Once there, upload the file to the same folder: 
-`DoNotStarveTogether => config => server => Master` 
+   ![Configure Mod](images/configure-mod.png)
 
-#TODO: Replace with new image
-![Directory](images/directory.png)
+5. When you're done, select **Generate World**. The game creates the config file `modoverrides.lua` in `Users\%useraccount%\Documents\Klei\DoNotStarveTogether\%randomnumber%\Cluster_1\Master` on your computer. To find the folder, you can also select **Manage World**:
 
-But before that, rename the modoverrides.lua on your gamepanel or delete it if it isn't needed.
+   ![Manage World](images/manage-world.png)
 
-If you have a mod that made adjustments to the Caves, all you need to do is go to the Caves folder instead of the Master folder on your PC, and the same goes for the folder on your Game panel.
+   And then **Open World Folder**:
 
-![Caves](images/caves.png)
+   ![Open World Folder](images/world-folder.png)
 
-7. After everything is done, Start/Restart your server, and you have successfully installed, enabled and configured your mod.
+6. Copy the file to the server, into `DoNotStarveTogether/config/server/Master`. Either:
+   - Open the file on your computer in a text editor and copy everything. On the **Files** tab, open the server's `modoverrides.lua`, replace its contents with what you copied and select **Save file**. Or:
+   - Delete or rename the server's existing `modoverrides.lua`, then open the `Master` folder on the **Files** tab and select **Upload** to upload your file (see [Upload files](../../control-panel/file-manager.md#upload-files)).
+7. If a mod changes the caves, do the same with the `modoverrides.lua` from the `Caves` folder on your computer and the server's `DoNotStarveTogether/config/server/Caves` folder.
+8. Start or restart the server. Your mods are now installed, enabled and configured.

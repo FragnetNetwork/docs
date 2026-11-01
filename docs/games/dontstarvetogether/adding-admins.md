@@ -1,50 +1,39 @@
 ---
 title: Adding admins
-keywords: ['dont starve together', 'dont starve together admins', 'dont starve together adding admins']
+keywords: ['dont starve together', 'dont starve together admins', 'dont starve together adding admins', 'dont starve together adminlist.txt', 'fragnet dashboard']
 ---
 
 # Adding admins to your Don't Starve Together server
 
-Adding admins to your Don’t Starve Together server requires creating an **adminlist.txt** file at a specific location.
+Admins are listed by their Klei ID in a file called `adminlist.txt` on your server. You create it on the **Files** tab of the dashboard.
 
-Let's start by getting your **Klei_ID**. There are 2 ways to do this:
+## Get your Klei ID
 
-## Getting your Klei_ID
+There are two ways to find a Klei ID.
 
-### Method 1
+### Method 1: on the server
 
-1. Connect to your server and type `c_listallplayers()` in the console.
+1. Connect to your server and type `c_listallplayers()` in the console. You can also type it in the console on the **Overview** tab of the dashboard (see [Send a command](../../control-panel/basics.md#send-a-command)).
+2. You see a list of the players connected to the server. Find your name and copy your Klei ID. It starts with `KU_`.
 
-2. You will see a list of players connected to the server. Find your name and copy the **Klei_ID**.
-
-### Method 2
+### Method 2: on the Klei website
 
 1. Go to [Klei Entertainment](https://accounts.klei.com/account/game) and log in with your Steam account.
+2. Once logged in, you see your Klei ID.
 
-2. Once logged in, you will see your **Klei_ID**.
+![Klei ID](images/klei-id-website.png)
 
->![Klei ID](images/klei-id-website.png)
+## Create the adminlist.txt file
 
-## Creating the adminlist.txt file
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Don't Starve Together server.
+2. Select the **Files** tab and open the folder `DoNotStarveTogether/config/server`.
+3. If `adminlist.txt` is already there, select it to open it. Otherwise select **New file**, enter `adminlist.txt` as the name and select **Create** (see [Create a file or folder](../../control-panel/file-manager.md#create-a-file-or-folder)). The name must be exactly `adminlist.txt`. The new file opens in the editor.
+4. Paste your Klei ID on the first line. To add more admins, put each Klei ID on its own line.
+5. Select **Save file**.
+6. Restart the server (see [Power controls](../../control-panel/basics.md#power-controls)) and connect to it.
 
-1. Open up your **File Manager** on your game panel. 
-
-![File Manager](../images/file-manager.png)
-
-2. Go to this directory: `DoNotStarveTogether => config => server`.
-
-3. Once there, click on **New File** located in the upper right corner of the panel.
-
->![New File](../images/new-file.png)
-
-4. The file will open up, paste your `Klei_ID` in the first line and then click on **Create File** in the lower right corner. 
-
->![Create File](../images/create-file.png)
-
-5.  It will prompt you to name the file. It’s very important to name it **adminlist.txt**.
-
-6. Afterwards, click on Create File and Start/Restart you server and connect to it.
-
-If successfully done, you should see a star icon near your character portrait:
+If it worked, you see a star icon next to your character portrait:
 
 ![Character portrait](images/character-portrait.png)
+
+To remove an admin, delete their line from `adminlist.txt`, save the file and restart the server.

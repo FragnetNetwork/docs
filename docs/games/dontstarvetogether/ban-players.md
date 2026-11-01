@@ -1,42 +1,38 @@
 ---
-title: Banning players on your Don't Starve Together server 
-keywords: ['dont starve together', 'dont starve together ban', 'dont starve together ban player']
+title: Banning players on your Don't Starve Together server
+keywords: ['dont starve together', 'dont starve together ban', 'dont starve together ban player', 'dont starve together blocklist.txt', 'fragnet dashboard']
 ---
 
 # Banning players on your Don't Starve Together server
-There are two ways to ban players.
 
-1. If the players are still present on the server, they can be banned via console commands.
+There are two ways to ban players:
 
-2. Banning players via blocklist.txt.
+- With a console command, while the player is still on the server.
+- By adding their Klei ID to `blocklist.txt`, for example when the player is offline.
 
-## Banning players via console commands
+## Ban a player with a console command
 
-In this example, we will use the game panel console, but you can also do this in-game.
+You can run these commands in the console on the **Overview** tab of the dashboard (see [Send a command](../../control-panel/basics.md#send-a-command)) or in the in-game console as an admin.
 
-1. Navigate to your Fragify console and type in the command: ```c_listallplayers()```. It will list all players and their Klei IDs.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Don't Starve Together server.
+2. In the console, type `c_listallplayers()` and press **Enter**. The console lists all players with their Klei IDs.
+3. Copy the player's Klei ID into this command and send it: `TheNet:Ban("PlayerKleiID")`
 
-2. Once you have found the player copy their Klei ID In this command: ```TheNet:Kick("PlayerKleiID")``` 
-:::note
-Leave the apostrophes and the parenthesis they are needed.
-:::
+   For example: `TheNet:Ban("KU_ex12312")`. Keep the quotes and the parentheses.
 
-It should look something like this:
-```TheNet:Kick("KU_ex12312")```. Once executed the player is banned.
+The player is removed from the server and can't join again. To only kick a player without banning them, use `TheNet:Kick("PlayerKleiID")` instead.
 
-## Banning players via Blocklist.txt
+## Ban a player with blocklist.txt
 
-1. If the player isn’t online anymore, you can go to the server logs, search for the player's name and find their Klei ID.
-The server logs are located at `DoNotStarveTogether => config => server => Master => server_log.txt`.
+1. If the player isn't online any more, find their Klei ID in the server log. On the **Files** tab, open `DoNotStarveTogether/config/server/Master/server_log.txt` and look for the player's name.
+2. Open the folder `DoNotStarveTogether/config/server`.
+3. If `blocklist.txt` is already there, select it to open it. Otherwise select **New file**, enter `blocklist.txt` as the name and select **Create** (see [Create a file or folder](../../control-panel/file-manager.md#create-a-file-or-folder)). The name must be exactly `blocklist.txt`.
+4. Paste the player's Klei ID. Put each Klei ID on its own line.
+5. Select **Save file**.
+6. Restart the server (see [Power controls](../../control-panel/basics.md#power-controls)).
 
-2. Now, we need to go to the directory where blocklist.txt is, and if it isn’t there, we need to create it. If **blocklist.txt** isn’t there, go ahead and click on **New File** in the upper right corner. 
+When the player tries to connect, they see this:
 
-![New File](../images/new-file.png)
+![Ban](images/banned.png)
 
-3. Paste the Klei ID you have acquired through the **server_log.txt**.
-
-4. Once done, click on **Create File** and type in the name **blocklist.txt**.  Exactly like that, it’s crucial.
-
-![blocklist](images/blocklist.png)
-
-5. And press Create File again, Start/Restart your server and when the player connects, they will see this: ![Ban](images/banned.png)
+To unban a player, delete their line from `blocklist.txt`, save the file and restart the server.

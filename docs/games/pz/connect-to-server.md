@@ -1,37 +1,49 @@
 ---
 title: Finding and connecting to your Project Zomboid server
-keywords: ['project zomboid server join', 'find project zomboid server']
+keywords: ['project zomboid server join', 'find project zomboid server', 'project zomboid server ip', 'project zomboid connect', 'fragnet dashboard']
 ---
 
 # Finding and connecting to your Project Zomboid server
 
-You can find and connect to your Project Zomboid server in 2 ways which are described in this article.
+You can connect to your Project Zomboid server through Steam's server list, or through the in-game server browser.
+
+## Find your server's address
+
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Project Zomboid server.
+2. On the **Overview** tab, the **Server Details** card shows the **Address**. Select the copy button next to it.
+
+The address has two parts, the host and the port, separated by a colon (`host:port`). See [Server Details](../../control-panel/basics.md#server-details).
 
 ## Via Steam
 
-1. Copy your IP address and port of your Project Zomboid server from your [Fragify panel's account](https://panel.fragnet.net/)
+1. Open Steam and go to **View** > **Game Servers**.
 
-2. Launch your Steam client and go to `View` tab on top-left side of the client => click on `Game Servers` option.
-![Steam Game Servers](images/steam-servers.png)
+   ![Steam Game Servers](images/steam-servers.png)
 
-3. Go to **Favourites** tab in the new window and click on **+** sign to add a new server in Favourites list.
-![Steam Favourites list](images/steam-favourites.png)
+2. Open the **Favorites** tab and select the **+** button to add a server.
 
-4. Input the IP and port of your server in the new window and click on **Ok** button.
+   ![Steam Favorites list](images/steam-favourites.png)
 
-5. The server should appear in your favourites and you should select it. Afterwards, click on **Connect** button.
-![Connect](images/connect.png)
+3. Enter your server's address (host and port) and select **OK**.
+4. Your server appears in the list. Select it, then select **Connect**.
 
-6. After the game launched, you will be provided with login details screen and you can set them to your preferences. Click on **Connect** once everything is set.
-![Join Details](images/join-details.png)
+   ![Connect](images/connect.png)
 
-## Via Server Browser in-game
+5. When the game has started, it asks for your login details. Enter the username and password you want to use on this server, then select **Connect**.
 
-1. Launch the game and go to `Join` option in the main menu. 
-![Join a Game](images/join.png)
+   ![Join details](images/join-details.png)
 
-2. Go to **Internet** tab. Input the name of your server that you have set in **Configure** option in Fragify panel and ensure that all the filters are selected. To connect to the server, set your account's username and password. Afterwards, click on **Join Server** option. 
+## Via the in-game server browser
 
-![Server search](images/server-browser.png)
+1. Launch the game and select **Join** in the main menu.
 
-> If you cannot find server, please double-check if correct IP/port/server name are used. 
+   ![Join](images/join.png)
+
+2. Open the **Internet** tab. In **Name filter**, enter your server's name and make sure all the filter boxes are ticked. The name is the **Server Name** startup setting, on the **Configuration** tab under **General**.
+3. Select your server. Enter your **Account Username** and **Account Password**, then select **Join Server**.
+
+   ![Server browser](images/server-browser.png)
+
+:::tip Can't find your server?
+Check that the name you search for matches the **Server Name** startup setting, or add the server with its address on the right of the browser. Make sure you use the right host and port.
+:::
