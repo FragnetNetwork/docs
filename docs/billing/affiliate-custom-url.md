@@ -1,19 +1,25 @@
-# Affiliates: Custom URL codes
+# Affiliates: Linking to a specific page
 
-When using the official Affiliates system to refer new users to our services in return for a commission, the URL listed provides a direct link to the Fragnet homepage. In some cases, you may wish to choose which page you are able to link to on our website, while still maintaining your Affiliate URL.  
-To do so, you may use the custom Affiliate URL format displayed below, placing your target URL at the end. This will be the web address where you wish to redirect users who click on your links.
+Your referral link (shown on the **Affiliates** page of the [Fragnet dashboard](VAR::PANEL_URL)) opens the Fragnet home page. To send people to a specific page instead, for example the page of the game your community plays, add your referral code to that page's address.
 
-http://clients.fragnet.net/aff2.php?aff=XXXXX&url=http://fragnet.net
+## Build the link
 
-Replace the following values as instructed:  
-  
-**?aff**\= This number should be your Affiliate ID which can be obtained from the original Affiliate URL provided.  
-**?url=** This should be the URL (prefixed with http://) where you wish to redirect the user clicking the link.
+1. Find your referral code. It is the last part of your referral link: in `https://fragnet.net/ref/yourname` the code is `yourname`.
+2. Open the page you want to link to on [fragnet.net](https://fragnet.net) and copy its address.
+3. Add `?aff=` followed by your code to the end of the address. If the address already contains a `?`, add `&aff=` instead.
 
-  
-If you have any questions or issues when using this, feel free to open a support ticket with our team at [https://clients.fragnet.net](https://clients.fragnet.net)
+For example, to link to the Minecraft page with the code `yourname`:
 
-# Affiliate: Custom Discount codes
+```text
+https://fragnet.net/games/minecraft?aff=yourname
+```
 
-If you wish to refer users to our website for getting any services, we can create a custom discount code that your users can activate while buying any products from us.
-Just reach out to us and we can proceed with creation of custom code for you! =)
+Visitors who arrive through this link are credited to you in the same way as through your normal referral link. The same rules apply: the visitor must allow **Marketing** cookies, and the referral is remembered for 90 days. See [Affiliates: Earn money by advertising us!](./affiliate-signup.md) for how commissions work.
+
+:::tip
+Open your link in a private browser window to check that it lands on the right page. The `aff` part is removed from the address bar once the visit is recorded.
+:::
+
+## Custom discount codes
+
+If you'd like a discount code for your audience, [open a support ticket](VAR::SUPPORT_URL) in the **Sales** category and tell us about your community. Customers enter the code in the promo code field when they order a server.

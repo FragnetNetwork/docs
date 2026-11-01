@@ -1,97 +1,72 @@
 ---
 title: How to access your server files using FTP
-keywords: ['FTP access', 'file access']
+keywords: ['FTP access', 'SFTP access', 'file access', 'FileZilla', 'FTP password', 'SFTP password', 'upload files', 'FTP details']
 ---
 
-Please note that this guide covers only FTP access for game servers hosted under our <a href="https://gamepanel.fragnet.net" target="_blank">Game Panel (gamepanel.fragnet.net)</a> which we plan on decomissioning in favor of our custom control panel <a href="/docs/fragify/intro">Fragify</a>
+You can manage most of your server's files in the browser from the **Files** tab of the [Fragnet dashboard](VAR::PANEL_URL). See [Files](../control-panel/file-manager.md) for what you can do there.
 
-If you have a Farming Simulator 19 / 22 server, you can <a href="/docs/games/fs22/manage-files-via-ftp">find the FTP guide here.</a>
+An FTP or SFTP client is better for bigger jobs:
 
--------
+- uploading large files (uploads over 100 MB should go through FTP rather than the browser)
+- uploading or downloading many files at once
+- moving files and folders between folders, which the **Files** tab can't do
 
-We provide full access to your server files for most games through the game panel's integrated file manager and the File transfer protocol (FTP). The integrated file manager is a lightweight solution for simple tasks such as file and folder deletions/renames and light file uploads. FTP is more suited for heavier tasks such as large file uploads (both in size and number) and moving files from one directory to another.
+Some games limit which files you can access, at the request of their developers.
 
-While we provide full access to server files for most games we are hosting, some games are limited or completely inaccessible via FTP or File Manager as per developer demands.
+## Find your connection details
 
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
+2. Open the **Files** tab and find the **FTP access** card. The same details are under **Configuration** → **General** → **File access**. On Farming Simulator servers, they're in the **File access** card on the **Overview** tab.
+3. Choose **FTP** or **SFTP** at the top of the card. The port changes with your choice.
+4. Copy the **Host**, **Username**, **Port** and **Password** with the copy button next to each. To see the password, select the eye icon (**Reveal**).
 
-## FTP connection details
+![Server page, Files tab](images/files-tab-ftp-access@2x.png)
 
--------
+:::info
+The password is a dedicated SFTP/FTP password for this server. It is **not** your Fragnet account password. Only the account owner and team members with the **Admin** or **Service manager** role can see it.
+:::
 
-To access your server's FTP, you must input the **Hostname or IP address**, **Port**, **Username** and **Password**.
+We recommend SFTP, which encrypts the connection, if your client supports it.
 
-If your server is setup on ```gamepanel.fragnet.net```, FTP details are the following:
+### Change the password
 
-    Host : Your game server address  
-    **Warning** : Do not include the port after the IP address (I.E 192.168.1.1 instead of 192.168.1.1:25565)  
-    Username : Your game panel username  
-    Password : Your game panel password  
-    Port : Can be seen on the game panel 
+Select **Regenerate**, then **Regenerate password** to confirm. The new password replaces the old one for everyone with access to the server, and connections that use the old password stop working.
 
-![FTP section](images/ftp-details.png)
+## Choose an FTP client
 
-## Connecting to your FTP
-
--------
-
-You can use any FTP client that you are comfortable with. However, if you don't know which FTP client to use, you can check this table for
-compatibility of most popular FTP clients:
+You can use any FTP or SFTP client you like. These are popular free options:
 
 | Software | Windows | Mac | Linux |
 |----------|---------|-----|-------|
-| [Cyberduck](https://cyberduck.io/) | ✔️ | ✔️ | ✔️ |
-| [WinSCP](https://winscp.net/eng/download.php) | ✔️ | ❌ | ❌ |
 | [FileZilla](https://filezilla-project.org/) | ✔️ | ✔️ | ✔️ |
+| [Cyberduck](https://cyberduck.io/) | ✔️ | ✔️ | ❌ |
+| [WinSCP](https://winscp.net/eng/download.php) | ✔️ | ❌ | ❌ |
 
-You can follow the steps to access and manage your server files for most game servers using FTP clients such as:
+If your computer has an FTP client set up to open links, you can also select **Open in FTP client** or **Open in SFTP client** in the card. It fills in the host, port and username for you; you enter the password.
 
-## Cyberduck
+## Connect with FileZilla
 
-1. Download and install Cyberduck here: [Download Cyberduck](https://cyberduck.io/download/)
+1. Download and install FileZilla Client from [filezilla-project.org](https://filezilla-project.org/download.php?type=client).
+2. In the bar at the top of FileZilla, fill in:
+   - **Host**: the host from the dashboard. For SFTP, type `sftp://` in front of the host. Don't add the port to the host.
+   - **Username**: the username from the dashboard.
+   - **Password**: the SFTP/FTP password from the dashboard.
+   - **Port**: the port shown for the option you chose (FTP or SFTP).
+3. Select **Quickconnect**.
 
-2. Click on ```Open Connection`` button in Cyberduck.
+![FileZilla Quickconnect bar](images/FileZilla-details.png)
 
-![Cyberduck Open Connection](images/Cyberduck-open-connection.png)
+When you're connected, your server's files appear on the right (**Remote site**) and your computer's files on the left (**Local site**).
 
-3. Input the FTP details 
+## Upload and download files
 
-![Cyberduck FTP details](images/Cyberduck-details.png)
+- To upload, drag files or folders from the left side to a folder on the right.
+- To download, drag them from the right side to the left.
+- You can also right-click a file or folder and select **Upload** or **Download**.
+- To move a file on the server, drag it into another folder on the right side.
 
-4. The pop-up message regarding unsecure connection will appear and you can click on ```Continue``` option.
+:::tip
+Most games only read their configuration files when they start. Restart your server after uploading or changing config files.
+:::
 
-![Cyberduck message](images/Cyberduck-message.png)
-
-Afterwards, if all the details were correct, you should see the folder with the IP and port of your server.
-
-## Filezilla
-
-1. Download and install FileZilla here: [Download FileZilla](https://filezilla-project.org/download.php?type=client)
-
-2. Connect to your FTP account using the FTP details and click on "Quick connect".
-
-![Filezilla connection details](images/FileZilla-details.png)
-
-3. Afterwards, if all the details were correct, you should see the folder with the IP and port of your server and the following will appear in console:
-
-![Filezilla connection](images/FileZilla-connection.png)
-
-## WinSCP
-
-1. Download and install WinSCP here: [Download WinSCP](https://winscp.net/eng/download.php)
-
-2. Fill the fields with your FTP details and click on **Login** button. 
-
-![WinSCP Login](images/WinSCP-login.png)
-
-*** Be careful when you type login information as you may get a 5 minutes ban if you attempt to login with the wrong credentials repeatedly. In that situation, simply disconnect and wait 5 minutes before trying again ***
-
-## Uploading and downloading files or folders
-
-------
-
-FTP is particularly useful for backing up your server files, or uploading plugins/worlds/settings onto your server.  
-  
-Once connected to your FTP account, server files will be listed on the right side of the screen, whilst your computer's files will be listed on the left side.  
-You can upload, download, and move files from your computer to your server and vice versa, as well as within the server's folders.  
-  
-Alternatively, you may right click on the relevant file or folder and hit the "Download" or "Upload" button.
+If you can't connect, check that you copied the port for the option you chose, and that you're using the SFTP/FTP password from the dashboard. If it still doesn't work, [open a support ticket](VAR::SUPPORT_URL) and choose **Files & SFTP**.

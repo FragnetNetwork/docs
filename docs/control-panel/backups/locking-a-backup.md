@@ -1,18 +1,33 @@
 ---
-title: Locking a backup
-keywords: ['lock backup', 'lock backups', 'lock server backup', 'lock server backups', 'lock game server backup', 'lock game server backups']
+title: Protecting a backup
+keywords: ['protect backup', 'protected backup', 'remove protection', 'lock backup', 'unlock backup', 'locked backup', 'keep backup', 'prevent backup deletion']
 ---
 
+Protecting a backup stops it from being deleted, by you or by a schedule. This used to be called locking a backup.
 
-## Locking
-You can lock an existing backup of your server at any time by heading over to your server's **Backups** tab and clicking the **Lock** button next to the backup you want to lock.
+Protect backups you want to keep for good, such as a backup from before a big update. When you're at your plan's backup limit, scheduled and [automatic backups](./index.md#scheduled-backups) replace the oldest backup that isn't protected, so protected backups are never replaced.
 
-![Lock Backup](./images/backup-lock.png)
+Protected backups still count toward your plan's backup limit.
 
-This feature is useful if you want to prevent a backup from being deleted or overwritten when you have a backup schedule enabled. By default, the scheduler will delete the oldest backup when creating a new backup if the maximum number of backups has been reached. Locking a backup will prevent it from being deleted by the scheduler.
+## Protect a backup
 
-## Unlocking
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
+2. Open the **Backups** tab.
+3. Open the ⋯ menu next to the backup and select **Protect from deletion**.
 
-If you have locked your backup, you will need to unlock it before you can delete it. You can do this by clicking the **Unlock** button next to the backup you want to unlock.
+The backup now shows the **Protected** tag, and **Delete** disappears from its menu.
 
-![Unlock Backup](./images/backup-unlock.png)
+You can also protect a backup as you make it: tick **Protect this backup from deletion** in the **Create backup** dialog.
+
+<!-- screenshot: backup-menu-protect.png | Backups tab: a backup row tagged Protected with its ⋯ menu open, showing Restore, Download and Remove protection (no Delete) -->
+
+## Remove the protection
+
+1. On the **Backups** tab, open the ⋯ menu next to the protected backup.
+2. Select **Remove protection**.
+
+The **Protected** tag goes away. The backup can now be deleted, and a scheduled backup can replace it when you're at the limit.
+
+:::tip
+If every one of your backups is protected and you're at the limit, a scheduled backup has nothing to replace. Its run fails with "Backup limit reached". Remove the protection from a backup you no longer need, or delete one.
+:::

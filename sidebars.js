@@ -7,43 +7,18 @@ const sidebars = {
     'contributing',
     {
       type: 'category',
-      label: 'Game Control Panel',
+      label: 'Dashboard',
       link: {
         type: 'generated-index',
-        title: 'Getting Started With the Game Control Panel',
-        description: 'Learn more about the Game Control Panel (Fragify)!',
+        title: 'Getting Started With the Fragnet Dashboard',
+        description: 'Manage your servers, files, backups, schedules and team from the Fragnet dashboard.',
         slug: '/control-panel',
-        keywords: ['getting started', 'fragify', 'control panel', 'game panel'],
+        keywords: ['getting started', 'dashboard', 'control panel', 'game panel', 'manage server'],
       },
       items: [
         'control-panel/intro',
-        {
-          type: 'category',
-          label: 'API',
-          link: {
-            type: 'doc',
-            id: 'control-panel/api/index',
-          },
-          items: [
-            'control-panel/api/generating-an-api-key',
-            {
-              type: 'category',
-              label: 'Server',
-              link: {
-                type: 'generated-index',
-                slug: '/api/server',
-              },
-              items: [
-                'control-panel/api/server/retrieving-server-resources',
-                'control-panel/api/server/websocket',
-                'control-panel/api/server/sending-a-command',
-                'control-panel/api/server/power-actions',
-              ]
-            },
-          ],
-        },
         'control-panel/basics',
-        'control-panel/changelog',
+        'control-panel/configuration',
         'control-panel/file-manager',
         {
           type: 'category',
@@ -55,7 +30,6 @@ const sidebars = {
           items: [
             'control-panel/schedules/creating-a-schedule',
             'control-panel/schedules/creating-a-task',
-            'control-panel/schedules/editing-a-task',
             'control-panel/schedules/editing-a-schedule',
             'control-panel/schedules/running-a-schedule',
           ]
@@ -75,11 +49,22 @@ const sidebars = {
             'control-panel/backups/deleting-a-backup',
           ]
         },
-        'control-panel/subusers',
+        'control-panel/team-access',
         'control-panel/subdomains',
-        'control-panel/databases',
         'control-panel/crash-alerts',
-        'control-panel/2fa'
+        'control-panel/2fa',
+        {
+          type: 'category',
+          label: 'Donations',
+          link: {
+            type: 'doc',
+            id: 'control-panel/donations/index',
+          },
+          items: [
+            'control-panel/donations/public-page',
+            'control-panel/donations/send-and-receive',
+          ]
+        },
       ],
     },
     // Discord Bots section hidden - service not currently offered
@@ -392,7 +377,7 @@ const sidebars = {
         title: 'Billing',
         description: 'Guides around our billing system!',
         slug: '/billing',
-        keywords: ['billing', 'client area', 'payments'],
+        keywords: ['billing', 'invoices', 'payments', 'renewals'],
       },
       items: [
         'billing/accepted-payment-methods',

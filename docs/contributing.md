@@ -45,7 +45,7 @@ We welcome contributions from the community! Whether you're fixing a typo, impro
 
 - `docs/` - All documentation files (Markdown)
 - `docs/games/` - Game-specific documentation
-- `docs/control-panel/` - Control panel documentation
+- `docs/control-panel/` - Dashboard documentation
 - `docs/billing/` - Billing and payment guides
 - `docs/FAQ/` - Frequently asked questions
 
@@ -111,4 +111,4 @@ The path should match your file location without the `.md` extension.
 
 ## Get Rewarded
 
-After your contribution is merged, [open a support ticket](https://clients.fragnet.net) mentioning your GitHub username and the pull request. We offer platform credits as a thank you for quality contributions!
+After your contribution is merged, [open a support ticket](VAR::SUPPORT_URL) mentioning your GitHub username and the pull request. We offer platform credits as a thank you for quality contributions!

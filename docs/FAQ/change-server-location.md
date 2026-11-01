@@ -1,15 +1,25 @@
 ---
 title: Transfering your server to another location
-keywords: ['transfer your server', 'server transfer']
+keywords: ['transfer your server', 'server transfer', 'change location', 'move server', 'location change request', 'change server region']
 ---
 
-If you want to move your server to another location, please [create a ticket with our support team](https://clients.fragnet.net/submitticket.php).
+You can't change a server's location yourself in the [Fragnet dashboard](VAR::PANEL_URL). Our support team moves it for you.
 
-When a game server is moved to another machine, there are some aspects to be aware of:
+## Request a location change
 
-**IP address**: The IP address of a game server will be changed if the service is moved to another machine. As IP addresses are allocated to each of our machines, transferring a single IP to another machine may not be possible. We recommend setting up a subdomain for your service if possible, which can then be changed at any time to point to a different address if needed.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL) and select **Support** in the sidebar.
+2. Under **What do you need help with?**, choose **Game servers**.
+3. Under **What's going on?**, choose **Location change request**, then select the server under **Related server**.
+4. In **Message**, tell us which location you'd like to move to and when suits you. Set the **Urgency** and select **Submit ticket**.
 
-**Data Files**: When a server is transferred, the files will be kept intact. While we always urge our customers to keep frequent backups of their services, the files will not change when moved between machines.
+![Support center, New support request](images/support-location-change-request@2x.webp)
 
-**Duration**: A server's transfer time primarily depends on the size of your server's files. Generally, the waiting time for a server transfer is between 30 and 45 minutes, although this can often be faster or slower than that. However, if your server's files are extremely large, this process can sometimes take a few hours.
-Our staff members will keep you informed about the progress of moving your server files.
+You can see your server's current location in the **Location** row of the **Server Details** card on the **Overview** tab. It updates once the move is done.
+
+## What to expect when your server is moved
+
+**IP address**: Your server's IP address changes when it moves to another location, because each of our machines has its own addresses. Players who join by IP need the new address, which you'll find under **Address** in the **Server Details** card. If your players join with a free [subdomain](../control-panel/subdomains.md) instead, they can keep using the same name. Mention it in your ticket so we can check that it points to the new address after the move.
+
+**Files**: Your server's files are moved with it and stay as they are. We still recommend [creating a backup](../control-panel/backups/creating-a-backup.md) before the move.
+
+**Downtime**: Your server is offline while it's being moved. How long that takes depends mostly on the size of your server's files: large servers take longer. Our team keeps you updated in the ticket.
