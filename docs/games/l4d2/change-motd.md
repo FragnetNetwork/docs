@@ -1,6 +1,6 @@
 ---
 title: Changing MOTD on your Left 4 Dead 2 server
-keywords: ['left 4 dead 2 motd', 'left 4 dead 2 create motd', 'left 4 dead 2 server motd']
+keywords: ['left 4 dead 2 motd', 'left 4 dead 2 create motd', 'left 4 dead 2 server motd', 'l4d2 motd.txt', 'fragnet dashboard']
 ---
 
 # Changing MOTD on your Left 4 Dead 2 server
@@ -8,20 +8,14 @@ MOTD or Message of the day is a small text that appears to players once they joi
 
 Banners can also be added, but we’ll cover this in a different guide.
 
-1. First, we’ll need to locate the MOTD. By default MOTD is located at `left4dead2 / motd.txt`.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server. Open the **Files** tab.
 
-![MOTD](images/motd.png)
+2. First, we’ll need to locate the MOTD. By default the MOTD is located at `left4dead2/motd.txt`. Select it to open it in the editor. See [Edit a file](../../control-panel/file-manager.md#edit-a-file).
 
-2. Once found, open it. There will be a link which you can remove it and add any message you wish for all players to see. 
+3. There will be a link, which you can remove, and add any message you wish for all players to see.
 
-![Example MOTD](images/example-motd.png)
+4. Once done, select **Save file**.
 
-3. Once done, click on **Save Content** in the window's lower right corner.
+5. Afterwards, we need to enable the MOTD in `server.cfg`, which is located in `left4dead2/cfg/server.cfg`. Open it and insert `motd_enable 1`. You can add it anywhere in the file (keep it somewhere at the beginning for easier access), then select **Save file**.
 
-4. Afterwards, we need to locate the server.cfg to enable the MOTD.The server.cfg is located in `left4dead2 / cfg / server.cfg`.
-![ServerConfig](images/serverconfig.png)
-Once found, open it up and `insert motd_enable 1`. You can add it anywhere in between the codes ( keep it somewhere at the beginning for easier access like in the example ) and click on **Save Content** in the window's lower right corner.
-
-![MOTD Enable](images/motd-enable.png)
-
-5. Start/Restart the server and connect to it.
+6. Start or restart the server and connect to it. See [Power controls](../../control-panel/basics.md#power-controls).

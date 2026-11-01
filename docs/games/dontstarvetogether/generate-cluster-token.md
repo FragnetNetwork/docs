@@ -1,19 +1,27 @@
 ---
 title: Generating Cluster Token for your Don't Starve Together server
-keywords: ['dont starve together', 'dont starve together server token', 'dont starve together server cluster' , 'dont starve together server cluster token', ' generate token dont starve together', 'create token dont starve together', 'get token for dont starve together server']
+keywords: ['dont starve together', 'dont starve together server token', 'dont starve together server cluster' , 'dont starve together server cluster token', ' generate token dont starve together', 'create token dont starve together', 'get token for dont starve together server', 'fragnet dashboard']
 ---
 
 # Generating Cluster Token for your Don't Starve Together server
 
-It is neccessary to generate a token for your server to run and to be accessible in-game. This guide will show you on how to proceed with setup of token for your Don't Starve Together server.
+Your server needs a cluster token from Klei to run and to be visible in the game. This guide shows you how to create one and add it to your server.
 
-1. Login to your Klei account here: https://accounts.klei.com/login and go to `Games` => `Don't Starve Together`. Alternatively, you can use this link: https://accounts.klei.com/account/game/servers?game=DontStarveTogether
+## Create the token
 
-2. You will need to input the Cluster name and click on **Add New Server**.
-![Add New Server](images/add-server.png)
+1. Log in to your Klei account at https://accounts.klei.com/login and go to **Games** > **Don't Starve Together**. You can also use this link: https://accounts.klei.com/account/game/servers?game=DontStarveTogether
+2. Enter a cluster name and select **Add New Server**.
 
-3. After adding server, you will see the generated token. Copy the token and paste it in `Configure` => `Base Settings` => `Server Token`.
-![Token](images/token.png)
-![Server Token](images/server-token.png)
+   ![Add New Server](images/add-server.png)
 
-Afterwards, you can start/restart your server for this change to be applied.
+3. Klei shows the generated token. Copy it.
+
+   ![Token](images/token.png)
+
+## Add the token to your server
+
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Don't Starve Together server.
+2. Select the **Configuration** tab, select **General** in the list on the left, then the **Startup** group (see [Startup](../../control-panel/configuration.md#startup)).
+3. Find the startup setting for the server (cluster) token and paste your token into it.
+4. Select **Save** in the bar at the bottom.
+5. Start or restart the server (see [Power controls](../../control-panel/basics.md#power-controls)). The token applies the next time the server starts.

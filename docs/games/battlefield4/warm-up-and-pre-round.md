@@ -14,3 +14,5 @@ If the number of players drops beneath the minimum threshold during the round, t
 You can change the number of players required to go between warm-up and in-round using **vars.roundStartPlayerCount** and **vars.roundRestartPlayerCount** in the startup.txt.
 
 The start player count must be higher than the restart player count – so if you set the starting player count below the restart player count, the engine will silently assume that the restart player count is one lower than the start player count.
+
+In the [Fragnet dashboard](VAR::PANEL_URL), open the **Configuration** tab, select `Startup.txt` and go to the **Rounds** group. **Players to start a round** is vars.roundStartPlayerCount and **Players to keep a round going** is vars.roundRestartPlayerCount. The change applies when the server restarts. See [Change a setting](../../control-panel/configuration.md#in-a-game-config-file).

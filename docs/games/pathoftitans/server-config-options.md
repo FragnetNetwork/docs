@@ -1,6 +1,6 @@
 ---
 title: Configuration options for your Path of Titans server
-keywords: ['config options pot', 'config options path of titans']
+keywords: ['config options pot', 'config options path of titans', 'path of titans game.ini', 'fragnet dashboard']
 ---
 
 # Configuration options for your Path of Titans server
@@ -9,7 +9,11 @@ keywords: ['config options pot', 'config options path of titans']
 
 To change the configuration options, you must edit your `Game.ini` file.
 
-The file is located in following directory: `PathOfTitans/Saved/Config/LinuxServer/` which can be accessed via **File Manager** on the [Fragify panel](VAR::PANEL_URL).
+The file is located in the following directory: `PathOfTitans/Saved/Config/LinuxServer/`. In the [Fragnet dashboard](VAR::PANEL_URL), open your server's **Configuration** tab and select `Game.ini`. Many of the options below have labelled fields there, and **Raw file** lets you add any other option (see [Change a setting](../../control-panel/configuration.md#change-a-setting)). You can also edit the file on the **Files** tab.
+
+:::info
+The server name, the max players and the map are startup settings in the dashboard: **Name in the server list** and **Max players** in the **Server** group, and **Map** in the **World** group, under **Configuration** > **General**. They are passed to the server when it starts and take priority over `ServerName`, `MaxPlayers` and `ServerMap` in `Game.ini`, so change them there.
+:::
 
 **Note:** Each option must be on its own line or else they will not work.
 

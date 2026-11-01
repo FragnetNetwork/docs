@@ -1,53 +1,60 @@
 ---
 title: Setting up Mods on your Path Of Titans server
-keywords: ['setup mods pot server', 'setup mods pot', 'pot server mods', 'path of titans mods setup', 'path of titans server mods setup', 'path of titans server mods']
+keywords: ['setup mods pot server', 'setup mods pot', 'pot server mods', 'path of titans mods setup', 'path of titans server mods setup', 'path of titans server mods', 'path of titans mod map', 'path of titans mods tab', 'fragnet dashboard']
 ---
 
 # Setting up Mods on your Path Of Titans server
 
-In order to use a mod you must specify it in your **GameUserSettings.ini** file located in `PathOfTitans/Saved/Config/LinuxServer` directory which can be accessed via **File Manager**. If you are hosting a modded map, you must also change your server config settings to use the modded map name. 
+You manage your server's mods on the **Mods** tab of the dashboard. The server downloads the mods when it starts, and players get them automatically when they join. If you use a modded map, you also set its map name as the server's map.
 
-# Finding Mod IDs
+## Find a mod's ID
 
-You can find the ID of mods by looking at their Mod ID in-game. Select the mod you are interested in, and note down the number on the page.
+Open the mod browser in the game: select **Mods** in the main menu, select the mod you want and note its **Mod Id**. Mod IDs look like `UGC_M_YZK743K09W_SK`.
 
 ![Mods](images/mods.png)
 ![Example Mod](images/example-mod.png)
 
-## Add mods to GameUserSettings.ini
-**Important Note:** The server must be stopped while editing server files. You must save your edits and restart your server for any edits to take effect.
+## Add mods to your server
 
-You must specify every mod you intend to use in the `GameUserSettings.ini` file.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Path of Titans server.
+2. Stop the server (see [Power controls](../../control-panel/basics.md#power-controls)). The mod list is saved in `GameUserSettings.ini`, which the server can rewrite while it runs, so you can only change mods while it's stopped.
+3. Select the **Mods** tab. If you don't see it, look under **More**.
+4. In **Mod ID or link**, paste the mod ID. You can also paste text or a link that contains the ID.
+5. Optionally, enter a **Name (optional)** so you know which mod it is.
+6. Select **Add mod**. Repeat for each mod you want.
+7. The server loads the mods in the order shown. Use the up and down arrows to change the order, or the bin icon to remove a mod.
+8. Select **Save mods** in the bar that says "The mod list has unsaved changes." (**Discard** throws your changes away.)
+9. Start the server. The mods download when it starts.
 
-1. Navigate to `PathOfTitans/Saved/Config/LinuxServer/GameUserSettings.ini` 
+<!-- screenshot: pot-mods-tab.png | Path of Titans server, Mods tab, server stopped: the "Mod ID or link" and "Name (optional)" fields with Add mod, a list of two or three mods with names, IDs and arrow/bin buttons, the unsaved-changes bar with Save mods, and the "About mods" card -->
 
-2. Add `[PathOfTitans.Mods]` and add the line: `EnabledMods=UGC_M_YZK743K09W_SK` - where `UGC_M_YZK743K09W_SK` is the Mod ID of the mod you want to use for your server.
+:::tip
+Some mods block mobile players. Check a mod's page before you add it.
+:::
 
-`UGC_M_YZK743K09W_SK` is the unique MOD ID identifier of the mod to enable which will automatically be downloaded and enabled on restart. You can add additional lines to enable more then one mod at a time.
+## Use a modded map
 
->Example of the way GameUserSettings.ini looks like with multiple mods:
-```
+A map mod also needs its map name set as the server's map. Only one map can run at a time.
+
+1. Add the map mod on the **Mods** tab as described above, and save.
+2. Open the **Configuration** tab, select **General**, then the **World** group. You can also use the **Choose the map** link in the **About mods** card on the **Mods** tab.
+3. Under **Map**, select **Map mod…**.
+4. Enter the map name exactly as the mod gives it, for example `TheGrimExpanse`. Generally this is the same as the mod's name, but check with the mod author to be sure. Names can contain letters, digits, `_` and `-`.
+5. Select **Save** in the bar at the bottom, then restart the server (see [Under General](../../control-panel/configuration.md#under-general)).
+
+Set the map here rather than with `ServerMap` in `Game.ini`. The server starts with the map from this setting.
+
+If everything is set up correctly, your mods load after the restart. In the game's community server browser, select **Details** on your server to see the mods it runs.
+
+## Edit GameUserSettings.ini yourself
+
+The **Mods** tab writes each mod as an `EnabledMods` line under `[PathOfTitans.Mods]` in `PathOfTitans/Saved/Config/LinuxServer/GameUserSettings.ini`, with the name you entered as a comment above it. You can also edit this file while the server is stopped, on the **Configuration** tab (select `GameUserSettings.ini`) or on the **Files** tab. Example with several mods:
+
+```ini
 [PathOfTitans.Mods]
 ;TheGrimExpanse
 EnabledMods="UGC_M_DYV7XYEGX2_SK"
-;German Shepard Mod (this is a example of mod stacking)
+;German Shepard Mod (an example of mod stacking)
 EnabledMods="UGC_M_DYV0XMY7GX_SK"
 EnabledMods="UGC_M_YZK743K09W_SK"
 ```
-![Load Mod](images/load-mod.png)
-
-# Changing Default Server Map to Mod Map
-If you are using a modded map on your server, you must specify the modded map name in your `Game.ini` file.
-
-1. Navigate to `PathOfTitans/Saved/Config/LinuxServer/Game.ini`.
-
-2. Under the header `[/Script/PathOfTitans.IGameSession]` add the line `ServerMap=TheGrimExpanse` where `TheGrimExpanse` is the map name of the mod you want to use for your server. This name must be written exactly as specified in the mod files. Generally, this will be the same name as the mod, however you may want to check with the mod author to make sure you have the correct mod map name.
-
->Example Game.ini
-```
-[/Script/PathOfTitans.IGameSession]
-ServerMap=TheGrimExpanse
-```
-![Load Map](images/load-map.png)
-
-If everything is set up correctly, your mods should now show up after restarting your server, and will auto download required mods when players join. On the community server browser tab, you can also click "Details" to see a list of all mods that your server is currently running.

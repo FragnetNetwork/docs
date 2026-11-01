@@ -1,21 +1,25 @@
 ---
 title: Setting and editing an RCON password of your Left 4 Dead 2 server
-keywords: ['RCon Left 4 Dead 2', 'RCon Left 4 Dead 2 server', 'Left 4 Dead 2 rcon password', 'Left 4 Dead 2 rcon password setup', 'Left 4 Dead 2 set rcon password', 'Left 4 Dead 2 server rcon password', 'Left 4 Dead 2 create rcon password']
+keywords: ['RCon Left 4 Dead 2', 'RCon Left 4 Dead 2 server', 'Left 4 Dead 2 rcon password', 'Left 4 Dead 2 rcon password setup', 'Left 4 Dead 2 set rcon password', 'Left 4 Dead 2 server rcon password', 'Left 4 Dead 2 create rcon password', 'fragnet dashboard']
 ---
 
 # Set and edit an RCON password for Left 4 Dead 2 server
-Editing the RCON password is fairly simple with our gamepanel
+You set the RCON password in the startup settings of your server in the [Fragnet dashboard](VAR::PANEL_URL).
 
-Follow these steps to guide you on how to edit it.
+## Change or set the RCON password
 
-Changing/Setting the RCON password:
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
 
-1. Go to your Fragify Gamepanel   
+2. Open the **Configuration** tab and select the **Startup** group. See [Startup](../../control-panel/configuration.md#startup).
 
-2. Click on the **Configure** tab and find **RCON Password** in `Base Settings`.
+3. Find the RCON password setting and enter the password you would like to have.
 
-3. Change/Set the RCON password to any you would like to have. Afterwards, restart the server for the change to be applied.
+4. Select **Save** in the bar at the bottom of the page.
 
-![RCON PASSWORD](images/rcon-password.png)
+5. Restart the server. The new password applies the next time the server starts. See [Power controls](../../control-panel/basics.md#power-controls).
 
-Removing the RCON password requires that the field in the **RCon password** window is blank.
+To remove the RCON password, leave the RCON password setting empty and save.
+
+:::info
+`server.cfg` (in `left4dead2/cfg` on the **Files** tab) can also contain an `rcon_password` line. If that line still has a different password after the restart, it's the one the game uses: change it there too, or remove the line.
+:::

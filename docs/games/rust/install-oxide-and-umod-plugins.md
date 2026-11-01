@@ -1,58 +1,72 @@
 ---
-title: Installing Oxide and Umod plugins for your Rust server
-keywords: ['rust server oxide', 'rust server setup oxide', 'rust server install oxide', 'rust server umod plugins', 'rust server oxide plugins', 'rust server install plugins', 'rust server setup plugins']
+title: Installing Oxide and uMod plugins for your Rust server
+keywords: ['rust server oxide', 'rust server setup oxide', 'rust server install oxide', 'rust server umod plugins', 'rust server oxide plugins', 'rust server install plugins', 'rust server setup plugins', 'rust carbon', 'rust plugins tab', 'umod', 'fragnet dashboard']
 ---
 
-# Installing Oxide plugins on the server
+# Installing Oxide (uMod) plugins on your Rust server
 
-There are many oxide plugins that can be installed on the server and which can improve your gameplay experience. It's up to you to decide what will be on the server and how it will be configured.
+Plugins add features to your Rust server, such as kits, teleports, gather rates or admin tools. Most Rust plugins are published on [uMod](https://umod.org/plugins) and need a modding framework to run: Oxide (uMod) or Carbon. You manage both on the **Plugins** tab of your server.
 
-#### Prerequisites for the Oxide Plugins:
+## Step 1: Turn on Oxide
 
-*   **uMod/OxideMod**
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Rust server.
+2. Select the **Plugins** tab. If you don't see it in the tab row, look under **More**.
+3. In the **Modding framework** card, select the framework you want:
+   - **Vanilla**: no plugins, the game as Facepunch ships it.
+   - **Oxide (uMod)**: the classic loader for uMod plugins. It updates itself at every start.
+   - **Carbon**: a faster loader that runs most uMod plugins. It also updates itself at every start.
+4. Confirm with **Switch**.
+5. If the server is running, select **Restart now** in the notice that appears. If it's offline, the framework is installed the next time the server starts. The first start with a new framework takes a little longer.
 
-Oxide mod must be installed on your server for plugins to run.  
-Navigate to the **Configure** option on the left-side menu on Fragify Panel and click on the **OxideMod** variable to be enabled!  
+Only one framework can be on at a time. The one in use is marked **On**. A framework marked **Files present** was used before and its files are still on the server. If an option is greyed out, your server doesn't offer it.
 
-![Configure](../images/configure.png)
+When Oxide is on, your server has an `oxide` folder in its main folder, with the plugins in `oxide/plugins` and their configs in `oxide/config`. Carbon uses a `carbon` folder in the same way.
 
-![OxideMod Enabled](images/oxide-enabled.png)
+:::info Switching between Oxide and Carbon
+Plugin files and configs stay in their own folder when you switch. Oxide plugins in the `oxide` folder aren't used by Carbon, so install them again after switching to Carbon. Switching to **Vanilla** turns plugins off at the next start without deleting them.
+:::
 
-Start/Restart the server for the oxide to be downloaded on the server. It will generate a new folder **oxide** in the main directory of your Rust server. Oxide will be automatically updated on every server's restart. 
+## Step 2: Install plugins from uMod
 
-Installing plugins on the server
---------------------------------
+1. On the **Plugins** tab, select **Browse uMod**.
+2. Type in **Search uMod plugins** to find a plugin, or sort the list by **Most downloaded**, **Recently updated** or **Name**.
+3. Select **Install** next to the plugin.
 
-We need to install plugins on the server.  
-We have two methods that we can use for this: via the **uMod Plugins** option on the left-side menu in the Fragify panel or via File Manager.
+You see "Installing" followed by the plugin's name. While the server runs, the plugin loads within seconds; otherwise it loads the next time the server starts. Plugins you already have show **Installed**.
 
-### Method #1 Installing plugins via **uModP Plugins** option on panel
+<!-- screenshot: rust-plugins-tab.png | Rust server with Oxide on, Plugins tab: the "Modding framework" card with "Oxide (uMod)" marked "On", and below it the "Browse uMod" view with a search term entered, a few results and their "Install" buttons (one showing "Installed") -->
 
-* Go to **uMod Plugins** and search for plugins that you would like the server to have.
+If you see "Plugins need Oxide or Carbon. Choose one above, then restart the server.", go back to [Step 1](#step-1-turn-on-oxide).
 
-![uMod Plugins](images/umod-plugins.png)
+## Install a plugin from another site
 
-* Click the **Install** button on the plugins you would like to install.
+Plugins that aren't on uMod, for example paid plugins, are installed by uploading their `.cs` file.
 
-![Install Plugin](images/install-plugin.png)
+1. On the **Files** tab, open the `oxide/plugins` folder (`carbon/plugins` if you use Carbon).
+2. Select **Upload** and choose the plugin's `.cs` file. See [Upload files](../../control-panel/file-manager.md#upload-files).
+3. Oxide loads new plugin files on its own while the server runs. If the plugin doesn't load, restart the server.
 
-### Method #2 Installing plugins via File Manager
+The plugin then also shows on the **Plugins** tab under **Installed**.
 
-*   Go to your Rust server on the Fragify panel
+## Manage installed plugins
 
-*   Navigate to **File Manager**
+On the **Plugins** tab, the **Installed** view lists your plugins with their version, author and when they last changed.
 
-![File Manager](../images/file-manager.png)
+- **Updates**: select **Check for updates**. A plugin with a newer version on uMod shows an **Update** tag with the version. Select **Update** next to it; the plugin reloads by itself.
+- **⋯ menu** on a plugin's row:
+  - **Edit config** opens the plugin's config file in an editor on the same tab.
+  - **Reload** reloads the plugin, for example after you changed its config. Shown while the server runs.
+  - **Open on uMod** opens the plugin's uMod page.
+  - **Delete** unloads the plugin and deletes its file. Tick **Also delete its config file** to remove the config too. The plugin's data files stay.
 
-*   Go to **oxide/plugins** directory 
+## Edit plugin configs
 
-*   Simply press the **Upload** button and select the plugins (**.cs** files) you want to upload.  
+Most plugins create a config file the first time they load, named after the plugin, in `oxide/config` (`carbon/configs` with Carbon). You can edit it in three places:
 
-*   Once those files are uploaded, restart your server
+- **Plugins** tab: open the plugin's ⋯ menu and select **Edit config**.
+- **Configuration** tab: the plugin configs are listed under the **Oxide configs** heading (**Carbon configs** with Carbon). See [Change a setting](../../control-panel/configuration.md#change-a-setting).
+- **Files** tab: open the `oxide/config` folder. See [Edit a file](../../control-panel/file-manager.md#edit-a-file).
 
-*   Your oxide plugins will now be loaded on the server!
+After you save a config, select **Reload** in the plugin's ⋯ menu on the **Plugins** tab so it reads the new settings. You can also send `oxide.reload PluginName` in the console.
 
-Your Oxide plugins will generate configuration files which you can edit.
-You can access those files by going to your **File Manager**. All plugin configs are located in the following location: **oxide/config**, and you can edit files by just clicking on them. 
-
-You have successfully installed Oxide plugins on your Rust server!
+Oxide's own settings are in `oxide/oxide.config.json`, listed as "Oxide settings" on the **Configuration** tab.

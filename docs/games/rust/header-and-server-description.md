@@ -1,72 +1,69 @@
 ---
 title: Adding header image and description for your Rust server
-keywords: ['rust server header image', 'rust server set header image', 'rust server browser header', 'rust server setup header image', 'rust server description']
+keywords: ['rust server header image', 'rust server set header image', 'rust server browser header', 'rust server setup header image', 'rust server description', 'rust server logo', 'rust server website', 'rust server.cfg', 'fragnet dashboard']
 ---
 
+# How to add a header image and description to your Rust server
 
-# How to add header image and server description on Rust server
+When players select your server in the Rust server browser, they see its header image and description. Use them to show what your server is about before anyone joins.
 
-Header Image
-------------
+All of these settings are in the **Server** group of `server.cfg` on the **Configuration** tab:
 
-It is possible to have a header image on your Rust server. The header image adds a nice touch to your server and is a great way to show what your server is about before someone joins.  
-The header image of your server appears when you click on the server in the Rust server browser.
+| Setting | What it is |
+| --- | --- |
+| **Header image** | A link to a 512 × 256 PNG or JPG, shown above your description. |
+| **Description** | The text players see when they open your server, up to 1,000 characters. |
+| **Website** | The link on your server page in the browser, for example your Discord. |
+| **Logo image** | A link to the logo shown in the server browser and the Rust+ app. |
 
-### Preparing the Image Header
+## Header image
 
-For the image to be loaded in the header, few rules must be followed.
+### Prepare the image
 
-*   The image size must be **512x256** and **.png** or **.jpg** formats.
+The image must be **512 × 256** pixels, in **.png** or **.jpg** format.
 
-There are quite a few online tools that can be used in case you need to resize your image.  
-We recommend using Picresize https://picresize.com/. Upload the image and proceed to edit it.  
-Under Resize your picture, select **Custom Size...** and write the resolution mentioned above. Ensure that **Image File Format** is set to **PNG** or **JPG**. After all changes are made, click on **I'm done, resize my picture!** button.
+To resize an image, you can use an online tool such as [Picresize](https://picresize.com/). Upload the image, then under **Resize your picture** select **Custom Size...** and enter the size above. Make sure **Image File Format** is set to **PNG** or **JPG**, then select **I'm done, resize my picture!**.
 
 ![Picresize Instructions](images/picresize-instructions.png)
 
-*   The image must be uploaded to a public image-sharing website. We recommend using [Imgur](https://imgur.com/). You can upload an image by using the drag and drop function.
+### Upload the image
 
-Once you upload the image, copy the Imgur image's link by right-clicking on the image and selecting the **Copy image address** option.
+The image must be on a public image-hosting site. We recommend [Imgur](https://imgur.com/): upload the image with drag and drop, then right-click the image and select **Copy image address**. The link should end in `.png` or `.jpg`.
 
 ![Example Imgur](images/example-imgur.png)
 
-### Adding the Image Header to your server
+### Add the image to your server
 
-*   Login to the [Fragify panel](https://panel.fragify.net/auth/login) and select your Rust server.
-*   Navigate to the **Configure** option on the left-side menu and look for the variable **Server Image** under `Base Settings`. Paste the link of your image uploaded to Imgur.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your Rust server.
+2. Select the **Configuration** tab, then select `server.cfg` in the list on the left.
+3. In the **Server** group, paste the image link into **Header image**.
+4. Select **Save and restart**, or **Save** to apply it at the next restart. See [Change a setting](../../control-panel/configuration.md#in-a-game-config-file).
 
-![Server Image](images/server-image.png)
+Your header image shows when players select your server in the Rust server browser.
 
-*   Restart the server so the changes can take effect.
+## Server description
 
-You should be able to see your header image once you click on your server in the Rust Server browser!
+The description is the text players see when they select your server in the server browser. Common uses:
 
+- Rules players should know about
+- Plugins that change the game, such as gather rates
+- Contact details, such as your Discord
+- Your wipe schedule
 
-Server Description
-------------------
+### Add a description
 
-A server description is a text that will appear when potential players click on a Rust server in the in-game listings. You can use this text to describe your server and attract new players.
+1. On the **Configuration** tab, select `server.cfg`.
+2. In the **Server** group, type your text into **Description**.
+3. Select **Save and restart**, or **Save** to apply it at the next restart.
 
-It can be used for various things but is most commonly used for:
+### New lines
 
-*   Specific rules that players should be aware of
-*   Mentioned plugin that modified game style, such as gathering rates
-*   Contact information
-*   Server Wipe date
+To start a new line, write `\n` where the line should break. You don't need spaces around it. For example:
 
-### Adding a description to your RUST server
+```
+Welcome to our server!\nWipes every Thursday.\nDiscord: discord.gg/example
+```
 
-Just like the Header Image, the server description is also set via variables in **Configure** option on the left-side menu.
-
-*   Login to the [Fragify panel](https://panel.fragify.net/auth/login) and select your Rust server.
-*   Navigate to **Configure** option on the left-side menu and look for **Description** variable under `Base Settings`. You can type any information that you would like to appear in your server's description in-game. 
-
-![Description](images/description.png)
-
-*   Restart the server so the changes can take effect.
-
-### Formatting the text
-
-**New Lines**
-
-If you want the text to appear on different lines, you can add the characters **\\n** to create a new line directly below it. You don't need to add spaces around the **\\n**. They can be directly touching text on either side.
+:::tip
+**Header image** and **Description** may be tagged **Applied at start**. Then the dashboard keeps them in your startup settings and writes them into `server.cfg` at every start, so change them on the **Configuration** tab rather than in the file. A [scheduled wipe](./rust-wipe.md#schedule-a-wipe) also sets the description at every wipe.
+:::

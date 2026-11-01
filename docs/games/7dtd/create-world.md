@@ -1,40 +1,49 @@
 ---
 title: Creating a new world
-keywords: ['create 7dtd world', 'create 7 days to die world', 'create 7 days to die server world', 'create 7dtd server world', '7dtd world', '7 days to die world', '7 days to die server world', '7dtd server world']
+keywords: ['create 7dtd world', 'create 7 days to die world', 'create 7 days to die server world', 'create 7dtd server world', '7dtd world', '7 days to die world', '7dtd rwg', '7dtd wipe world', 'game world', 'world gen size', 'fragnet dashboard']
 ---
 
-**Step 1:** Log in to your account on our [Fragify panel](VAR::PANEL_URL) and find your 7 Days To Die server.  
-**Step 2:** Navigate to **Configure** and find the **Game World** variable. Set it to any world you would like the server to load. You can also switch **World Gen Size**, **World Seed**, and **Game Name**.
+The world your 7 Days To Die server loads is set by four startup settings: **Game World**, **World Seed**, **World Gen Size** and **Game Name**.
 
-![Configure](../images/configure.png)
+## Choose a new world
 
-![World Settings](images/world-settings.png)
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your 7 Days To Die server.
+2. Open the **Configuration** tab and select **General** in the list on the left. The settings are in the **Startup** group.
+3. Set **Game World** to the world you want the server to load, for example `Navezgane`, `RWG` (a randomly generated world), `PREGEN6k`, `PREGEN8k` or `PREGEN10k`.
+4. If you chose `RWG`, also set:
+   - **World Seed**: the seed the new world is generated from. If a world with the resulting name already exists, the server loads that world instead.
+   - **World Gen Size**: the width and height of the generated world, between 2048 and 16384.
+5. Set **Game Name** to a name for this save. It also affects the seed used to place decoration, such as trees.
+6. Select **Save** in the bar at the bottom of the page.
+7. Restart the server: open ⋯ **More actions** at the top of the page and select **Restart**. The server generates or loads the world while it starts.
 
-**Step 3:** Restart the server, and new world will be generated!
+See [Change a setting under General](../../control-panel/configuration.md#under-general) for more on saving these settings.
 
-> Keep in mind that RWG world can take longer to generate depending on the value of **World Gen Size**. 
-When setting the higher value, the server will start generating a large map size, which will take a long to generate / download / load the map.
+:::info
+A random world can take a long time to generate. The larger the **World Gen Size**, the longer it takes to generate, and the longer players take to download and load the map the first time they join.
+:::
 
-## Removing old worlds
+## Remove old worlds
 
-**Step 1:** Log in to your account on our [Fragify panel](https://panel.fragify.net/auth/login) and find your service. Make sure to stop it before any further actions.
+Deleting a world's save makes the server start that world from scratch.
 
-**Step 2:** Go to **File Manager** and navigate to `.local/share/7DaysToDie/Saves` directory.  
+1. If you might want the world back, make a [backup](../../control-panel/backups/index.md) first.
+2. Stop the server with **Shut down**.
+3. Open the **Files** tab and go to the `.local/share/7DaysToDie/Saves` folder.
+4. Delete the world folders: open a folder's ⋯ menu and select **Delete**, or tick several folders and select **Delete** in the bar that appears.
+5. For a random world, you can also delete its folder in `.local/share/7DaysToDie/GeneratedWorlds`, so the map is generated again.
+6. Start the server with **Start**.
 
-![File Manager](../images/file-manager.png)
+:::warning Only delete folders
+Delete only the folders in `Saves`. Leave the files there, such as `serveradmin.xml`, which holds your admin list.
+:::
 
-**Step 3:** Delete all folders there. **NOTE: Do not delete any files, only folders!**  
+## Wipe the whole server
 
-**Step 4:** Start the server.
+A wipe deletes every file on the server, including worlds, mods, config files and your admin list, and then installs the game fresh. Make a [backup](../../control-panel/backups/index.md) first if you want to keep anything.
 
-## Perform a complete wipe of your server
+1. Open the **Configuration** tab and select **General**.
+2. In the **Danger zone**, select **Wipe server**.
+3. Type your server's name to confirm and select **Wipe server now**.
 
-**Step 1:** Log in to your account on our [Fragify panel](https://panel.fragify.net/auth/login) and find your 7 Days To Die server.  
-
-**Step 2:** Navigate to the **Advanced** option on the left-side menu. Make sure to click on consent **I understand this will delete all of my files** and the new button **Wipe Server** will appear.  
-
-![Advanced](images/advanced.png)
-
-**Step 3:** Click on **Wipe Server**, and your server will be completely wiped. 
-
-![Wipe Server](images/wipe-server.png)
+See [Danger zone: wipe the server](../../control-panel/configuration.md#danger-zone-wipe-the-server) for details.

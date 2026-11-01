@@ -1,18 +1,20 @@
 ---
 title: Changing map on ARK server
-keywords: ['map ark survival server', 'change map ark','map switch ark', 'ark server']
+keywords: ['map ark survival server', 'change map ark', 'map switch ark', 'ark server', 'ark server map', 'fragnet dashboard']
 ---
+
 # Changing map on ARK server
-You can easily change the map on your server by following the next steps:
 
-**Step 1:**  Login to the [Fragify panel](VAR::PANEL_URL) and select your ARK server.
+The map your ARK server runs is the **Server Map** startup setting.
 
-**Step 2:** Navigate to the **Configure** option on the left-side menu.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your ARK server.
+2. Open the **Configuration** tab and select **General** in the list on the left.
+3. In the **Startup** group, find **Server Map** and pick the map you want, for example `TheIsland` or `Valguero_P`.
+4. Select **Save** in the bar at the bottom of the page.
+5. Restart the server: open ⋯ **More actions** at the top of the page and select **Restart**. It starts on the new map.
 
-![Configure](../images/configure.png) 
+See [Change a setting under General](../../control-panel/configuration.md#under-general) for more on saving these settings.
 
-**Step 3:** In `Base Settings`, find **Server Map** and select to the map you would like the server to load.
-
-![Server Map](images/server-map.png)
-
-**Step 4:** Restart your server for the changes to be applied, and it should be running with the selected map.
+:::info
+ARK keeps a separate save for each map. If you switch back to a map you played before, the server loads that map's save again.
+:::

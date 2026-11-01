@@ -1,15 +1,18 @@
 ---
 title: Becoming an admin on Left 4 Dead 2 server
-keywords: ['left 4 dead 2 admin', 'left 4 dead 2 admin setup', 'left 4 dead 2 admin setup guide', 'left 4 dead 2 admin guide', 'left 4 dead 2 admin installation', 'left 4 dead 2 admin installation guide']
+keywords: ['left 4 dead 2 admin', 'left 4 dead 2 admin setup', 'left 4 dead 2 admin setup guide', 'left 4 dead 2 admin guide', 'left 4 dead 2 admin installation', 'left 4 dead 2 admin installation guide', 'l4d2 admins.cfg', 'fragnet dashboard']
 ---
 
-1. Firstly, navigate to your **File Manager**. 
+You become an admin with SourceMod. You need:
 
-![File Manager](../images/file-manager.png)
+- SourceMod installed on your server. See [Installing Metamod and Sourcemod](install-metamod.md).
+- Your SteamID. See [Finding your Steam64ID](find-steamid.md).
 
-2. Then go to `left4dead2 => addons => sourcemod => configs => admins.cfg`.
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server. Open the **Files** tab.
 
-3. Scroll down to the end of the script until you find:
+2. Go to `left4dead2` → `addons` → `sourcemod` → `configs` and select `admins.cfg` to open it in the editor. See [Edit a file](../../control-panel/file-manager.md#edit-a-file).
+
+3. Scroll down to the end of the file until you find:
 ```
 Admins
 {
@@ -55,6 +58,8 @@ Admins
 }
 ```
 
-![Example Admin](images/example-admin.png)
+5. Once done, select **Save file** and start or restart your server. See [Power controls](../../control-panel/basics.md#power-controls).
 
-5. Once done, click on **Save Content** and Start/Restart your server.
+:::tip
+If the server is already running, you can also load the new admin list without a restart: type `sm_reloadadmins` in the **Console** on the **Overview** tab. See [Send a command](../../control-panel/basics.md#send-a-command).
+:::

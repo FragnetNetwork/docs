@@ -7,7 +7,7 @@ keywords: ['procon layer add users', 'procon layer setup users', 'procon layer']
 
 You can easily add another user and give him access to the Procon Layer and the server.
 
-Once you are connected to the Procon Layer, simply navigate to the "**Parental Layer Control**" → "**Accounts**"
+Once you are connected to the Procon Layer, simply navigate to the "**Parent Layer Control**" → "**Accounts**"
 
 You will already see your account and on the bottom you will have an option to create a new account.  
 ![Accounts](images/users1.png)
