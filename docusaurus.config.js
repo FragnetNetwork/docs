@@ -3,10 +3,37 @@
 
 const { themes } = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
-const darkCodeTheme = themes.dracula;
+const darkCodeTheme = require('./src/prism/arena');
 
 // Custom variable injector for remark
 const variableInjector = require('./src/remark/variable-injector');
+const tableMarks = require('./src/remark/table-marks');
+const retinaImages = require('./src/remark/retina-images');
+
+// Pages removed when the docs moved to the new dashboard: old path -> replacement
+const retiredPages = {
+  '/control-panel/api': '/control-panel',
+  '/control-panel/api/generating-an-api-key': '/control-panel',
+  '/control-panel/api/server/power-actions': '/control-panel',
+  '/control-panel/api/server/retrieving-server-resources': '/control-panel',
+  '/control-panel/api/server/sending-a-command': '/control-panel',
+  '/control-panel/api/server/websocket': '/control-panel',
+  '/api/server': '/control-panel',
+  '/control-panel/changelog': '/control-panel',
+  '/control-panel/databases': '/control-panel',
+  '/control-panel/subusers': '/control-panel/team-access',
+  '/control-panel/schedules/editing-a-task': '/control-panel/schedules/editing-a-schedule',
+};
+
+// Each retired path also had /docs/* and /docs/fragify/* aliases (see createRedirects)
+const retiredRedirects = Object.entries(retiredPages).map(([from, to]) => ({
+  to,
+  from: [
+    from,
+    `/docs${from}`,
+    ...(from.startsWith('/control-panel') ? [`/docs${from.replace('/control-panel', '/fragify')}`] : []),
+  ],
+}));
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -36,6 +63,7 @@ const config = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+        redirects: retiredRedirects,
         createRedirects(existingPath) {
           // Skip root path and paths ending with / to avoid duplicates
           // (both /games/ark and /games/ark/ create the same redirect file)
@@ -67,13 +95,14 @@ const config = {
           beforeDefaultRemarkPlugins: [
             [variableInjector, {
               replacements: {
-                'PANEL_URL': 'https://panel.fragnet.net',
-                'OLD_PANEL_URL': 'https://gamepanel.fragnet.net',
-                'BILLING_URL': 'https://clients.fragnet.net',
+                'PANEL_URL': 'https://fragnet.net/account',
+                'BILLING_URL': 'https://fragnet.net/account/billing',
+                'SUPPORT_URL': 'https://fragnet.net/account/support',
                 'CDN_URL': 'https://cdn.fragify.net',
               }
             }],
           ],
+          remarkPlugins: [tableMarks, retinaImages],
         },
         blog: {
           showReadingTime: false
@@ -96,21 +125,13 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: false,
       },
-      announcementBar: {
-        id: 'contribute',
-        content:
-          'Help improve our docs and earn platform credits! <a href="/contributing">Learn how to contribute</a>',
-        backgroundColor: '#E53600',
-        textColor: '#ffffff',
-        isCloseable: true,
-      },
       navbar: {
-        title: 'Home',
+        title: 'Docs',
         logo: {
-          alt: 'Fragnet Logo',
-          src: 'https://b-cdn.fragnet.net/images/logo.png',
+          alt: 'Fragnet',
+          src: 'img/fragnet-logo-on-light.svg',
+          srcDark: 'img/fragnet-logo-on-dark.svg',
           target: '_self',
-          style: {backgroundColor: '#242526'}
         },
         items: [
           // Discord Bots hidden - service not currently offered
@@ -123,7 +144,7 @@ const config = {
           {
             to: '/control-panel/intro',
             position: 'left',
-            label: 'Control Panel',
+            label: 'Dashboard',
             activeBasePath: '/control-panel',
           },
           {
@@ -141,13 +162,8 @@ const config = {
             label: 'FAQ',
           },
           {
-            href: 'https://clients.fragnet.net',
-            label: 'Billing/Support',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/FragnetNetwork/docs',
-            label: 'GitHub',
+            href: 'https://fragnet.net/account',
+            label: 'My account',
             position: 'right',
           },
           {
@@ -155,10 +171,23 @@ const config = {
             label: 'Contribute',
             position: 'right',
           },
+          {
+            href: 'https://github.com/FragnetNetwork/docs',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
         ],
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Fragnet',
+          src: 'img/fragnet-logo-on-light.svg',
+          srcDark: 'img/fragnet-logo-on-dark.svg',
+          href: 'https://fragnet.net',
+          height: 16,
+        },
         links: [
           {
             title: 'Popular Game Docs',
@@ -181,16 +210,16 @@ const config = {
             title: 'Useful Links',
             items: [
               {
-                label: 'Game Control Panel',
-                href: 'https://panel.fragnet.net',
+                label: 'Fragnet Dashboard',
+                href: 'https://fragnet.net/account',
               },
               {
-                label: 'Old Game Panel',
-                href: 'https://gamepanel.fragnet.net',
+                label: 'Billing',
+                href: 'https://fragnet.net/account/billing',
               },
               {
-                label: 'Billing/Support Panel',
-                href: 'https://clients.fragnet.net',
+                label: 'Support',
+                href: 'https://fragnet.net/account/support',
               },
             ],
           },
@@ -207,10 +236,10 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Fragnet Networks International AB. 🛠️ with Docusaurus.`,
       },
       zooming: {
-        selector: '.markdown img',
+        selector: '.markdown img:not(.no-zoom)',
         options: {
           margin: 24,
-          background: '#1b1b1d',
+          background: 'rgba(11, 12, 16, 0.92)',
           scrollOffset: 0,
         },
       },
@@ -235,7 +264,7 @@ const config = {
         contextualSearch: true,
       },
       prism: {
-        theme: darkCodeTheme,
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
