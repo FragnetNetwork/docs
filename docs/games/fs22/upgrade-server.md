@@ -1,46 +1,39 @@
 ---
 title: Upgrade your server
-keywords: ['fs22', 'fs22 docs', 'fs22 upgrade', 'fs22 upgrade server']
+keywords: ['fs22', 'fs22 docs', 'fs22 upgrade', 'fs22 upgrade server', 'fs22 downgrade', 'fs22 player slots', 'fs22 mod space', 'change configuration', 'change plan']
 ---
 
-If you want to upgrade your FS22 server, we offer quite a few modifications, whether it's slots, mod space or performance upgrade.
+# Upgrade your server
 
-Upgrade options
-===============
+You can change your FS22 server's plan, such as its player slots or mod space, on the **Billing** tab of your server in the [Fragnet dashboard](VAR::PANEL_URL). Upgrades apply straight away. Downgrades are scheduled for the end of the period you've paid for.
 
-  
-To be able to check which upgrade options are available for your server you first need to navigate to your service.  
-  
-Once you are in there, click on your active Farming Simulator 2022 Server.  
-![Active FS22 Server](images/upgrade-1.png)
+## Change your plan
 
-When you opened your Farming Simulator 22 Server page, you will have an "Actions" menu on the left side of the page. Press the "Upgrade/Downgrade Options" button.  
+1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
+2. Open the **Billing** tab. You can also get there with **Manage billing** in the **More actions** (⋯) menu, or the **Add storage** link at the bottom of the **Mods** tab.
+3. In the **Current plan** card, change the options you want, such as the number of **Player slots** or the amount of mod space. Your current choice is marked **Current**.
+4. Check the summary below the options. It shows the new price and when the change **Takes effect**: **Immediately** for an upgrade, or on a date for a downgrade.
+5. Confirm the change:
+   - For an upgrade, select the **Upgrade** button. It shows the amount you pay today, for example **Upgrade · €3.00 today**. You pay the difference for the rest of the current period, and the change is applied once the payment is received.
+   - For a downgrade, select **Schedule downgrade**. Nothing is charged today, and you keep the current plan until the date shown. Other changes that wait until your next renewal show **Schedule change** instead.
 
-![Upgrade/Downgrade Options](images/upgrade-2.png)
+Select **Reset** to discard your choices.
 
-  
-Once you are in, you can see available options for the Upgrade. Select the upgrades you want on your server and proceed to the checkout by pressing the red button labeled "Click to Continue".  
-![Upgrade](images/upgrade-3.png)  
-  
-After you proceed, an invoice will be generated. Once the invoice is paid, the upgraded options will be applied to your server.
+<!-- screenshot: fs22-billing-change-configuration.png | FS22 server, Billing tab: the Current plan card with the Player slots slider moved up from the current value and the mod space option changed, and the summary below showing the new monthly price, "Takes effect: Immediately", the amount charged today and the "Upgrade · ... today" button -->
 
-Confirming that upgrades have been applied  
-  
+:::info
+If the server is running, it restarts to apply the new plan. Downgrades restart the server briefly on the day they apply. Save in-game first if you need the latest progress.
+:::
 
-================================================
+If you can't change the plan, the **Billing** tab tells you why, for example when a cancellation request or an unpaid invoice is open. For general help with plan changes, see [How do I upgrade or downgrade my server](../../FAQ/upgrade-downgrade-server.md).
 
-Upgrades are almost instant after the invoice for them is paid. However, for changes to take effect, the server backend needs to be restarted via the Actions menu on your FS22 Service panel!
+## Confirming that the upgrade has been applied
 
-Once the upgrade invoice is paid, changes are automatically being done to your server.   
-You can check if the upgrades took place by checking "Configurable options" tab on your active FS22 service.  
-![Configurable options](images/upgrade-4.png)
+Upgrades apply within a few minutes after the payment.
 
-  
-There is one last step that should be done for an upgrade to be completely finished. In order for upgrades to take effect, a server backend needs to be restarted.  
-This can be easily done by pressing the "Restart" button on the "Actions" menu.  
-![Restart](images/upgrade-5.png)  
-  
-Once restarted, feel free to login to your FS22 Control Panel, start the server and enjoy the upgrades!  
-  
+1. Check the server header: it shows the number of player slots.
+2. On the **Overview** tab, the **Mod space** tile shows your new mod space.
 
-If you encounter any issues with the upgrades, or you simply want to get more options that are not listed, contact our team via support ticket and they will help you out! [Submit a ticket](https://clients.fragnet.net/submitticket.php)
+If the game still uses the old slots or mod space, restart the whole server: open the **More actions** (⋯) menu in the header, select **Restart FS22 control panel** and confirm. This restarts the FS22 control panel and the game.
+
+If you encounter any issues with your upgrade, or you want options that aren't listed, [open a support ticket](VAR::SUPPORT_URL) and our team will help you.

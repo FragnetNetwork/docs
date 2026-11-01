@@ -1,53 +1,70 @@
 ---
 title: Frequently Asked Questions
-keywords: ['fs22', 'fs22 docs', 'fs22 faq', 'fs22 frequently asked questions', 'fs22 server issues', 'fs22 server issue', 'fs22 server problems', 'fs22 server problem']
+keywords: ['fs22', 'fs22 docs', 'fs22 faq', 'fs22 frequently asked questions', 'fs22 server issues', 'fs22 server issue', 'fs22 server problems', 'fs22 server problem', 'fs22 dashboard', 'fs22 control panel', 'fs22 restart server']
 ---
 
-Unable to find the server
--------------------------
+## Unable to find the server
 
-Cause of this issue is most often the configuration of the server search filter. You can check [this article](find-server.md) which shows how to find your server.
+The most common cause is the server browser's search filters. [This article](find-server.md) shows how to find your server.
 
-### Is the server running in the Farming Simulator Control Panel?
+### Is the game running?
 
-With the Farming Simulator, the server backend is started automatically on Fragnet. The server itself must be started via the Farming Simulator Control Panel. It is therefore recommended to log into the Farming Simulator Control Panel and then start the server if necessary.
+On Fragnet, you start and stop the Farming Simulator 22 game from the [Fragnet dashboard](VAR::PANEL_URL). Go to **My servers**, select your server and check the status next to its name:
 
-I can not log in into the Farming Simulator Control Panel
----------------------------------------------------------
+- **Online · ready to join**: players can join.
+- **Loading map**: the game is still loading. Wait a moment.
+- **Game stopped** or **Server off**: select **Start game** in the header.
 
-Many options are implemented directly via the Farming Simulator Control Panel. Since it is stand-alone software, changes will not be in effect until the server backend gets restarted.
+## Do I still need the FS22 control panel?
 
-### The password is wrong
+Usually not. Everything you need day to day is in the dashboard: the **Configuration** tab has the game settings (server name, passwords, savegame slot and more), and the **Mods**, **Savegames** and **Logs** tabs replace those pages of the FS22 control panel.
 
-Most likely, if you changed the password for your Control Panel that the changes haven't taken place since server backend wasn't restarted. Try restarting server backend from your FS22 Service page so changes can take effect.
+The FS22 control panel by GIANTS Software is still available for the few things the dashboard doesn't cover, for example updating a ModHub mod in place, deleting a savegame, or setting the career mode for a new farm. To open it, go to the **Overview** tab and, on the **FS22 control panel** card, select the open-in-new-tab icon next to **Panel address**, or select **Open FS22 control panel** in the **More actions** (⋯) menu. The dashboard signs you in for you.
 
-### The Control Panel can not be accessed
+### The control panel password is wrong
 
-In this case, the server backend can not be started or is not started. In this case, it is advisable to try starting it up from your FS22 Service page by clicking on active **Farming Simulator 22** service in your [billing area](https://clients.fragnet.net/clientarea.php?action=products) (from the Actions menu) and giving it a try. If this does not help, our support team will be more than glad to help you out. Just submit a ticket and let us handle it!
+If you changed the password with **Change password** on the **FS22 control panel** card while the server was running, the FS22 control panel keeps the old password until it restarts. Select **Restart now** on the card, or **Restart FS22 control panel** in the **More actions** (⋯) menu.
 
-![Restart from Actions menu](../images/restart.png)
+To sign in by hand, use the **Username** (`admin`) and the **Password** shown on the **FS22 control panel** card.
 
-Common problems with mods and save games
-----------------------------------------
+### The control panel can't be reached
 
-### Uploaded savegame not supported. Only Farming Simulator 22 savegames are supported
+If the status shows **Control panel unreachable**, the dashboard can't reach the FS22 control panel, so the game can't be started or stopped either. Restart the whole server:
 
-Most likely you are trying to upload the wrong file structure. Save games can only be uploaded as .zip archive and that .zip should contain all the contents from the savegame folder. Refer to the following article in order to properly zip and upload the save game. You can check [this article](upload-savegame.md) which shows how to upload the savegame.
+1. Open the **More actions** (⋯) menu in the header.
+2. Select **Restart FS22 control panel** and confirm.
+
+This restarts the FS22 control panel and the game, and takes about a minute. If the problem lasts more than a few minutes, [open a support ticket](VAR::SUPPORT_URL) and we'll look into it.
+
+## Common problems with mods and savegames
+
+### My savegame upload is rejected
+
+Savegames must be uploaded as a `.zip` archive that contains the files from inside the savegame folder, with `careerSavegame.xml` at the top level. A ZIP that contains the folder itself is rejected with "This isn't a complete savegame". [This article](upload-savegame.md) shows how to prepare and upload a savegame.
 
 ### I'm not able to upload my mod
 
-You are either uploading the mod in the incorrect format or you have maxed out your Mod Space. Check if you are uploading the mod correctly by referring to the following article [How to manage your Farming Simulator 22 server files using FTP (File transfer protocol)](manage-files-via-ftp.md)
+Check that:
 
-### Stuck on Sync data with other players 
+- the mod is a `.zip` file,
+- it's no larger than 512 MB (use SFTP for larger mods, see [Manage files via FTP](manage-files-via-ftp.md)),
+- a mod with the same file name isn't already installed,
+- your mod space isn't full ("Mod space full. Delete mods or add mod space.").
 
-Most common issue on FS22 servers and it's almost always related to either incompatible mod or corrupted save game. We recommend starting a new game with the same mods, if the issue still occurs you should start removing mods from your server in order to find which one is causing this issue. 
+See [Installing and activating mods](installing-mods.md).
 
-### Cannot deactivate or uninstall mod
+### Stuck on "Sync data with other players"
 
-If you are unable to deactivate or delete an active mod from the server, this means that the mod is a dependency for another active mod on the server. In this case, the other mod in the server has to be deactivated first. 
+This is the most common issue on FS22 servers, and it's almost always caused by an incompatible mod or a corrupted savegame. Try starting a new game with the same mods. If the issue still occurs, remove mods from your server one at a time to find the one causing it.
 
-### Cannot activate mod or start server with the mod map
+### Cannot deactivate or delete a mod
 
-Usually, this means that mod requires another mod as it dependend on it. In this case, you will need to install and activate the dependencies. To see what dependencies are missing, you will need to check the issues of the mod in **Mods** tab. See example:
-![Issues](images/mod-issue.png)
-![Missing dependency](images/missing-dependency.png)
+- Mods can only be turned on or off, or deleted, while the game is stopped. Select **Stop** in the header and confirm with **Stop game** first.
+- Only inactive mods can be deleted. Deactivate the mod first.
+- If the mod still can't be deactivated, it's probably a dependency of another active mod. Deactivate the other mod first.
+
+### Cannot activate a mod or start the server with a mod map
+
+Usually the mod needs another mod (a dependency) that isn't installed or active. On the **Mods** tab, such a mod shows **Missing:** followed by the mods it needs. Install and activate those, then try again. If **Start game** fails with "GIANTS can't start this savegame: its map needs mods that aren't installed or active", open the **Logs** tab to see which mods are missing.
+
+<!-- screenshot: fs22-mods-missing-dependency.png | FS22 server, Mods tab, Installed mods with the game stopped: one mod row showing "Missing:" followed by the name of the required mod, with its Active switch off -->

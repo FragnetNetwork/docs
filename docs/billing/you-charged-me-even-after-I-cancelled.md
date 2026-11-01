@@ -1,12 +1,23 @@
 # You charged me even after I cancelled?
 
-We never charge any client or store any credit card information or other similar data. All payments have to be initiated by the client.  
-When cancelling your service with us, please cancel any recurring _PayPal_ subscriptions you have set up with _PayPal_. Otherwise, the invoice will be automatically paid again even though you no longer have a service with us.  
-  
-Please follow the steps below to cancel an active _PayPal_ subscription:  
-   
-1\. Navigate to the _PayPal_ site and login to your account.  
-2\. Look up your last payment with us and click on the _"Details"_ button of that payment.  
-3\. It will say at the top of the payment details something about a recurring subscription, and it will give you the option to cancel your recurring subscription with us.  
+There are a few reasons you might see a payment after cancelling. You can check your server's payments under **Renewal invoices** on its **Billing** tab, or all of them under **Billing** → **Invoices** in the [Fragnet dashboard](VAR::PANEL_URL).
 
-As always, if you have any questions or need assistance, please do not hesitate to contact us!
+## The renewal was paid before you cancelled
+
+With **Auto-renew** on, we charge your saved payment method from 3 days before the due date. If you cancelled after that payment went through, the payment for the new period stays as it is. Your server keeps running until the end of that paid period.
+
+Cancelling only stops future renewals. To avoid the next charge, cancel before the date shown next to **Auto-renew** on the server's **Billing** tab. See [How do I cancel my service?](./cancel-service.md).
+
+## An old PayPal subscription is still active
+
+Some servers were paid by a PayPal subscription set up in our old billing system. Cancelling the server in the dashboard does not stop that subscription: PayPal keeps sending the payments until you cancel it in your PayPal account.
+
+To cancel it:
+
+1. Log in to your PayPal account.
+2. Open the list of your automatic payments (subscriptions) in your PayPal settings.
+3. Find the payment to Fragnet and cancel it.
+
+## Something else
+
+If none of these explain the charge, or you'd like to ask about a refund, [open a support ticket](VAR::SUPPORT_URL) in the **Billing** category and choose **Refund request**. Tell us which invoice or payment it's about.
