@@ -12,6 +12,8 @@ Your server's settings live in `server.cfg`. You change them on the **Configurat
 1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
 2. Select the **Configuration** tab, then **server.cfg** in the list on the left.
 
+![Arma 3 server, Configuration tab, server.cfg in the easy editor](images/arma3-server-cfg@2x.webp)
+
 The page shows the settings as a form (**Easy editor**). To edit the file's text yourself, switch to **Raw file**.
 
 ## The settings most people change
@@ -35,6 +37,8 @@ The **Missions** card lists the missions the server plays, one after the other.
 - **Add a mission:** type its name or pick it from the list, then select **Add mission**. The list shows the `.pbo` files and mission folders in `mpmissions`. A mission that comes with a mod, such as Antistasi, isn't in that list: type its name.
 - **Change a mission:** edit its name in place, or pick another difficulty next to it. A mission's own difficulty wins over the **Difficulty** setting under **Server**.
 - **Remove a mission:** select the bin icon next to it.
+
+![Arma 3 server, Configuration tab, Missions card with two missions and their difficulty](images/arma3-missions-card@2x.webp)
 
 If your file has no mission list, an admin picks the mission in game with `#missions`.
 

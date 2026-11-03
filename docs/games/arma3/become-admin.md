@@ -15,6 +15,8 @@ The admin password is `passwordAdmin` in your server's `server.cfg`.
 2. Open the **Configuration** tab, select **server.cfg**, and type the password in **Admin password** under **Admin access**.
 3. Select **Save and restart**, or **Save** and restart the server later. The server reads `server.cfg` when it starts.
 
+![Arma 3 server, Configuration tab, Admin access group with the admin password](images/arma3-admin-access@2x.webp)
+
 See [Change a setting](../../control-panel/configuration.md#in-a-game-config-file) for how saving works. Use a different password than the join password, and don't share it with players.
 
 ## Log in as admin

@@ -31,6 +31,8 @@ Below the list are **Mass install**, **Import Launcher preset** and **Check for 
 2. Type the mod's name or Workshop ID in the search box. **Sort by** sorts the results by **Most subscribed**, **Recently updated**, **Trending** or **Newest**.
 3. Select **Install** next to the mod. To install several, tick them and select the **Install** button at the bottom (for example **Install 3 mods**). The bar also shows how much there is to download.
 
+![Arma 3 server, Workshop tab, Browse Workshop with search results](images/arma3-workshop-browse@2x.webp)
+
 Mods that the chosen mod lists as required items on Steam, such as CBA_A3, are installed with it.
 
 ## Import an Arma 3 Launcher preset
@@ -42,6 +44,8 @@ If you already play with a set of mods, export it from the Arma 3 Launcher and i
 3. Select **Choose preset file** and pick the `.html` file.
 4. Check the list. Each mod shows whether it's **New**, already **Installed** or **Not available**, and you see how much there is to download.
 5. Select **Install** (for example **Install 24 mods**).
+
+![Arma 3 server, Workshop tab, Import Launcher preset dialog listing new and installed mods](images/arma3-workshop-import-preset@2x.webp)
 
 A preset can have up to 150 mods. The list may also show:
 
@@ -55,6 +59,8 @@ A preset can have up to 150 mods. The list may also show:
    - **IDs or links**: paste Workshop IDs or item links, one per line or separated by commas. You can install up to 50 at a time.
    - **Collection**: paste a Workshop collection link or ID. Mods you already have are skipped.
 3. Check what was found, then select **Install** (for example **Install 12 mods**).
+
+![Arma 3 server, Workshop tab, Mass install dialog with pasted Workshop links](images/arma3-workshop-mass-install@2x.webp)
 
 A mod's Workshop ID is the number at the end of its Steam Workshop address, for example `450814997` in `https://steamcommunity.com/sharedfiles/filedetails/?id=450814997`.
 
@@ -79,6 +85,8 @@ Select **Installed** to see the **Load order** card. It has two lists:
 
 - **Client mods** (loaded with `-mod`): players need these too.
 - **Server-side mods** (loaded with `-servermod`): only the server loads these.
+
+![Arma 3 server, Workshop tab, Installed view with the load order](images/arma3-workshop-load-order@2x.webp)
 
 Mods load top to bottom. Keep frameworks such as CBA_A3 above the mods that need them. Drag a mod to change its place or to move it to the other list. On a phone, use the arrows next to each mod. Changes save straight away and apply on the next restart.
 

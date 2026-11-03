@@ -14,6 +14,8 @@ This page shows where to find your server's address and how players join it.
 2. On the **Overview** tab, look at the **Server Details** card. **Address** shows the IP address and the port, for example `203.0.113.10:2302`. The number after the `:` is the port.
 3. Select the copy button next to it to copy it.
 
+![Arma 3 server, Overview tab, Server Details card with the address and port](images/arma3-server-details@2x.webp)
+
 If the address shows a name instead of numbers, switch **Address type** to **IP**.
 
 ## Join the server

@@ -28,6 +28,8 @@ Some mods, such as Antistasi, bring their mission with them. You don't upload an
 3. Select **Add mission**. The server plays the missions in the list in order. Pick the mission's difficulty in the box next to it.
 4. Select **Save and restart**, or **Save** and restart the server later.
 
+![Arma 3 server, Configuration tab, Missions card with the Add mission box](images/arma3-missions-card@2x.webp)
+
 To stop a mission from loading, select the bin icon next to it. See [Change your server's settings](./configuration.md) for the rest of the page.
 
 In the `server.cfg` file itself, the mission list looks like this:
