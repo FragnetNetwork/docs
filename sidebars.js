@@ -143,6 +143,20 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Arma 3',
+          link: {
+            type: 'generated-index',
+            slug: '/games/arma3',
+          },
+          items: [
+            'games/arma3/index',
+            'games/arma3/workshop-mods',
+            'games/arma3/become-admin',
+            'games/arma3/custom-missions'
+          ]
+        },
+        {
+          type: 'category',
           label: 'Arma Reforger',
           link: {
             type: 'generated-index',
