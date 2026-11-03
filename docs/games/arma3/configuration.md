@@ -20,7 +20,7 @@ The page shows the settings as a form (**Easy editor**). To edit the file's text
 |---|---|---|
 | **Server name** | **Server** | The name in the server browser. |
 | **Join password** | **Server** | Players need it to join. Leave it empty for a public server. |
-| **Difficulty** | **Server** | Recruit, Regular, Veteran or Custom. It applies to every mission. |
+| **Difficulty** | **Server** | Recruit, Regular, Veteran or Custom, for missions that don't set their own. Missions in the list use the difficulty next to them. |
 | **Missions** | the card at the top | The missions the server plays, in order. See [Add a custom mission](./custom-missions.md). |
 | **Admin password** | **Admin access** | Type `#login` and this password in chat to become admin. See [Become admin](./become-admin.md). |
 | **Admins** | **Admin access** | Steam64 IDs, one per line, that can become admin without the password. |
@@ -33,7 +33,7 @@ Other groups cover joining rules (BattlEye, signature check), voice chat, voting
 The **Missions** card lists the missions the server plays, one after the other.
 
 - **Add a mission:** type its name or pick it from the list, then select **Add mission**. The list shows the `.pbo` files and mission folders in `mpmissions`. A mission that comes with a mod, such as Antistasi, isn't in that list: type its name.
-- **Change a mission:** edit its name in place.
+- **Change a mission:** edit its name in place, or pick another difficulty next to it. A mission's own difficulty wins over the **Difficulty** setting under **Server**.
 - **Remove a mission:** select the bin icon next to it.
 
 If your file has no mission list, an admin picks the mission in game with `#missions`.

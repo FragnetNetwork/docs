@@ -25,7 +25,7 @@ Some mods, such as Antistasi, bring their mission with them. You don't upload an
 
 1. Open the **Configuration** tab and select **server.cfg**.
 2. In the **Missions** card at the top, type the mission name in the empty box, or pick it from the list. The list shows the missions in your `mpmissions` folder. The name is the file name without `.pbo`, for example `MyMission.Altis`.
-3. Select **Add mission**. The server plays the missions in the list in order.
+3. Select **Add mission**. The server plays the missions in the list in order. Pick the mission's difficulty in the box next to it.
 4. Select **Save and restart**, or **Save** and restart the server later.
 
 To stop a mission from loading, select the bin icon next to it. See [Change your server's settings](./configuration.md) for the rest of the page.
