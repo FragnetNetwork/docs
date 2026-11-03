@@ -12,7 +12,7 @@ As admin you can kick and ban players, change the mission and restart it, all fr
 The admin password is `passwordAdmin` in your server's `server.cfg`.
 
 1. Open the [Fragnet dashboard](VAR::PANEL_URL), go to **My servers** and select your server.
-2. Open **Configuration**, choose **server.cfg**, and set the admin password (`passwordAdmin`).
+2. Open the **Configuration** tab, select **server.cfg**, and type the password in **Admin password** under **Admin access**.
 3. Select **Save and restart**, or **Save** and restart the server later. The server reads `server.cfg` when it starts.
 
 See [Change a setting](../../control-panel/configuration.md#in-a-game-config-file) for how saving works. Use a different password than the join password, and don't share it with players.

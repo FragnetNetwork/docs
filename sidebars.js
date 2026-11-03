@@ -150,6 +150,7 @@ const sidebars = {
           },
           items: [
             'games/arma3/index',
+            'games/arma3/configuration',
             'games/arma3/workshop-mods',
             'games/arma3/become-admin',
             'games/arma3/custom-missions'

@@ -29,7 +29,7 @@ If the address shows a name instead of numbers, switch **Address type** to **IP*
 1. Start Arma 3 and select **Multiplayer**, then **Server Browser**.
 2. Search for your server's name and join.
 
-You set the name players see on the **Configuration** tab.
+You set the name players see on the **Configuration** tab. See [Change your server's settings](./configuration.md).
 
 ## Password
 

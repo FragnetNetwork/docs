@@ -23,8 +23,12 @@ Some mods, such as Antistasi, bring their mission with them. You don't upload an
 
 ## Make the server load the mission
 
-1. Open **Configuration**, choose **server.cfg**, and add the mission name under **Missions**. The name is the file name without `.pbo`, for example `MyMission.Altis`.
-2. Select **Save and restart**, or **Save** and restart the server later.
+1. Open the **Configuration** tab and select **server.cfg**.
+2. In the **Missions** card at the top, type the mission name in the empty box, or pick it from the list. The list shows the missions in your `mpmissions` folder. The name is the file name without `.pbo`, for example `MyMission.Altis`.
+3. Select **Add mission**. The server plays the missions in the list in order.
+4. Select **Save and restart**, or **Save** and restart the server later.
+
+To stop a mission from loading, select the bin icon next to it. See [Change your server's settings](./configuration.md) for the rest of the page.
 
 In the `server.cfg` file itself, the mission list looks like this:
 
